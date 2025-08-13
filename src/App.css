@@ -1,0 +1,17 @@
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body, html, #__next {
+  height: 100%;
+  width: 100%;
+   font-family: 'Geist', sans-serif;
+   overflow-y: hidden;
+}
+
+

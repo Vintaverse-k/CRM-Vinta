@@ -1,0 +1,52 @@
+project-root/
+│
+├── app/
+│   ├── dashboard/
+│   │   └── page.js           ← Dashboard page
+│   ├── signin/
+│   │   └── page.js           ← Signin page
+│   ├── signup/
+│   │   └── page.js           ← Signup page
+│   └── passwordChanged
+│       └── page.js           
+├   └── verifycode
+│       └── page.js
+├.  └── verifyemail
+│       └── page.js
+|   └── Sidebar
+│       └── page.js
+├.  └── topbar
+│       └── page.js
+│   ├── page.js               ← Home page
+│   └── layout.js             ← Root layout (global styles, font, etc.)
+│.  
+├── components/
+│   ├── Sidebar/
+│   │   └── Sidebar.js
+│   ├── Dashboard/
+│   │   └── Dashboard.jsx
+│   ├── TopBar/
+│   │   └── TopBar.jsx
+│   ├── VerifyPassword/
+│   │   └── VerifyPassword.jsx
+│   ├── VerifyEmail/
+│   │   └── VerifyEmail.jsx
+│   ├── VerifyCode/
+│   │   └── VerifyCode.jsx
+│   ├── passwordChanged/
+│   │   └── passwordChanged.jsx
+│   ├── SignUp/
+│   │   └── SignUp.jsx
+│   └── SignIn/
+│       └── SignIn.jsx
+│
+├── public/
+│   └── logo.png
+│
+└── styles/
+    └── all components css here
+
+
+
+
+

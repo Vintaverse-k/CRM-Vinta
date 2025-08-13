@@ -1,0 +1,271 @@
+/* GLOBAL FIX */
+* {
+  box-sizing: border-box;
+}
+
+.page-container-02 {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.left-side-02 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 40px 30px;
+}
+
+.signin-box-02 {
+  width: 460px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  top: 90px;
+  border: 1px solid #E6E8EA;
+  box-shadow: 0px 8px 16px -4px #14151A0F;
+}
+
+.signin-box-02 img.logo-02 {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+}
+
+.signin-box-02 h2 {
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.signin-box-02 p {
+  color: #625F6E;
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.social-login-02 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.social-login-02 button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.social-login-02 img {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+.divider-02 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #aaa;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.divider-02::before,
+.divider-02::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.divider-02:not(:empty)::before {
+  margin-right: 10px;
+}
+
+.divider-02:not(:empty)::after {
+  margin-left: 10px;
+}
+
+.input-group-02 {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group-02 label {
+  display: block;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.input-group-02 input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.password-wrapper-02 {
+  position: relative;
+}
+
+.password-wrapper-02 img.eye-icon-02 {
+  position: absolute;
+  right: 10px;
+  top: 66%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.options-02 {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #625F6E;
+  text-align: left;
+}
+
+.options-02 label {
+  cursor: pointer;
+}
+
+.options-02 a.purple-link-02 {
+  color: #593BF2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.options-02 a.purple-link-02:hover {
+  text-decoration: underline;
+}
+
+.signin-btn-02 {
+  width: 100%;
+  height: 48px;
+  border: none;
+  background-color: #593BF2;
+  color: white;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.signup-text-02 {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #020204;
+  text-align: center;
+}
+
+.signup-text-02 a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #593BF2;
+  text-decoration: none;
+}
+
+.signup-text-02 a:hover {
+  text-decoration: underline;
+}
+
+.right-side-02 {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-width: 720px;
+  min-height: 896px;
+}
+
+.background-image-02 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 720px;
+  height: 896px;
+  background-image: url('src/assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  border: 10px solid white;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.overlay-image-02 {
+  position: relative;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  z-index: 2;
+  border: 1px solid #FFFFFF4D;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.top-image-02 {
+  width: 355px;
+  height: 270px;
+  margin-top: 100px;
+  margin-left: 80px;
+}
+
+.bottom-image-02 {
+  width: 355px;
+  height: 320px;
+  top: -122px;
+  margin-left: 265px;
+}
+
+.bottom-heading-wrapper-02 {
+  position: absolute;
+  bottom: 73px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  z-index: 3;
+  text-align: center;
+  max-width: 90%;
+}
+
+.bottom-heading-02 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.bottom-heading-01-02 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #EDEDED;
+}
+
+.dots-wrapper-02 {
+  display: inline-flex;      
+  justify-content: center;    
+  width: 100%;                
+  margin-top: 8px;            
+  user-select: none;  
+}
+
+.dot-image-02 {
+  width: 52px;
+  height: 6px;
+  display: inline-block;
+}
