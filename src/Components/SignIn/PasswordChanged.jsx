@@ -14,7 +14,7 @@ const PasswordChanged = () => {
     <div className="page-container-05">
       <div className="left-side-05">
         <form className="signin-box-05" onSubmit={handleSubmit}>
-          <img src="src/assets/logo.svg" alt="Logo" className="logo-05" />
+          <img src="assets/logo.svg" alt="Logo" className="logo-05" />
           <h2>Password Changed</h2>
           <p>Your password has been changed successfully.</p>
 
@@ -30,12 +30,12 @@ const PasswordChanged = () => {
         </div>
 
         <img
-          src="src/assets/frontsignin.png"
+          src="assets/frontsignin.png"
           alt="Total Time Worked"
           className="overlay-image-05 top-image-05"
         />
         <img
-          src="src/assets/frontsignin2.png"
+          src="assets/frontsignin2.png"
           alt="Goals by Status"
           className="overlay-image-05 bottom-image-05"
         />
@@ -52,7 +52,7 @@ const PasswordChanged = () => {
           </p>
           <div className="dots-wrapper-05">
             <img
-              src="src/assets/dots.svg"
+              src="assets/dots.svg"
               alt="custom"
               className="dot-image-05"
             />

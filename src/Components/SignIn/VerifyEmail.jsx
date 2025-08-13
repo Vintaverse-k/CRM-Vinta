@@ -15,14 +15,14 @@ const VerifyEmail = () => {
     <div className="page-container-03">
       <div className="left-side-03">
         <form className="signin-box-03" onSubmit={handleSubmit}>
-          <img src="src/assets/logo.svg" alt="Logo" className="logo-03" />
+          <img src="assets/logo.svg" alt="Logo" className="logo-03" />
           <h2>Verify Your Email</h2>
           <p>Please enter your Email details to Forgot Password</p>
 
           <div className="input-group-03">
             <label htmlFor="email">Email</label>
             <div className="input-wrapper-03">
-              <img src="src/assets/email.svg" alt="email icon" className="input-icon-03" />
+              <img src="assets/email.svg" alt="email icon" className="input-icon-03" />
               <input
                 type="email"
                 id="email"
@@ -46,12 +46,12 @@ const VerifyEmail = () => {
         </div>
 
         <img
-          src="src/assets/frontsignin.png"
+          src="assets/frontsignin.png"
           alt="Total Time Worked"
           className="overlay-image-03 top-image-03"
         />
         <img
-          src="src/assets/frontsignin2.png"
+          src="assets/frontsignin2.png"
           alt="Goals by Status"
           className="overlay-image-03 bottom-image-03"
         />
@@ -67,7 +67,7 @@ const VerifyEmail = () => {
             decisions.
           </p>
           <div className="dots-wrapper-03">
-            <img src="src/assets/dots.svg" alt="custom" className="dot-image-03" />
+            <img src="assets/dots.svg" alt="custom" className="dot-image-03" />
           </div>
         </div>
       </div>

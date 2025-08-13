@@ -17,7 +17,7 @@ const Dashboard = () => {
             <div className="header-actions">
               <button className="btn-outline">
                 <img
-                  src="src/assets/share.svg"
+                  src="assets/share.svg"
                   alt="Share Icon"
                   width={24}
                   height={24}
@@ -36,7 +36,7 @@ const Dashboard = () => {
               <div className="stat-card light-blue">
                 <div className="stat-header">
                   <img
-                    src="src/assets/task.svg"
+                    src="assets/task.svg"
                     alt="Tasks Icon"
                     width={28}
                     height={28}
@@ -59,7 +59,7 @@ const Dashboard = () => {
               <div className="stat-card light-orange">
                 <div className="stat-header">
                   <img
-                    src="src/assets/complete.svg"
+                    src="assets/complete.svg"
                     alt="Tasks Icon"
                     width={28}
                     height={28}
@@ -82,7 +82,7 @@ const Dashboard = () => {
               <div className="stat-card light-green">
                 <div className="stat-header">
                   <img
-                    src="src/assets/complete.svg"
+                    src="assets/complete.svg"
                     alt="Tasks Icon"
                     width={28}
                     height={28}
@@ -105,7 +105,7 @@ const Dashboard = () => {
               <div className="stat-card light-purple">
                 <div className="stat-header">
                   <img
-                    src="src/assets/opentask.svg"
+                    src="assets/opentask.svg"
                     alt="Tasks Icon"
                     width={28}
                     height={28}
@@ -132,7 +132,7 @@ const Dashboard = () => {
               <div className="workload-status-container">
                 <h3 className="workload-title">
                   <img
-                    src="src/assets/workload-icon.svg"
+                    src="assets/workload-icon.svg"
                     alt="Workload Icon"
                     className="workload-icon"
                   />
@@ -172,14 +172,13 @@ const Dashboard = () => {
             </div>
           </div>
 
-          {/* Rest of your dashboard content (timeline, time tracker, task list etc) goes here */}
           {/* Middle Section */}
           <div className="middle-section">
             <div className="timeline-project">
               <div className="timeline-header">
                 <h3 style={{ display: 'flex', alignItems: 'center' }}>
                   <img
-                    src="src/assets/totaltask.svg"
+                    src="assets/totaltask.svg"
                     alt="Calendar Icon"
                     width={20}
                     height={20}
@@ -189,7 +188,7 @@ const Dashboard = () => {
                 </h3>
                 <button className="btn-filter">
                   <img
-                    src="src/assets/timeline-2.svg"
+                    src="assets/timeline-2.svg"
                     alt="Settings Icon"
                     width={40}
                     height={40}
@@ -206,7 +205,7 @@ const Dashboard = () => {
               <div className="timeline-tasks">
                 <div className="task conduct-meeting">
                   <img
-                    src="src/assets/complete.svg"
+                    src="assets/complete.svg"
                     alt="Meeting Icon"
                     width={28}
                     height={28}
@@ -216,7 +215,7 @@ const Dashboard = () => {
                 </div>
                 <div className="task clients-emails">
                   <img
-                    src="src/assets/complete.svg"
+                    src="assets/complete.svg"
                     alt="Email Icon"
                     width={28}
                     height={28}
@@ -226,7 +225,7 @@ const Dashboard = () => {
                 </div>
                 <div className="task finalize-presentations">
                   <img
-                    src="src/assets/complete.svg"
+                    src="assets/complete.svg"
                     alt="Presentation Icon"
                     width={28}
                     height={28}
@@ -236,7 +235,7 @@ const Dashboard = () => {
                 </div>
                 <div className="task design-research">
                   <img
-                    src="src/assets/complete.svg"
+                    src="assets/complete.svg"
                     alt="Research Icon"
                     width={28}
                     height={28}
@@ -253,7 +252,7 @@ const Dashboard = () => {
               <div className="tracker-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <h3 style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   <img
-                    src="src/assets/timetracker.svg"
+                    src="assets/timetracker.svg"
                     alt="Timer Icon"
                     width={28}
                     height={28}
@@ -265,7 +264,7 @@ const Dashboard = () => {
               <div className="tracker-current-task">
                 <div className="task-name">
                   <img
-                    src="src/assets/slack.svg"
+                    src="assets/slack.svg"
                     alt="Slack"
                     className="slack-logo"
                   />
@@ -274,7 +273,7 @@ const Dashboard = () => {
                 <div className="timer-display">
                   <div className="date">
                     <img
-                      src="src/assets/clock.svg"
+                      src="assets/clock.svg"
                       alt="Calendar Icon"
                       width={18}
                       height={18}
@@ -288,7 +287,7 @@ const Dashboard = () => {
                 <div className="tracker-buttons">
                   <button className="btn-pause">
                     <img
-                      src="src/assets/pause.svg"
+                      src="assets/pause.svg"
                       alt="Pause Icon"
                       width={16}
                       height={16}
@@ -298,7 +297,7 @@ const Dashboard = () => {
                   </button>
                   <button className="btn-stop">
                     <img
-                      src="src/assets/stop.svg"
+                      src="assets/stop.svg"
                       alt="Stop Icon"
                       width={16}
                       height={16}
@@ -311,7 +310,7 @@ const Dashboard = () => {
 
               <div className="previous-tasks">
                 <img
-                  src="src/assets/elephent.svg"
+                  src="assets/elephent.svg"
                   alt="Checkmark Icon"
                   width={40}
                   height={40}
@@ -338,7 +337,7 @@ const Dashboard = () => {
             <div className="task-list-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <h3 style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                 <img
-                  src="src/assets/tasklist.svg"
+                  src="assets/tasklist.svg"
                   alt="List Icon"
                   width={28}
                   height={28}
@@ -402,7 +401,7 @@ const Dashboard = () => {
                   <td>Netlify - SaaS Real Estate...</td>
                   <td><span className="priority medium">
                                    <img
-                      src="src/assets/flag2.svg"
+                      src="assets/flag2.svg"
                       alt="High Priority Icon"
                       width={14}
                       height={14}

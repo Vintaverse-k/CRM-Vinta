@@ -1,10 +1,10 @@
 const topbarData = {
-  searchIcon: 'src/assets/search.svg',
+  searchIcon: 'assets/search.svg',
   shortcutKey: '⌘ 1',
-  pinIcon: 'src/assets/start.svg',
-  videoIcon: 'src/assets/play.svg',
-  integrateIcon: 'src/assets/slack.svg',
-  profileImage: 'src/assets/profile.jpg',
+  pinIcon: 'assets/start.svg',
+  videoIcon: 'assets/play.svg',
+  integrateIcon: 'assets/slack.svg',
+  profileImage: 'assets/profile.jpg',
 };
 
 export default topbarData;

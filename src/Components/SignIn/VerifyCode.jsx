@@ -27,7 +27,7 @@ const VerifyCode = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/verifypassword"); // redirect to verify password page
+    navigate("/verifypassword"); 
   };
 
   const handleResend = () => {
@@ -38,7 +38,7 @@ const VerifyCode = () => {
     <div className="page-container-04">
       <div className="left-side-04">
         <form className="signin-box-04" onSubmit={handleSubmit}>
-          <img src="src/assets/logo.svg" alt="Logo" className="logo-04" />
+          <img src="assets/logo.svg" alt="Logo" className="logo-04" />
           <h2>Enter Your Code</h2>
           <p>Please enter the 6-digit code sent to your email.</p>
 
@@ -82,12 +82,12 @@ const VerifyCode = () => {
         </div>
 
         <img
-          src="src/assets/frontsignin.png"
+          src="assets/frontsignin.png"
           alt="Total Time Worked"
           className="overlay-image-04 top-image-04"
         />
         <img
-          src="src/assets/frontsignin2.png"
+          src="assets/frontsignin2.png"
           alt="Goals by Status"
           className="overlay-image-04 bottom-image-04"
         />
@@ -103,7 +103,7 @@ const VerifyCode = () => {
             decisions.
           </p>
           <div className="dots-wrapper-04">
-            <img src="src/assets/dots.svg" alt="custom" className="dot-image-04" />
+            <img src="assets/dots.svg" alt="custom" className="dot-image-04" />
           </div>
         </div>
       </div>

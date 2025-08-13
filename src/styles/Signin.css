@@ -214,7 +214,7 @@
   left: 0;
   width: 720px;
   height: 896px;
-  background-image: url('src/assets/bg.png');
+  background-image: url('assets/bg.png');
   background-size: cover;
   background-position: center;
   border: 10px solid white;

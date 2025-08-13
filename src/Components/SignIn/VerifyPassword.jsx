@@ -12,7 +12,6 @@ const VerifyPassword = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can add validation logic here if needed
     navigate("/passwordchanged");
   };
 
@@ -20,7 +19,7 @@ const VerifyPassword = () => {
     <div className="page-container-05">
       <div className="left-side-05">
         <form className="signin-box-05" onSubmit={handleSubmit}>
-          <img src="src/assets/logo.svg" alt="Logo" className="logo-05" />
+          <img src="assets/logo.svg" alt="Logo" className="logo-05" />
           <h2>Set Your Password</h2>
           <p>Must be at least 8 characters.</p>
 
@@ -35,7 +34,7 @@ const VerifyPassword = () => {
               required
             />
             <img
-              src="src/assets/eye.svg"
+              src="assets/eye.svg"
               alt="Toggle visibility"
               className="eye-icon-05"
               onClick={() => setShowNewPassword(!showNewPassword)}
@@ -53,7 +52,7 @@ const VerifyPassword = () => {
               required
             />
             <img
-              src="src/assets/eye.svg"
+              src="assets/eye.svg"
               alt="Toggle visibility"
               className="eye-icon-05"
               onClick={() => setShowConfirmPassword(!showConfirmPassword)}
@@ -76,7 +75,7 @@ const VerifyPassword = () => {
         </div>
 
         <img
-          src="src/assets/frontsignin.png"
+          src="assets/frontsignin.png"
           alt="Total Time Worked"
           className="overlay-image-05 top-image-05"
         />
@@ -97,7 +96,7 @@ const VerifyPassword = () => {
             decisions.
           </p>
           <div className="dots-wrapper-05">
-            <img src="src/assets/dots.svg" alt="custom" className="dot-image-05" />
+            <img src="assets/dots.svg" alt="custom" className="dot-image-05" />
           </div>
         </div>
       </div>

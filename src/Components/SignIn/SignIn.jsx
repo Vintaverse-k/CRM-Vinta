@@ -20,19 +20,19 @@ const SignIn = () => {
       {/* Left side - Sign In Form */}
       <div className="left-side">
         <form className="signin-box" onSubmit={handleSubmit}>
-          <img src="src/assets/logo.svg" alt="Logo" className="logo" />
+          <img src="assets/logo.svg" alt="Logo" className="logo" />
           <h2>Sign in to your account</h2>
           <p>Enter your details to login</p>
 
           <div className="social-login">
             <button type="button">
-              <img src="src/assets/apple.svg" alt="Apple" />
+              <img src="assets/apple.svg" alt="Apple" />
             </button>
             <button type="button">
-              <img src="src/assets/google.svg" alt="Google" />
+              <img src="assets/google.svg" alt="Google" />
             </button>
             <button type="button">
-              <img src="src/assets/linkedin.svg" alt="LinkedIn" />
+              <img src="assets/linkedin.svg" alt="LinkedIn" />
             </button>
           </div>
 
@@ -41,7 +41,7 @@ const SignIn = () => {
           <div className="input-group">
             <label htmlFor="email">Email</label>
 
-            <img src="src/assets/email.svg" alt="email icon" className="input-icon-00" />
+            <img src="assets/email.svg" alt="email icon" className="input-icon-00" />
             <input
               type="email"
               id="email"
@@ -53,7 +53,7 @@ const SignIn = () => {
           </div>
 
           <div className="input-group password-wrapper">
-            <img src="src/assets/lock.svg" alt="lock icon" className="input-icons-00" />
+            <img src="assets/lock.svg" alt="lock icon" className="input-icons-00" />
             <label htmlFor="password">Password</label>
 
             <input
@@ -65,7 +65,7 @@ const SignIn = () => {
               required
             />
             <img
-              src="src/assets/eye.svg"
+              src="assets/eye.svg"
               alt={showPassword ? "Hide password" : "Show password"}
               onClick={togglePassword}
               className="eye-icon"
@@ -99,12 +99,12 @@ const SignIn = () => {
         </div>
 
         <img
-          src="src/assets/frontsignin.png"
+          src="assets/frontsignin.png"
           alt="Total Time Worked"
           className="overlay-image top-image"
         />
         <img
-          src="src/assets/frontsignin2.png"
+          src="assets/frontsignin2.png"
           alt="Goals by Status"
           className="overlay-image bottom-image"
         />
@@ -120,7 +120,7 @@ const SignIn = () => {
             decisions.
           </p>
           <div className="dots-wrapper">
-            <img src="src/assets/dots.svg" alt="custom" className="dot-image" />
+            <img src="assets/dots.svg" alt="custom" className="dot-image" />
           </div>
         </div>
       </div>

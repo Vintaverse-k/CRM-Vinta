@@ -110,28 +110,28 @@ const MyTask = () => {
           <div className="mytask-card mytask-priority-breakdown">
             <div className="mytask-card-header">
               <h3 className="mytask-card-title">
-                <img src="src/assets/totaltime.svg" alt="Icon" />
+                <img src="assets/totaltime.svg" alt="Icon" />
                 Priority Breakdown
               </h3>
               <button className="mytask-menu-btn">...</button>
             </div>
             <div className="mytask-priority-list">
               <div className="mytask-priority-item mytask-priority-high">
-                <img src="src/assets/flag01.svg" alt="High Priority" className="mytask-priority-icon" />
+                <img src="assets/flag01.svg" alt="High Priority" className="mytask-priority-icon" />
                 <div className="mytask-priority-text">
                   <span className="mytask-priority-count">721</span>
                   <span className="mytask-priority-label">High Priority</span>
                 </div>
               </div>
               <div className="mytask-priority-item mytask-priority-high">
-                <img src="src/assets/flag01.svg" alt="High Priority" className="mytask-priority-icon" />
+                <img src="assets/flag01.svg" alt="High Priority" className="mytask-priority-icon" />
                 <div className="mytask-priority-text">
                   <span className="mytask-priority-count">721</span>
                   <span className="mytask-priority-label">High Priority</span>
                 </div>
               </div>
               <div className="mytask-priority-item mytask-priority-high">
-                <img src="src/assets/flag01.svg" alt="High Priority" className="mytask-priority-icon" />
+                <img src="assets/flag01.svg" alt="High Priority" className="mytask-priority-icon" />
                 <div className="mytask-priority-text">
                   <span className="mytask-priority-count">721</span>
                   <span className="mytask-priority-label">High Priority</span>
@@ -145,7 +145,7 @@ const MyTask = () => {
           <div className="mytask-card mytask-status-overview">
             <div className="mytask-card-header">
               <h3 className="mytask-card-title">
-                <img src="src/assets/status.svg" alt="Icon" />
+                <img src="assets/status.svg" alt="Icon" />
                 Status Overview
               </h3>
               <button className="mytask-menu-btn">...</button>
@@ -185,7 +185,7 @@ const MyTask = () => {
           <div className="mytask-card mytask-total-time-worked">
             <div className="mytask-card-header">
               <h3 className="mytask-card-title">
-                <img src="src/assets/totaltime.svg" alt="Icon" />
+                <img src="assets/totaltime.svg" alt="Icon" />
                 Total Time Worked
               </h3>
 
@@ -199,13 +199,13 @@ const MyTask = () => {
           <div className="mytask-card mytask-task-completed">
             <div className="mytask-card-header">
               <h3 className="mytask-card-title">
-                <img src="src/assets/taskassign.svg" alt="Icon" />
+                <img src="assets/taskassign.svg" alt="Icon" />
                 Task completed by assignee
               </h3>
               <button className="mytask-menu-btn">...</button>
             </div>
             <div className="mytask-progress-ring-wrapper">
-              <img src="src/assets/chart.png" alt="Progress ring showing 78% work done" />
+              <img src="assets/chart.png" alt="Progress ring showing 78% work done" />
               <div className="mytask-progress-text"></div>
             </div>
             <div className="mytask-progress-breakdown">
@@ -219,7 +219,7 @@ const MyTask = () => {
           <div className="mytask-card mytask-recent-activity">
             <div className="mytask-card-header">
               <h3 className="mytask-card-title">
-                <img src="src/assets/recent.svg" alt="Icon" />
+                <img src="assets/recent.svg" alt="Icon" />
                 Recent activity
               </h3>
               <button className="mytask-menu-btn">...</button>
@@ -227,7 +227,7 @@ const MyTask = () => {
             <div className="mytask-activity-list">
               <div className="mytask-activity-group">
                 <h4 className="mytask-activity-title">
-                  <img src="src/assets/list.svg" alt="Icon" />
+                  <img src="assets/list.svg" alt="Icon" />
                   Juyed Ahmed’s List
                 </h4>
                 <ul className="mytask-activity-items">
@@ -241,7 +241,7 @@ const MyTask = () => {
 
               <div className="mytask-activity-group">
                 <h4 className="mytask-activity-title">
-                  <img src="src/assets/list.svg" alt="Icon" />
+                  <img src="assets/list.svg" alt="Icon" />
                   Pixem’s Project
                 </h4>
                 <ul className="mytask-activity-items">

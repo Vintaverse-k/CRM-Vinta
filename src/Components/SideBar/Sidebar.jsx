@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
     <div className="app-container-01">
       <div className="sidebar">
         <div className="logo">
-          <img src="src/assets/dashlogo.svg" alt="logo" />
+          <img src="assets/dashlogo.svg" alt="logo" />
           <h2>Taskbito</h2>
           <span className="dropdown-icon">⌄</span>
         </div>

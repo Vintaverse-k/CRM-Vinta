@@ -1,17 +1,17 @@
 const iconData = {
-  dashboard: 'src/assets/home.svg',
-  myTasks: 'src/assets/task.svg',
-  inbox: 'src/assets/inbox.svg',
-  calendar: 'src/assets/calendar.svg',
-  reports: 'src/assets/analytics-01.svg',
-  portfolio: 'src/assets/portfolio.svg',
-  folder: 'src/assets/firstportfolio.svg',
-  team: 'src/assets/team.svg',
-  plus: 'src/assets/plus-sign.svg',
-  downArrow: 'src/assets/dropdown-arrow.svg',   
-  invite: 'sr/assets/invite.svg',
-  support: 'src/assets/support.svg',
-  settings: 'src/assets/setting.svg'
+  dashboard: 'assets/home.svg',
+  myTasks: 'assets/task.svg',
+  inbox: 'assets/inbox.svg',
+  calendar: 'assets/Calendar.svg',
+  reports: 'assets/analytics-01.svg',
+  portfolio: '/assets/portfolio.svg',
+  folder: 'assets/firstportfolio.svg',
+  team: 'assets/team.svg',
+  plus: 'assets/plus-sign.svg',
+  downArrow: 'assets/dropdown-arrow.svg',   
+  invite: 'assets/invite.svg',
+  support: 'assets/support.svg',
+  settings: 'assets/setting.svg'
 };
 
 export default iconData;
