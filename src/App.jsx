@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import SignIn from "./components/SignIn/SignIn";
-import SignUp from "./components/SignIn/SignUp";
-import VerifyEmail from "./components/SignIn/VerifyEmail";
-import VerifyCode from "./components/SignIn/VerifyCode";
-import VerifyPassword from "./components/SignIn/VerifyPassword";
-import PasswordChanged from "./components/SignIn/PasswordChanged";
+import SignIn from "./Components/SignIn/SignIn";
+import SignUp from "./Components/SignIn/SignUp";
+import VerifyEmail from "./Components/SignIn/VerifyEmail";
+import VerifyCode from "./Components/SignIn/VerifyCode";
+import VerifyPassword from "./Components/SignIn/VerifyPassword";
+import PasswordChanged from "./Components/SignIn/PasswordChanged";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Sidebar from "./Components/SideBar/Sidebar";
 import TopBar from "./Components/TopBar/TopBar";
