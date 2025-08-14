@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TaskAssigned = () => {
+const TaskAssignedContent = () => {
   return (
     <div>
       this is the task assigned page
@@ -8,4 +8,4 @@ const TaskAssigned = () => {
   )
 }
 
-export default TaskAssigned
+export default TaskAssignedContent;

@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.task__details__container {
+  flex-grow: 1;
+}
+
+.task__btns {
+    margin-top: -20px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content:space-between;
+  width: 100%;
+}
+.task__actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.view__switcher {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  margin-right: 0;
+  border-radius: 8px;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA);
+}
+
+.view__btn {
+  padding: 6px 12px;
+  border: 1px solid #e6e8ea;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view__btn.active {
+  background: #f3f3f3;
+  color: rgb(3, 3, 3);
+  border: 1px solid var(--Stroke-Tertiery, #E6E8EA)
+}
+
+.task__bar {
+    width: 1104px;
+    height: 48px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 18px;
+}
+
+.task__details__container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.my__task {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.task__details {
+  font-size: 14px;
+  color: #625f6e;
+}
+
+
+.share__task__btn,
+.add__task__btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.share__task__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 40px;
+  background: #f5f5f5;
+  border: 1px solid #e6e8ea;
+}
+
+.add__task__btn {
+width: 42px;
+height: 40px;
+  background: #f5f5f5;
+  border: 1px solid #e6e8ea;
+  border: none;
+}
+
+.calendar__days__container {
+  display: flex;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.backward__arrow {
+  border: 1px solid #e6e8ea;
+  background: #fff;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.rounded {
+  border-top-left-radius: 12px;
+}
+
+.sunday {
+  background: #f4f4f4;
+  border: 1px solid #e6e8ea;
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.rounded-day {
+  border-top-right-radius: 12px;
+}
+
+.main__container {
+  display: flex;
+}
+
+.calendar__sidebar1 {
+    width: 104px;
+    height: 680px;
+  border: 1px solid #e6e8ea;
+  border-top: none;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+  border-radius: 12px;
+}
+
+.time__list {
+  font-size: 14px;
+  font-weight: 500;
+  color: #625f6e;
+  text-align: center;
+}
+
+.calendar__main__content {
+  display: grid;
+  grid-template-columns: repeat(7, 142.86px);
+  grid-auto-rows: 168px;
+}
+
+.meeting__holder {
+  width: 142.86px;
+  height: 168px;
+  padding: 8px;
+  /* border-radius: 12px; */
+  border-right: 1px solid #e6e8ea;
+  border-bottom: 1px solid #e6e8ea;
+  box-sizing: border-box;
+}
+
+.meeting__card {
+  width: 126.86px;
+  height: 152px;
+  padding: 8px 12px;
+  border: 1px solid #e6e8ea;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  overflow: hidden;
+}
+
+.meeting__title {
+  font-size: 12px;
+  font-weight: 500;
+  color: #020204;
+}
+
+.meeting__time {
+  font-size: 12px;
+  font-weight: 400;
+  color: #625f6e;
+  display: flex;
+  align-items: center;
+}
+
+.meeting__joiners {
+  display: flex;
+  align-items: center;
+}
+
+.joiner__avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-right: -8px;
+}
+
+.joiner__more {
+  width: 28px;
+  height: 28px;
+  background: #f0ecff;
+  border-radius: 50%;
+  color: #593bf2;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meeting__priority {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.meeting__priority.high {
+  font-size: 12px;
+  font-weight: 500;
+  color: #020204;
+}
+
+.meeting__priority.medium {
+  color: #f9ab00;
+}
+
+.meeting__agenda {
+  font-size: 12px;
+  font-weight: 400;
+  color: #625f6e;
+}
+.meeting__title,
+.meeting__agenda {
+  white-space: nowrap;         
+  overflow: hidden;            
+  text-overflow: ellipsis;     
+}

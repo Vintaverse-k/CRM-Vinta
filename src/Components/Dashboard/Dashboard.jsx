@@ -132,7 +132,7 @@ const Dashboard = () => {
               <div className="workload-status-container">
                 <h3 className="workload-title">
                   <img
-                    src="assets/workload-icon.svg"
+                    src="assets/timetracker.svg"
                     alt="Workload Icon"
                     className="workload-icon"
                   />
@@ -297,7 +297,7 @@ const Dashboard = () => {
                   </button>
                   <button className="btn-stop">
                     <img
-                      src="assets/stop.svg"
+                      src="assets/Stop.svg"
                       alt="Stop Icon"
                       width={16}
                       height={16}
@@ -379,7 +379,7 @@ const Dashboard = () => {
                   <td>Develop High-fidelities UI</td>
                   <td><span className="priority high">   
                      <img
-                      src="src/assets/flag.svg"
+                      src="assets/flag.svg"
                       alt="High Priority Icon"
                       width={14}
                       height={14}
