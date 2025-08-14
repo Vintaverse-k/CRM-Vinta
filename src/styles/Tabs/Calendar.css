@@ -109,7 +109,7 @@ height: 40px;
 .backward__arrow {
   border: 1px solid #e6e8ea;
   background: #fff;
-  padding: 0 20px;
+  padding: 0 11px;
   display: flex;
   align-items: center;
 }
@@ -143,7 +143,6 @@ height: 40px;
   display: flex;
   flex-direction: column;
   gap: 96px;
-  border-radius: 12px;
 }
 
 .time__list {
