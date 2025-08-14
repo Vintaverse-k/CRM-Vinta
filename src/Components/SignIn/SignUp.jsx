@@ -29,7 +29,7 @@ const SignUp = () => {
               <img src="assets/apple.svg" alt="Apple" />
             </button>
             <button type="button">
-              <img src="/srcassets/google.svg" alt="Google" />
+              <img src="assets/google.svg" alt="Google" />
             </button>
             <button type="button">
               <img src="assets/linkedin.svg" alt="LinkedIn" />
