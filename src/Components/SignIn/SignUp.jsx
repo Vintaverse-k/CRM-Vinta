@@ -20,19 +20,19 @@ const SignUp = () => {
     <div className="page-container-02">
       <div className="left-side-02">
         <form className="signin-box-02" onSubmit={handleSubmit}>
-          <img src="src/assets/logo.svg" alt="Logo" className="logo-02" />
+          <img src="assets/logo.svg" alt="Logo" className="logo-02" />
           <h2>Sign up for your account</h2>
           <p>Enter your details to create your account</p>
 
           <div className="social-login-02">
             <button type="button">
-              <img src="src/assets/apple.svg" alt="Apple" />
+              <img src="assets/apple.svg" alt="Apple" />
             </button>
             <button type="button">
               <img src="/srcassets/google.svg" alt="Google" />
             </button>
             <button type="button">
-              <img src="src/assets/linkedin.svg" alt="LinkedIn" />
+              <img src="assets/linkedin.svg" alt="LinkedIn" />
             </button>
           </div>
 
@@ -73,7 +73,7 @@ const SignUp = () => {
               required
             />
             <img
-              src="src/assets/eye.svg"
+              src="assets/eye.svg"
               alt={showPassword ? "Hide password" : "Show password"}
               onClick={togglePassword}
               className="eye-icon-02"
@@ -114,12 +114,12 @@ const SignUp = () => {
         </div>
 
         <img
-          src="src/assets/frontsignin.png"
+          src="assets/frontsignin.png"
           alt="Total Time Worked"
           className="overlay-image-02 top-image-02"
         />
         <img
-          src="src/assets/frontsignin2.png"
+          src="assets/frontsignin2.png"
           alt="Goals by Status"
           className="overlay-image-02 bottom-image-02"
         />
@@ -134,7 +134,7 @@ const SignUp = () => {
             goals. Our insights features help you make informed decisions.
           </p>
           <div className="dots-wrapper-02">
-            <img src="src/assets/dots.svg" alt="custom" className="dot-image-02" />
+            <img src="assets/dots.svg" alt="custom" className="dot-image-02" />
           </div>
         </div>
       </div>

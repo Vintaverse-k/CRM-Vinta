@@ -80,7 +80,7 @@ const VerifyPassword = () => {
           className="overlay-image-05 top-image-05"
         />
         <img
-          src="src/assets/frontsignin2.png"
+          src="assets/frontsignin2.png"
           alt="Goals by Status"
           className="overlay-image-05 bottom-image-05"
         />
