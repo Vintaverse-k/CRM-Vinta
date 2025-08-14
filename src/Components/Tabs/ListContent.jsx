@@ -91,7 +91,6 @@ const taskData = {
 };
 
 const PriorityTag = ({ level }) => {
-  // You can customize icon per level if needed
   const iconSrc = "assets/cflag.svg"; // Same icon for all here
 
   return (
