@@ -10,6 +10,8 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import Sidebar from "./Components/SideBar/Sidebar";
 import TopBar from "./Components/TopBar/TopBar";
 import MyTask from "./Components/sidebarpath/MyTasks";
+import Inbox from "./Components/sidebarpath/Inbox";
+
 const App = () => {
   return (
     <Router>
@@ -24,6 +26,7 @@ const App = () => {
         <Route path="/sidebar" element={<Sidebar />} />
         <Route path="/topbar" element={<TopBar />} />
         <Route path="/mytask" element={<MyTask/>} />
+        <Route path="/inbox" element={<Inbox/>} />
         
       </Routes>
     </Router>

@@ -91,7 +91,7 @@ const taskData = {
 };
 
 const PriorityTag = ({ level }) => {
-  const iconSrc = "assets/cflag.svg"; // Same icon for all here
+  const iconSrc = "assets/cflag.svg"; 
 
   return (
     <span className={`priority-tag ${level.toLowerCase()}`}>
@@ -120,14 +120,12 @@ const ProgressBar = ({ percent }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Animate the progress fill smoothly
     let animationFrameId;
     let start = null;
 
     const animate = (timestamp) => {
       if (!start) start = timestamp;
       const elapsed = timestamp - start;
-      // Duration 800ms for animation
       const duration = 800;
       const progressPercent = Math.min(
         (elapsed / duration) * percent,

@@ -1,0 +1,135 @@
+.mytask-container-01 {
+  display: flex;
+  min-height: 100vh;
+}
+
+.mytask-avatar-01 {
+  width: 20px;
+  height: 20px;
+}
+
+.mytask-main-content-01 {
+  margin-top: 20px;
+  margin-left: -1170px;
+  flex: 1;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+  color: #1f2937;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #a78bfa transparent;
+}
+
+.mytask-main-content-01::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mytask-main-content-01::-webkit-scrollbar-thumb {
+  background-color: #a78bfa;
+  border-radius: 9999px;
+}
+
+/* Header */
+.mytask-header-01 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.mytask-title-01 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #020204;
+  margin: 0;
+}
+
+.mytask-subtitle-01 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #625f6e;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+/* Header Buttons */
+.mytask-header-buttons-01 button {
+  margin-left: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease;
+}
+
+.mytask-btn-outline-01 {
+  width: 85px;
+  height: 40px;
+  background: var(--Alpha-Neutral-alpha-4, #0202040A);
+border-radius: 8px;
+  color: #625F6E;
+  border: 1px solid var(--Alpha-Neutral-alpha-8, #02020414)
+}
+.mytask-btn-outline-02 {
+  width: 136px;
+  height: 40px;
+  background: var(--Alpha-Neutral-alpha-4, #0202040A);
+border-radius: 8px;
+  color: #625F6E;
+  border: 1px solid var(--Alpha-Neutral-alpha-8, #02020414)
+}
+
+.mytask-btn-outline-01:hover {
+  background-color: #f3f4f6;
+}
+
+.mytask-btn-primary-01 {
+  background-color: #7c3aed;
+  color: white;
+}
+
+.mytask-btn-primary-01:hover {
+  background-color: #6d28d9;
+}
+
+/* Tabs */
+.mytask-tabs-01 {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 0.75rem;
+  font-weight: 500;
+  color: #020204;
+  margin-bottom: 2rem;
+}
+
+.mytask-tab-01 {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mytask-tab-active-01 {
+  color: #7c3aed;
+  border-bottom: 2px solid #7c3aed;
+  font-weight: 700;
+}
+
+.mytask-tabs-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.mytask-tab-buttons-right {
+  display: flex;
+  gap: 0.75rem;
+}

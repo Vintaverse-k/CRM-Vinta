@@ -1,0 +1,132 @@
+.task-dashboard {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Sections */
+.task-section {
+  background: #fff;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA);
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.section-title01 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #625F6E;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+gap: 6px;
+  display: flex;
+  align-items: center;
+}
+/* Section Titles */
+.section-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #625F6E;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-left {
+  display: flex;
+  align-items: center;
+  gap: 6px; 
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-right {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+
+/* Subtitles */
+.task-subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #625F6E;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Task Card */
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA);
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.task-card span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.task-date {
+  color: #666;
+  font-size: 13px;
+}
+
+/* Tools Section */
+.tool-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA)
+}
+
+.tool-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.tool-info {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.tool-info h4 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.tool-info p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #555;
+}
+
+/* Universal icon class */
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/Tabs/Board.css";
 
-// ✅ Don't remove this! — Task Data
+
 const tasks = {
   todo: [
     {

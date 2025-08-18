@@ -21,7 +21,6 @@ const MyTask = () => {
     },
   ];
 
-  // Active tab ke hisaab se kaunsa component render karna hai
   const renderTabContent = () => {
     switch (activeTab) {
       case 0:
