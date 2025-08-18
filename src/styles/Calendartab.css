@@ -1,0 +1,219 @@
+/* === DASHBOARD & TASK BAR === */
+.dashboard__section--01 {
+  padding-left: 32px;
+  margin-left: -1175px;
+  margin-top: 91px;
+}
+
+.task__bar--001 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18px;
+  height: 60px;
+  margin-top: 20px;
+}
+
+.task__details__container--01 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.task__controls--001 {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.view__switcher--001 {
+  display: flex;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid #e6e8ea;
+}
+
+.view__btn--001 {
+  padding: 6px 12px;
+  border: 1px solid #e6e8ea;
+  border-radius: 6px;
+  background: white;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view__btn--001.active--01 {
+  background: #f3f3f3;
+  color: #030303;
+  border: 1px solid #e6e8ea;
+}
+
+.task__actions--001 {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.share__task__btn--001,
+.add__task__btn--001 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  height: 40px;
+  border-radius: 8px;
+  background: #f5f5f5;
+  border: 1px solid #e6e8ea;
+  cursor: pointer;
+}
+
+/* === CALENDAR === */
+.calendar__section--01 {
+  width: 880px; 
+  /* height: 724px;  */
+  margin-top: 20px;
+}
+
+.calendar__days__container--01 {
+  display: flex;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.backward__arrow--01 {
+  width: 52px;
+  border: 1px solid #e6e8ea;
+  background: #fff;
+  padding: 0 11px;
+  display: flex;
+  align-items: center;
+}
+
+.rounded--01 {
+  border-top-left-radius: 12px;
+}
+
+.sunday--01 {
+  background: #f4f4f4;
+  border: 1px solid #e6e8ea;
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.rounded-day--01 {
+  border-top-right-radius: 12px;
+}
+
+.main__container--01 {
+  display: flex;
+}
+
+/* === SIDEBAR === */
+.calendar__sidebar1--01 {
+  width: 52px;
+  height: 724px;
+  border: 1px solid #e6e8ea;
+  border-top: none;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+
+.time__list--01 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #625f6e;
+  text-align: center;
+}
+
+/* === CALENDAR GRID === */
+.calendar__main__content--01 {
+  display: grid;
+  grid-template-columns: repeat(7, 118.29px); 
+  grid-auto-rows: 200px; 
+}
+
+.meeting__holder--01 {
+  width: 118.29px;  
+  height: 200px;   
+  padding: 8px;
+  border-right: 1px solid #e6e8ea;
+  border-bottom: 1px solid #e6e8ea;
+  box-sizing: border-box;
+}
+
+.meeting__card--01 {
+  width: 102.29px;
+  height: 184px;
+  padding: 8px 12px;
+  border: 1px solid #e6e8ea;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  gap: 8px;
+  overflow: hidden;
+  text-align: center; 
+}
+
+/* .meeting__agenda--01{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-align: center; 
+} */
+
+.meeting__title--01,
+.meeting__priority--01 {
+  font-size: 12px;
+  font-weight: 500;
+}
+.meeting__agenda--01{
+font-size: 12px;
+font-weight: 400;
+color: #625F6E;
+}
+.meeting__time--01{
+  font-size: 12px;
+  font-weight: 400;
+  color: #625F6E;
+}
+
+.meeting__joiners--01 {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 4px; 
+  width: 80px;
+  height: 32px;
+}
+
+.joiner__avatar--01 {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%; 
+  object-fit: cover;
+}
+
+.joiner__more--01 {
+  width: 24px;
+  height: 24px;
+  background: #DED8FC; 
+  color: #593BF2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}

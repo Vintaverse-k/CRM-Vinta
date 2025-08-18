@@ -11,6 +11,7 @@ import Sidebar from "./Components/SideBar/Sidebar";
 import TopBar from "./Components/TopBar/TopBar";
 import MyTask from "./Components/sidebarpath/MyTasks";
 import Inbox from "./Components/sidebarpath/Inbox";
+import Calendar from "./Components/Calendar/Calendar";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/topbar" element={<TopBar />} />
         <Route path="/mytask" element={<MyTask/>} />
         <Route path="/inbox" element={<Inbox/>} />
+        <Route path="/calendar" element={<Calendar/>} />
         
       </Routes>
     </Router>
