@@ -60,9 +60,9 @@
   transition: background-color 0.2s ease;
 }
 .mytask-btn-outline {
-  background: white;
+  background: var(--Alpha-Neutral-alpha-4, #0202040A);
   color: #374151;
-  border-color: #d1d5db;
+  border: 1px solid var(--Alpha-Neutral-alpha-8, #02020414)
 }
 .mytask-btn-outline:hover {
   background-color: #f3f4f6;
