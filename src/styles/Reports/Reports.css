@@ -308,7 +308,7 @@ color: #625F6E;
 
 .mytask-chart-placeholder--01 {
     /* width: 697px; */
-  height: 258px;
+  height: 196px;
   border: 1px solid #e5e7eb;
   border-radius: 0.5rem;
   background-color: #f9fafb;
@@ -372,7 +372,7 @@ color: #625F6E;
 
 /* Task Completed */
 .mytask-task-completed--01 .mytask-progress-ring-wrapper--01 { position: relative; width: 192px; height: 192px; margin: 0 auto; }
-.mytask-progress-ring-wrapper--01 img { width: 154px; height: 154px; }
+.mytask-progress-ring-wrapper--01 img { width: 196px; height: 196px; }
 .mytask-progress-ring--01 { width: 192px; height: 192px; }
 .mytask-ring-bg--01 { fill: none; stroke: #e5e7eb; stroke-width: 4; }
 .mytask-ring-progress--01 { fill: none; stroke: #7c3aed; stroke-width: 4; stroke-linecap: round; }
@@ -417,9 +417,9 @@ color: #625F6E;
 .mytask-dot--01 { width: 12px; height: 12px; border-radius: 9999px; display: inline-block; }
 .mytask-dot-orange--01 { background-color: #f97316; }
 .mytask-activity-item--01 small { margin-left: auto; color: #625F6E; font-size: 10px; font-weight: 400; }
-.mytask-total-time-worked--01 { width: 355px; }
-.mytask-recent-activity--01 { width: 355px; }
-.mytask-task-completed--01 { width: 355px; }
+.mytask-total-time-worked--01 { width: 355px; height: 320px; }
+.mytask-recent-activity--01 { width: 355px;  height: 320px;}
+.mytask-task-completed--01 { width: 355px;  height: 320px;}
 .mytask-priority-breakdown--01 { width: 729px; height: 340px; }
 .mytask-status-overview--01 { width: 355px; height: 342px;   padding: 16px 16px 294px 16px;  border-radius: 12px;}
 
@@ -427,8 +427,7 @@ color: #625F6E;
 .mytask-buttons--01 {
   display: flex;
   gap: 20px;
-  justify-content: center; 
-  margin-bottom: 1rem;
+  justify-content: center;
 }
 /* Status Overview Grid */
 .mytask-status-grid--01 {
@@ -531,3 +530,13 @@ color: #625F6E;
     font-weight: 500;
     color: #020204;
 }
+.mytask-chart-placeholder--pi {
+  width: 697px;
+  height: 258px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px 16px 16px;
+}
+

@@ -131,7 +131,10 @@ const OverviewContent = () => {
                 </div>
               ))}
           </div>
-          <div className="mytask-chart-placeholder--01">Chart goes here</div>
+          <div className="mytask-chart-placeholder--pi">
+  <img src="assets/pichart.png" alt="Chart" className="chart-image" />
+</div>
+
         </div>
       </section>
 
@@ -200,12 +203,15 @@ const OverviewContent = () => {
             </button>
           </div>
           <div className="mytask-progress-ring-wrapper--01">
-            <img src="assets/chart.png" alt="Progress ring" />
+            <img src="assets/chart78%.png" alt="Progress ring" />
           </div>
           <div className="mytask-progress-breakdown--01">
-            <span>34%</span>
-            <span>28%</span>
-            <span>22%</span>
+            <span>
+              <img src="assets/purple.svg" alt="Icon" />To DO</span>
+            <span>
+              <img src="assets/blue.svg" alt="Icon" />In Progress</span>
+            <span>
+              <img src="assets/orange.svg" alt="Icon" />Done</span>
           </div>
         </div>
       </section>
