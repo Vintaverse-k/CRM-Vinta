@@ -173,6 +173,7 @@ margin-top: -16px;
   align-items: center;
   justify-content: space-between;
   padding: 2px 2px 0 2px;
+  border-bottom: 1px solid #eee;
 }
 
 .on-track-label {
@@ -196,6 +197,7 @@ margin-top: -16px;
   border-radius: 8px;
   cursor: pointer;
   margin-top: 16px;
+  margin-bottom: 16px;
   margin-right: 20px;
 }
 
