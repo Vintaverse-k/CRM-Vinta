@@ -13,6 +13,8 @@ import MyTask from "./Components/sidebarpath/MyTasks";
 import Inbox from "./Components/sidebarpath/Inbox";
 import Calendar from "./Components/Calendar/Calendar";
 import Reports from "./Components/sidebarpath/Reports";
+import Portfolio from "./Components/sidebarpath/Portfolio";
+import ProductManagement from "./Components/sidebarpath/ProductManagement";
 
 const App = () => {
   return (
@@ -31,6 +33,8 @@ const App = () => {
         <Route path="/inbox" element={<Inbox/>} />
         <Route path="/calendar" element={<Calendar/>} />
         <Route path="/reports" element={<Reports/>} />
+        <Route path="/portfolio" element={<Portfolio/>} />
+        <Route path="/productmanagement" element={<ProductManagement/>} />
         
       </Routes>
     </Router>

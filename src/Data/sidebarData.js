@@ -13,7 +13,7 @@ const sidebarData = {
     label: 'Project',
     addIcon: iconData.plus,
     items: [
-      { name: 'Product Management', dotColor: '#1FC3D8', path: '/product-management' },
+      { name: 'Product Management', dotColor: '#1FC3D8', path: '/productmanagement' },
       { name: 'Project Management', dotColor: '#7A5CFA', path: '/project-management' },
       { name: 'Netify Real Estate Website', dotColor: '#FD853A', path: '/netify-real-estate-website' },
       { name: 'My First portfolio', icon: iconData.folder, arrow: iconData.downArrow, path: '/my-first-portfolio' }

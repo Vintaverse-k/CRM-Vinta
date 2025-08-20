@@ -1,0 +1,366 @@
+.project-overview-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  width: auto;
+}
+
+.project-left {
+  width: 730px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA);
+  background: white;
+  border-radius: 12px;
+}
+
+.goals-box p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #625F6E;
+  line-height: 24px;
+}
+
+.project-right {
+  width: 354px;
+  height: 870px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA);
+}
+
+.card-one {
+  width: 322px;
+  /* height: 338px; */
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.card-two {
+  width: 322px;
+  height: 212px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.card-three {
+  width: 322px;
+  height: 184px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.status-card-title{
+    font-size: 16px;
+    font-weight: 500;
+    color: #020204;
+}
+.project-card,
+.status-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 6px;
+  color: #020204;
+}
+
+.section-subtitle {
+  color: #625F6E;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+.status-card-ptag {
+font-size: 16px;
+font-weight: 400;
+color: #625F6E;
+margin-top: -16px;
+}
+.roles-list {
+  display: flex;
+  gap: 20px;
+}
+
+.roles-list h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #625F6E;
+}
+
+.roles-list p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #625F6E;
+}
+
+.role-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+}
+
+.add-member {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Connected boxes */
+.goals-box {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  margin-top: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.portfolio-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.status {
+  margin-left: auto;
+  font-size: 12px;
+}
+
+.on-track {
+  color: #ff6a3d;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 2px 0 2px;
+}
+
+.on-track-label {
+  margin-left: 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #020204;
+}
+
+.update-status-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 16px;
+  margin-right: 20px;
+}
+
+/* Status Card common header */
+.status-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.status-card-titlewrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.status-card-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #020204;
+}
+.status-card-title01{
+    font-size: 16px;
+    font-weight: 500;
+    color: #020204;
+    margin-top: 16px;
+}
+.status-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+  margin-top: -20px;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.icon-btn:hover {
+  background: #f7f7f7;
+  opacity: 0.9;
+}
+
+.summary-title {
+  font-weight: 500;
+  margin: 6px 0 4px;
+  font-size: 16px;
+  color: #020204;
+}
+
+.summary-text {
+  color: #625F6E;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.status-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 13px;
+}
+
+.summary-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  background-color: #F8FAFB;
+}
+
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 140px;
+  height: 36px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 8px 16px 8px 0;
+
+}
+
+.toggle-btn:hover,
+.view-btn:hover {
+  background: #f7f7f7;
+}
+
+.msg-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+  margin: 8px 0 0;
+}
+
+/* Icons & Avatars */
+.icon-10 {
+  width: 10px;
+  height: 10px;
+}
+
+.icon-15 {
+  width: 18px;
+  height: 18px;
+}
+
+.icon-16 {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-18 {
+  width: 18px;
+  height: 18px;
+}
+
+.avatar-28 {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: -17px;
+}
+.status-footer span{
+    margin-bottom: -17px;
+}
+.avatar-36 {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
