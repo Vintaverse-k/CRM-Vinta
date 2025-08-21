@@ -1,80 +1,121 @@
+"use client";
 import React from "react";
-import "../../styles/Tabs/TaskAssignedContent.css";
+import "../../styles/Product/Product.css";
 
-const tasks = [
-  { name: "Develop High-fidelities UI", priority: "High", due: "23/05/2025" },
-  { name: "Real Estate website Design", priority: "Medium", due: "26/05/2025" },
-  { name: "Matex AI Meting assistance", priority: "Low", due: "25/05/2025" },
-  { name: "Triply AI Travel planner UI Design", priority: "High", due: "24/05/2025" },
-  { name: "Arto Focus Landing Page", priority: "Medium", due: "23/04/2025" },
-  { name: "Zuno Productivity Platform Design", priority: "High", due: "23/04/2025" },
-  { name: "Mova Workhub Landing", priority: "Low", due: "23/04/2025" },
-  { name: "Velo Productive UI Concept", priority: "Medium", due: "23/04/2025" },
-  { name: "Bexo Landing Experience", priority: "Low", due: "23/04/2025" },
-  { name: "Tumo Productive Landing page design", priority: "High", due: "23/04/2025" },
-  { name: "Navo Smart Landing Page", priority: "Medium", due: "23/04/2025" },
-];
-
-const TaskAssignedContent = () => {
+const ProjectBoard = () => {
   return (
-    <div className="board-wrapper">
-     <div className="top-bar">
-  <div className="left-controls">
-    <button className="btn-01">
-      <img src="assets/group.svg" alt="icon" className="btn-icon-01" />
-      Group: Status
-    </button>
-    <button className="btn-02">
-      <img src="assets/colum.svg" alt="icon" className="btn-icon-02" />
-      Columns
-    </button>
+    <div className="board-container-01">
+      {/* Top Section */}
+      <div className="task-source-01">
+        <h3>How are tasks being added to this <br />project?</h3>
+        <div className="source-item-01">
+          <img src="assets/manual.svg" alt="manual" className="icon-18" /> Manually
+        </div>
+        <div className="source-item-01">
+          <img src="assets/chrome.svg" alt="ai-ui-kit" className="icon-18" /> Matex AI Meeting Assistance UI Kit
+        </div>
+        <div className="source-item-01 add-source-01">
+          <img src="assets/intakeplus.svg" alt="add" className="icon-18" /> Intake source
+        </div>
+      </div>
+<div className="centered-image-container">
+  <img src="assets/leftrightarrow.png" alt="Centered Image" />
+</div>
+
+      {/* Sections Row */}
+      <div className="sections-row-01">
+        {/* To do */}
+        <div className="section-card-01">
+          <h4>Section
+             <img src="assets/3dot.svg" alt="ai-ui-kit" className="workflow-icons" />
+          </h4>
+          
+          <div className="title-tasks-row-01">
+            <div className="title-section-01">
+              <span className="dot purple"></span> To do
+            </div>
+            <p className="tasks-01">
+               <img src="assets/projectchek.svg" alt="manual" className="workflow-icons-01" />
+              3 incomplete tasks</p>
+          </div>
+          <div className="task-02">
+          <p>When tasks move to this section, do this automatically:</p>
+          </div>
+              <div className="automation-box-01">
+  <span>
+    <img src="assets/manual.svg" alt="arrow" className="workflow-icons" /> When Task is moved to a section 
+    <img src="assets/3dot.svg" alt="arrow" className="workflow-icons" />
+  </span>
+  <div className="status-row-01">
+    <p className="extra-text-01">Your left side text</p>
+    <p className="status-01">Active</p>
   </div>
-  <div className="right-controls">
-    <input
-      type="text"
-      placeholder="Search Task..."
-      className="search-input"
-    />
-    <button className="btn-03">All Project</button>
-    <button className="icon-btn">
-      <img src="assets/listbar.svg" alt="icon" className="btn-icon-02" />
-    </button>
+</div>
+          <div className="add-action-01">
+            <img src="assets/intakeplus.svg" alt="add-action" className="workflow-icons" /> More actions
+          </div>
+        </div>
+
+        {/* In Progress */}
+        <div className="section-card-01">
+          <h4>Section</h4>
+          <div className="title-tasks-row-01">
+            <div className="title-section-01">
+              <span className="dot purple"></span> In Progress
+            </div>
+            <p className="tasks-01">
+               <img src="assets/projectchek.svg" alt="manual" className="workflow-icons-01" />
+              incomplete tasks</p>
+          </div>
+
+          <div className="task-02">
+          <p>When tasks move to this section, do this automatically:</p>
+          </div>
+             <div className="automation-box-01">
+  <span>
+    <img src="assets/manual.svg" alt="arrow" className="workflow-icons" /> When Task is moved to a section
+
+    <img src="assets/3dot.svg" alt="arrow" className="workflow-icons" />
+  </span>
+  <div className="status-row-01">
+    <p className="extra-text-01">Your left side text</p>
+    <p className="status-01">Active</p>
+  </div>
+</div>
+          <div className="add-action-01">
+            <img src="assets/intakeplus.svg" alt="add-action" className="workflow-icons" /> More actions
+          </div>
+        </div>
+
+        {/* Done */}
+        <div className="section-card-01">
+          <h4>Section</h4>
+          <div className="title-tasks-row-01">
+            <div className="title-section-01">
+              <span className="dot blue"></span> Done
+            </div>
+            <p className="tasks-01">
+              <img src="assets/projectchek.svg" alt="manual" className="workflow-icons-01" />
+              3 incomplete tasks</p>
+          </div>
+
+          <div className="task-02">
+          <p>When tasks move to this section, do this automatically:</p>
+          </div>
+         <div className="automation-box-01">
+  <span>
+    <img src="assets/manual.svg" alt="arrow" className="workflow-icons" /> When Task is moved to a section
+
+    <img src="assets/3dot.svg" alt="arrow" className="workflow-icons" />
+  </span>
+  <div className="status-row-01">
+    <p className="extra-text-01">Your left side text</p>
+    <p className="status-01">Active</p>
   </div>
 </div>
 
-      {/* Task Table Section */}
-      <div className="board-container">
-        <div className="board-column full-width">
-          <div className="board-column-header-01">
-            <div className="left-header">
-              <img src="assets/todoicon.svg" alt="list" />
-              <h3>To do</h3>
-            </div>
-            <div className="right-header">
-              <button className="btnnn">
-                <img src="assets/plussign.svg" alt="list" />
-              </button>
-            </div>
-          </div>
-
-          <div className="task-table-wrapper">
-            <div className="task-table-header">
-              <div className="checkbox-col"><input type="checkbox" /></div>
-              <div className="task-name-col">Task Name</div>
-              <div className="priority-col">Priority</div>
-              <div className="due-col">Due Date</div>
-              <div className="menu-col"></div>
-            </div>
-
-            {tasks.map((task, idx) => (
-              <div className="task-table-row" key={idx}>
-                <div className="checkbox-col"><input type="checkbox" /></div>
-                <div className="task-name-col">{task.name}</div>
-                <div className={`priority-col ${task.priority.toLowerCase()}`}>{task.priority}</div>
-                <div className="due-col">{task.due}</div>
-                <div className="menu-col">⋮</div>
-              </div>
-            ))}
+          <div className="add-action-01">
+            <img src="assets/intakeplus.svg" alt="add-action" className="workflow-icons" /> More actions
           </div>
         </div>
       </div>
@@ -82,4 +123,4 @@ const TaskAssignedContent = () => {
   );
 };
 
-export default TaskAssignedContent;
+export default ProjectBoard;

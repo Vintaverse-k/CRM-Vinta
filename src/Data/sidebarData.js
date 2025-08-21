@@ -23,7 +23,7 @@ const sidebarData = {
     label: 'Team',
     addIcon: iconData.plus,
     items: [
-      { name: 'All Team', icon: iconData.team, arrow: iconData.downArrow, path: '/all-team' },
+      { name: 'All Team', icon: iconData.team, arrow: iconData.downArrow, path: '/allteam' },
       { name: 'Product Team', dotColor: '#7A5CFA', arrow: iconData.downArrow, path: '/product-team' }
     ]
   },

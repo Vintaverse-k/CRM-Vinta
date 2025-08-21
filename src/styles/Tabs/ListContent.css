@@ -7,6 +7,8 @@
 }
 
 .top-bar {
+  width: 1104px;
+  margin-left: -28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -101,6 +103,8 @@ height: 40px;
 }
 
 .section {
+  width: 1104px;
+  margin-left: -28px;
   background: white;
   border-radius: 12px;
   border: 1px solid #eaeaea;

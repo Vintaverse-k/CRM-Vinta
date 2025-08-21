@@ -1,7 +1,6 @@
 .project-overview-container {
   display: flex;
   gap: 20px;
-  padding: 20px;
   width: auto;
 }
 
@@ -73,15 +72,30 @@
   border-radius: 12px;
   padding: 16px;
 }
-
-.section-title {
-  font-size: 18px;
+.section-titles01 {
+  font-size: 16px;
   font-weight: 500;
-  margin: 0 0 6px;
-  color: #020204;
+  color: #625F6E;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+gap: 6px;
+  display: flex;
+  align-items: center;
+}
+.section-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #625F6E;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.section-subtitle {
+.section-subtitle01 {
   color: #625F6E;
   font-size: 16px;
   font-weight: 400;
@@ -127,7 +141,6 @@ margin-top: -16px;
   user-select: none;
 }
 
-/* Connected boxes */
 .goals-box {
   border: 1px solid #eee;
   border-radius: 10px;
@@ -135,7 +148,23 @@ margin-top: -16px;
   text-align: center;
 }
 
+.link-btn-01 {
+  width: 100%;
+  max-width: 682px;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  margin-top: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: none;
+}
 .link-btn {
+  width: 682px;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -143,7 +172,6 @@ margin-top: -16px;
   margin-top: 8px;
   border-radius: 8px;
   cursor: pointer;
-  border: none;
   background: none;
 }
 
@@ -281,7 +309,7 @@ margin-top: -16px;
 .summary-actions {
   display: flex;
   gap: 10px;
-  margin-top: 12px;
+  margin-top: 34px;
   background-color: #F8FAFB;
 }
 
@@ -329,7 +357,6 @@ margin-top: -16px;
   margin: 8px 0 0;
 }
 
-/* Icons & Avatars */
 .icon-10 {
   width: 10px;
   height: 10px;
@@ -365,4 +392,264 @@ margin-top: -16px;
   height: 36px;
   border-radius: 50%;
   object-fit: cover;
+}
+.avatar-28 {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.status-icon-01{
+  width: 5px;
+  height: 5px;
+  object-fit: contain;
+}
+
+
+
+
+
+.board-container-01 {
+  height: 784px;
+  background-image: url('assets/dotsgroup.png'); 
+  background-size: cover;       
+  background-position: center;  
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.task-source-01 {
+  width: 420px;
+  height: 276px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  text-align: center;
+margin-top: 20px;
+top: 40px;
+left: 342px;
+border-radius: 12px;
+border-width: 1px;
+gap: 16px;
+opacity: 1;
+padding: 16px;
+}
+
+.task-source-01 h3 {
+  font-size: 16px;
+  font-weight:500;
+  color: #020204;
+  margin-bottom: 20px;
+}
+
+.source-item-01 {
+  border: 1px solid var(--Stroke-Primary, #E6E8EA);
+  display: flex;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #625F6E;
+  margin-top: 16px;
+}
+
+.add-source-01 {
+  color: #625F6E;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sections-row-01 {
+  display: flex;
+  gap: 40px;
+}
+
+.section-card-01 {
+  width: 320px;
+  height: 284px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section-card-01 h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #020204;
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+
+.title-section-01 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #020204;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.purple {
+  background: #9b5de5;
+}
+
+.blue {
+  background: #4dabf7;
+}
+
+.tasks-01 {
+  font-size: 13px;
+  color: #666;
+  margin: 4px 0 12px 0;
+}
+
+.automation-box-01 {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 68px;
+}
+.automation-box-01 span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap; 
+}
+
+.status-row-01 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+
+.extra-text-01 {
+  font-size: 12px;
+  color: #625F6E; 
+  font-weight: 400;
+  margin: 0;
+}
+
+.status-01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 24px;
+  background: #593BF205;
+  border: 1px solid #593BF20A;
+  border-radius: 8px;
+  color: #593BF2;
+  font-weight: 500;
+  margin: 0;
+}
+
+.add-action-01 {
+  width: 288px;
+  height: 40px;
+  box-sizing: border-box; 
+  display: flex;
+  align-items: center;   
+  gap: 8px;
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+  margin-top: 8px;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA);
+  border-radius: 8px;
+  flex-shrink: 0; 
+}
+
+.workflow-icons {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+.section-card-01 {
+  position: relative; 
+}
+
+.title-tasks-row-01 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.tasks-01 {
+  width: 133px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #0202040A;
+  background-color: #02020405;
+  font-size: 12px;
+  font-weight: 400;
+  color: #625F6E;
+  margin: 0;
+  padding-top: 4px;
+  border-radius: 5px;
+  gap: 5px;
+}
+.task-02 p{
+  font-size: 14px;
+  font-weight: 400;
+  color: #625F6E;
+}
+.workflow-icons-01{
+  width: 14px;
+  height: 14px;
+  display: flex;
+}
+.centered-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.centered-image-container img {
+  width: 750px;
+  margin-top: -35px;
+  height: auto;
+}
+
+
+.mytask-title-101{
+  display: flex;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #020204;
+  margin: 0;
 }

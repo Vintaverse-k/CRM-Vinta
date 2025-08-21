@@ -8,7 +8,7 @@ import Calendar from "../ProductManagement/Calendar";
 import Workflow from "../ProductManagement/Workflow";
 
 const ProductManagement = () => {
-  const [activeTab, setActiveTab] = useState(0); 
+  const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
     { label: "Overview", icon: "assets/portoverview.svg" },
@@ -17,7 +17,7 @@ const ProductManagement = () => {
     { label: "Calendar", icon: "assets/portcalendar.svg" },
     {
       label: "Workflow",
-      icon: "assets/portworkflow.svg"
+      icon: "assets/portworkflow.svg",
     },
   ];
 
@@ -47,8 +47,30 @@ const ProductManagement = () => {
         {/* Header */}
         <header className="mytask-header">
           <div className="mytask-header-left">
-            <h1 className="mytask-title">Project Management</h1>
-            <p className="mytask-subtitle">Coordinate tasks, teams, and timelines to successfully deliver projects.
+            <h1 className="mytask-title-101">
+              <img
+                src="/assets/productlogo.svg"
+                alt="Add Member"
+                className="icon-09"
+              />
+              Project Management
+              <img
+              src="/assets/downarrow.svg"
+              alt="Add Member"
+              className="icon-09"
+            />
+
+
+            <img
+              src="/assets/productstar.svg"
+              alt="Add Member"
+              className="icon-09"
+            />
+            On Track
+            </h1>
+            <p className="mytask-subtitle">
+              Coordinate tasks, teams, and timelines to successfully deliver
+              projects.
             </p>
           </div>
           <div className="mytask-header-buttons">
@@ -74,7 +96,7 @@ const ProductManagement = () => {
         </nav>
 
         {/* Tab Content */}
-        <section className="mytask-tab-content">{renderTabContent()}</section>
+        <section className="mytask-tab-content01">{renderTabContent()}</section>
       </main>
     </div>
   );

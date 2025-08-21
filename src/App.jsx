@@ -15,6 +15,7 @@ import Calendar from "./Components/Calendar/Calendar";
 import Reports from "./Components/sidebarpath/Reports";
 import Portfolio from "./Components/sidebarpath/Portfolio";
 import ProductManagement from "./Components/sidebarpath/ProductManagement";
+import AllTeam from "./Components/sidebarpath/AllTeam";
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/reports" element={<Reports/>} />
         <Route path="/portfolio" element={<Portfolio/>} />
         <Route path="/productmanagement" element={<ProductManagement/>} />
+        <Route path="/allteam" element={<AllTeam/>} />
         
       </Routes>
     </Router>

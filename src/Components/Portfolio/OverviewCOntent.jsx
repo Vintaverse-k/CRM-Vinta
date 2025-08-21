@@ -6,7 +6,7 @@ const taskData = {
   todo: [
     {
       name: "Omail - Email Marketing website Design",
-      icon: "assets/omail.svg",
+      icon: "assets/Omail.svg",
       startDate: "28/04/2025",
       dueDate: "23/05/2025",
       progress: 90,
@@ -243,8 +243,8 @@ const TaskRow = ({ task }) => {
 
 const TaskSection = ({ title, data }) => {
   return (
-    <div className="section">
-      <div className="section-title">
+    <div className="sections-01">
+      <div className="section-titles-01">
         <img
           src={title === "To do" ? "assets/todo.svg" : "assets/inprogress.svg"}
           alt={`${title} icon`}
@@ -280,11 +280,11 @@ const TaskSection = ({ title, data }) => {
 };
 
 const ListContent = () => {
-  const repeatedTodoTasks = [...taskData.todo, ...taskData.todo]; // ✅ Minimal change here
+  const repeatedTodoTasks = [...taskData.todo, ...taskData.todo]; 
 
   return (
     <div className="list-container">
-      <div className="top-bar">
+      <div className="top-bar-011">
         <div className="left-controls">
           <input
             type="text"
@@ -294,7 +294,7 @@ const ListContent = () => {
         </div>
         <div className="right-controls">
           <button className="btn-01">All Projects</button>
-          <button className="icon-btn">
+          <button className="icon-btnn">
             <img src="assets/listbar.svg" alt="icon" className="btn-icon-02" />
           </button>
         </div>

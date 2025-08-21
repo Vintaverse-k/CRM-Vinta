@@ -9,13 +9,14 @@ const ProjectOverview = () => {
       <div className="project-left">
         {/* Project Description */}
         <div className="project-card">
-          <h3 className="section-title">Project Description</h3>
-          <p className="section-subtitle">What’s this project about?</p>
+          <h3 className="section-title-01">
+            Project Description</h3>
+          <p className="section-subtitle01">What’s this project about?</p>
         </div>
 
         {/* Project Roles */}
         <div className="project-card">
-          <h3 className="section-title">Project Roles</h3>
+          <h3 className="section-title-01">Project Roles</h3>
           <div className="roles-list">
             <div className="role-item add-member">
               <img src="/assets/productplus.svg" alt="Add Member" className="icon-16" />
@@ -47,10 +48,10 @@ const ProjectOverview = () => {
 
         {/* Connected Goals */}
         <div className="project-card">
-          <h3 className="section-title">Connected goals</h3>
+          <h3 className="section-title-01">Connected goals</h3>
           <div className="goals-box">
             <p>Connect or create a goal to link this project<br /> to a larger purpose.</p>
-            <button className="link-btn">
+            <button className="link-btn-01">
               <img src="/assets/stars.svg" alt="Goal" className="icon-16" />
               <span>Add Goals</span>
             </button>
@@ -59,17 +60,20 @@ const ProjectOverview = () => {
 
         {/* Connected Portfolios */}
         <div className="project-card">
-          <h3 className="section-title">Connected Portfolios</h3>
+          <h3 className="section-title-01">Connected Portfolios</h3>
           <div className="portfolio-box">
             <img src="/assets/Folder.svg" alt="Portfolio" className="icon-18" />
             <span>My Portfolio</span>
-            <span className="status on-track">On track</span>
+            <span className="status on-track">On track 
+              <img src="/assets/img1.png" alt="Portfolio" className="icon-18" />
+              <img src="/assets/3dot.svg" alt="Portfolio" className="icon-18" />
+            </span>
           </div>
         </div>
 
         {/* Milestone */}
         <div className="project-card">
-          <h3 className="section-title">Milestone</h3>
+          <h3 className="section-title-01">Milestone</h3>
           <button className="link-btn">
             <img src="/assets/blackstars.svg" alt="Milestone" className="icon-16" />
             <span>Add Milestone</span>

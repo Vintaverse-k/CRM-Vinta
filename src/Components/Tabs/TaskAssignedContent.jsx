@@ -17,8 +17,8 @@ const tasks = [
 
 const TaskAssignedContent = () => {
   return (
-    <div className="board-wrapper">
-      <div className="top-bar">
+     <div className="list-container">
+       <div className="top-bar">
         <div className="top-left-buttons">
           <button className="btnn">
             <img src="assets/group.svg" alt="group" /> Group: Status
@@ -35,7 +35,6 @@ const TaskAssignedContent = () => {
           </button>
         </div>
       </div>
-
       {/* Task Table Section */}
       <div className="board-container">
         <div className="board-column full-width">

@@ -208,7 +208,7 @@ const TaskRow = ({ task }) => (
 const TaskSection = ({ title, data }) => {
   return (
     <div className="section">
-      <div className="section-title">
+      <div className="section-titles01">
         <img
           src={title === "To do" ? "assets/todo.svg" : "assets/inprogress.svg"}
           alt={`${title} icon`}
@@ -246,29 +246,24 @@ const TaskSection = ({ title, data }) => {
 const ListContent = () => {
   return (
     <div className="list-container">
-      <div className="top-bar">
-        <div className="left-controls">
-          <button className="btn-01">
-            <img src="assets/group.svg" alt="icon" className="btn-icon-01" />
-            Group: Status
+       <div className="top-bar">
+        <div className="top-left-buttons">
+          <button className="btnn">
+            <img src="assets/group.svg" alt="group" /> Group: Status
           </button>
-          <button className="btn-02">
-            <img src="assets/colum.svg" alt="icon" className="btn-icon-02" />
-            Columns
+          <button className="btnn">
+            <img src="assets/colum.svg" alt="columns" /> Columns
           </button>
         </div>
-        <div className="right-controls">
-          <input
-            type="text"
-            placeholder="Search Task..."
-            className="search-input"
-          />
-          <button className="btn-03">All Project</button>
-          <button className="icon-btn">
-            <img src="assets/listbar.svg" alt="icon" className="btn-icon-02" />
+        <div className="top-right-buttons">
+          <input type="text" className="search-input" placeholder="Search Task..." />
+          <button className="btnn">All Project</button>
+          <button className="icon-btnn">
+            <img src="assets/listbar.svg" alt="list" />
           </button>
         </div>
       </div>
+
 
       <TaskSection title="To do" data={taskData.todo} />
       <TaskSection title="In Progress" data={taskData.inProgress} />

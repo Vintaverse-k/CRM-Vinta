@@ -7,7 +7,7 @@ const taskData = {
     {
       name: "Develop High-fidelities UI",
       priority: "Medium",
-      startDate: "28/04/2025",
+      startDate: "Varun walia",
       dueDate: "23/05/2025",
       progress: 90,
       status: "In Review",
@@ -16,7 +16,7 @@ const taskData = {
     {
       name: "Real Estate website Design",
       priority: "Low",
-      startDate: "28/04/2025",
+      startDate: "Leisha",
       dueDate: "26/05/2025",
       progress: 30,
       status: "Reviewed",
@@ -25,7 +25,7 @@ const taskData = {
     {
       name: "Matex AI Meting assistance",
       priority: "Medium",
-      startDate: "27/04/2025",
+      startDate: "Manoj Kumar",
       dueDate: "25/05/2025",
       progress: 40,
       status: "In Review",
@@ -34,7 +34,7 @@ const taskData = {
     {
       name: "Triply AI Travel planner UI Design",
       priority: "High",
-      startDate: "27/04/2025",
+      startDate: "Shubham",
       dueDate: "24/05/2025",
       progress: 30,
       status: "Reviewed",
@@ -43,7 +43,7 @@ const taskData = {
     {
       name: "Tumo Productive Landing page",
       priority: "Low",
-      startDate: "26/04/2025",
+      startDate: "Harshit",
       dueDate: "23/04/2025",
       progress: 20,
       status: "In Review",
@@ -54,7 +54,7 @@ const taskData = {
     {
       name: "Taskito- Task management web",
       priority: "High",
-      startDate: "26/04/2025",
+      startDate: "Varun walia",
       dueDate: "26/05/2025",
       progress: 70,
       status: "In Review",
@@ -63,7 +63,7 @@ const taskData = {
     {
       name: "Cliency client management web",
       priority: "High",
-      startDate: "25/04/2025",
+      startDate: "Manoj Kumar",
       dueDate: "25/05/2025",
       progress: 45,
       status: "In Review",
@@ -72,7 +72,7 @@ const taskData = {
     {
       name: "Cognify - AI hiring management",
       priority: "High",
-      startDate: "24/04/2025",
+      startDate: "Leisha",
       dueDate: "24/05/2025",
       progress: 60,
       status: "In Review",
@@ -81,7 +81,7 @@ const taskData = {
     {
       name: "Orbit - web3 website design",
       priority: "High",
-      startDate: "23/04/2025",
+      startDate: "Shubham",
       dueDate: "24/05/2025",
       progress: 40,
       status: "In Review",
@@ -89,9 +89,16 @@ const taskData = {
     },
   ],
 };
+const userImages = {
+  "Varun walia": "/assets/img1.png",
+  "Leisha": "/assets/img2.png",
+  "Manoj Kumar": "/assets/img1.png",
+  "Shubham": "/assets/img1.png",
+  "Harshit": "/assets/img1.png",
+};
 
 const PriorityTag = ({ level }) => {
-  const iconSrc = "assets/cflag.svg"; 
+  const iconSrc = "assets/cflag.svg";
 
   return (
     <span className={`priority-tag ${level.toLowerCase()}`}>
@@ -101,11 +108,24 @@ const PriorityTag = ({ level }) => {
   );
 };
 
-const AvatarGroup = ({ count }) => {
+const AvatarGroup = ({ count, names }) => {
   return (
     <div className="avatar-group">
       {Array.from({ length: count }).map((_, i) => (
-        <div key={i} className="avatar"></div>
+        <div
+          key={i}
+          className="avatar-item"
+          style={{ display: "flex", alignItems: "center", gap: "6px" }}
+        >
+          <img
+            src={userImages[names[i]] || "/assets/default.jpg"}
+            alt={`User ${names[i]}`}
+            className="avatar-28"
+          />
+          <span style={{ fontSize: "14px", color: "#625F6E" }}>
+            {names[i]}
+          </span>
+        </div>
       ))}
     </div>
   );
@@ -145,30 +165,58 @@ const ProgressBar = ({ percent }) => {
   const offset = circumference - (progress / 100) * circumference;
 
   return (
-    <div className="progress-circle-wrapper">
-      <svg height={radius * 2} width={radius * 2}>
-        <circle
-          stroke="#E6E6E6"
-          fill="transparent"
-          strokeWidth={stroke}
-          r={normalizedRadius}
-          cx={radius}
-          cy={radius}
-        />
-        <circle
-          stroke="#722ED1"
-          fill="transparent"
-          strokeWidth={stroke}
-          strokeLinecap="round"
-          strokeDasharray={circumference}
-          strokeDashoffset={offset}
-          r={normalizedRadius}
-          cx={radius}
-          cy={radius}
-          className="progress-ring"
-        />
-      </svg>
-      <div className="progress-circle-text">{Math.round(progress)}%</div>
+    <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+      <div
+        className="progress-circle-wrapper"
+        style={{
+          position: "relative",
+          width: radius * 2,
+          height: radius * 2,
+        }}
+      >
+        <svg height={radius * 2} width={radius * 2}>
+          <circle
+            stroke="#E6E6E6"
+            fill="transparent"
+            strokeWidth={stroke}
+            r={normalizedRadius}
+            cx={radius}
+            cy={radius}
+          />
+          <circle
+            stroke="#722ED1"
+            fill="transparent"
+            strokeWidth={stroke}
+            strokeLinecap="round"
+            strokeDasharray={circumference}
+            strokeDashoffset={offset}
+            r={normalizedRadius}
+            cx={radius}
+            cy={radius}
+            className="progress-ring"
+          />
+        </svg>
+
+        {/* Text inside the circle */}
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            fontSize: "10px",
+            fontWeight: "bold",
+            color: "#722ED1",
+          }}
+        >
+          {Math.round(progress)}%
+        </div>
+      </div>
+
+      {/* Text next to the circle */}
+      <span style={{ fontSize: "14px", color: "#625F6E" }}>
+        {Math.round(progress)}% Completed
+      </span>
     </div>
   );
 };
@@ -182,20 +230,18 @@ const TaskRow = ({ task }) => (
     <td>
       <PriorityTag level={task.priority} />
     </td>
-    <td>{task.startDate}</td>
     <td>
-      <AvatarGroup count={task.assignedTo} />
+      <AvatarGroup count={1} names={[task.startDate]} />
     </td>
     <td>{task.dueDate}</td>
     <td className="status-cell">
       <img
         src={"assets/Stop.svg"}
         alt="status icon"
-        className="status-icon"
+        className="status-icon-01"
       />
       <span className="status-dot">{task.status}</span>
     </td>
-
     <td>
       <ProgressBar percent={task.progress} />
     </td>
@@ -208,7 +254,7 @@ const TaskRow = ({ task }) => (
 const TaskSection = ({ title, data }) => {
   return (
     <div className="section">
-      <div className="section-title">
+      <div className="section-titles01">
         <img
           src={title === "To do" ? "assets/todo.svg" : "assets/inprogress.svg"}
           alt={`${title} icon`}
@@ -225,7 +271,6 @@ const TaskSection = ({ title, data }) => {
             </th>
             <th>Task Name</th>
             <th>Priority</th>
-            <th>Started Date</th>
             <th>Assigned To</th>
             <th>Due Date</th>
             <th>Status</th>
@@ -246,12 +291,6 @@ const TaskSection = ({ title, data }) => {
 const ListContent = () => {
   return (
     <div className="list-container">
-      <div className="top-bar">
-        <div className="left-controls">
-         
-          </div>
-              </div>
-
       <TaskSection title="To do" data={taskData.todo} />
       <TaskSection title="In Progress" data={taskData.inProgress} />
     </div>

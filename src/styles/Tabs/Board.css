@@ -1,5 +1,5 @@
 .board-container {
-  
+  margin-left: -28px;
   display: flex;
   gap: 20px;
   width: 1104px;
@@ -12,8 +12,6 @@
   background: var(--Background-Surface-Neutral-Lv2, #F7F6F9);
   border-radius: 10px;
   padding: 15px;
-  /* min-width: 280px; */
-  /* flex: 0 0 auto; */
 }
 
 .board-column h3 {
