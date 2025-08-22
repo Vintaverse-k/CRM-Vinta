@@ -1,0 +1,113 @@
+.mytask-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  color: #1f2937;
+}
+
+.mytask-avatar {
+  width: 20px;
+  height: 20px;
+}
+
+.mytask-main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #a78bfa transparent;
+  margin-top: 20px;
+  margin-left: -1170px; /* This seems very specific; adjust as needed */
+}
+
+.mytask-main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mytask-main-content::-webkit-scrollbar-thumb {
+  background-color: #a78bfa;
+  border-radius: 9999px;
+}
+
+/* Header */
+.mytask-header {
+  margin-top: 20px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mytask-title-101 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #020204;
+  margin: 0;
+}
+
+.mytask-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #625f6e;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+/* Header Buttons */
+.mytask-header-buttons button {
+  margin-left: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease;
+}
+
+.mytask-btn-outline {
+  background: rgba(2, 2, 4, 0.04);
+  color: #374151;
+  border: 1px solid rgba(2, 2, 4, 0.08);
+}
+
+.mytask-btn-outline:hover {
+  background-color: #f3f4f6;
+}
+
+.mytask-btn-primary {
+  background-color: #7c3aed;
+  color: white;
+}
+
+.mytask-btn-primary:hover {
+  background-color: #6d28d9;
+}
+
+/* Tabs */
+.mytask-tabs {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 0.75rem;
+  font-weight: 500;
+  color: #020204;
+  margin-bottom: 2rem;
+}
+
+.mytask-tab {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: inherit;
+}
+
+.mytask-tab-active {
+  color: #7c3aed;
+  border-bottom: 2px solid #7c3aed;
+  font-weight: 700;
+}

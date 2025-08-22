@@ -13,7 +13,7 @@ const AllTeam = () => {
         {/* Header */}
         <header className="allteam-header">
           <div className="allteam-header-left">
-            <h1 className="allteam-title">Portfolio</h1>
+            <h1 className="allteam-title">All Team</h1>
             <p className="allteam-subtitle">
                 View and manage all team members in one place.
             </p>

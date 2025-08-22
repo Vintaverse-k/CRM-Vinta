@@ -1,0 +1,195 @@
+/* ListContent Component Styles */
+.list-container {
+  padding: 30px;
+  font-size: 14px;
+  color: #1f1f1f;
+}
+
+.top-bar-011 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  white-space: nowrap;
+  margin-bottom: 24px;
+  height: 72px;
+}
+
+.left-controls,
+.right-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-01 {
+  background: var(--Alpha-Neutral-alpha-4, #0202040A);
+  width: 149px;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #625F6E;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-01:hover {
+  background: #f0f0f0;
+}
+
+.search-input {
+  background: var(--Alpha-Neutral-alpha-4, #0202040A);
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  min-width: 232px;
+}
+
+.sections-01 {
+  width: 1104px;
+  margin-left: -32px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+  margin-bottom: 24px;
+  padding: 20px;
+}
+
+.section-titles-01 {
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.section-dot-img {
+  width: 18px;
+  height: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  text-align: left;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+th,
+td {
+  padding: 14px 10px;
+  vertical-align: middle;
+}
+
+tbody tr {
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Priority */
+.priority-tag {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.priority-tag.high {
+  background: #f5f0ff;
+  color: #9254de;
+}
+
+.priority-tag.medium {
+  background: #fff2e8;
+  color: #fa8c16;
+}
+
+.priority-tag.low {
+  background: #fefbe6;
+  color: #fadb14;
+}
+
+.priority-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+/* Status */
+.status-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-dot {
+  font-weight: 500;
+}
+
+/* Progress */
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.progress-circle-wrapper {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circle-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
+.progress-ring {
+  transition: stroke-dashoffset 0.5s ease;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.progress-circle-text {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 600;
+  color: #722ED1;
+}
+
+.progress-label {
+  font-size: 12px;
+  color: #595959;
+}
+
+/* Icons */
+.icon-more {
+  font-size: 18px;
+  color: #8c8c8c;
+  cursor: pointer;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}

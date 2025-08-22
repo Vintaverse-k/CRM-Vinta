@@ -1,0 +1,259 @@
+.overview {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Left & Right Section */
+.overview-left {
+  width: 729px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.overview-right {
+  width: 355px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Common Card */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA);
+}
+
+.card-subtitle-11{
+    font-size: 14px;
+    font-weight: 500;
+    color: #625F6E;
+}
+/* Left Side */
+.card-left-1 {
+    width: 729px;
+  height: 104px;
+}
+.card-left-2 {
+  height: 154px;
+}
+.card-left-3 {
+  height: 167px;
+}
+.card-left-4 {
+  height: 299px;
+}
+
+/* Right Side */
+.card-right-1 {
+  height: 164px;
+}
+.card-right-2 {
+  height: 320px;
+}
+.member01{
+    font-size: 18px;
+    font-weight: 500;
+    color: #020204;
+}
+/* Text */
+.card-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #625F6E;
+  margin: 0 0 6px;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #625F6E;
+}
+.card-header{
+    margin-top: -20px;
+    border-bottom: 1px solid var(--Stroke-Primary, #E6E8EA);
+    font-size: 18px;
+    font-weight: 500;
+    color: #020204;
+}
+.path {
+  font-size: 16px;
+  color: #625F6E;
+  font-weight: 500;
+}
+
+.desc {
+  font-size: 16px;
+  font-weight: 400;
+  color: #625F6E;
+  /* margin: 2px 0; */
+}
+
+.priority {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.time {
+  font-size: 11px;
+  color: #aaa;
+  float: right;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-subtasks {
+    width: 164px;
+    height: 40px;
+  font-size: 12px;
+  border: none;
+  background: #f1f3f6;
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.bookmarks {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.bookmark {
+    background-color: #ffff;
+    height: 54px;
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--Alpha-Neutral-alpha-8, #02020414);
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.bookmark-title {
+    font-size: 14px;
+    color: #625F6E;
+  font-weight: 500;
+  margin: 0;
+}
+
+.bookmark-sub {
+  font-size: 12px;
+  font-weight: 400;
+  color: #625F6E;
+  margin: 2px 0 0;
+}
+
+/* Members Section */
+.avatars {
+  font-size: 22px;
+  margin: 8px 0;
+}
+
+.note {
+    display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  color: #625F6E;
+  background-color: #EEEBFE;
+  border-radius: 8px;
+  height: 36px;
+  padding: 8px;
+  border: 1px solid var(--Primary-100, #DED8FC)
+}
+
+/* Online Members */
+.member {
+    padding: 12px;
+    border: 1px solid var(--Stroke-Primary, #E6E8EA);
+    border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 6px 0;
+}
+
+.member img {
+  width: 44.67px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  color: #020204;
+}
+
+.role {
+  font-size: 12px;
+  color: #625F6E
+  color #625F6E ;
+  margin: 0;
+}
+.mini-card {
+    height: 83px;
+    border: 1px solid var(--Stroke-Primary, #E6E8EA);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mini-card .path {
+    margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #625F6E;
+}
+
+.mini-card .card-subtitle .card-subtitles .card-subtitless {
+  font-size: 16px;
+  font-weight: 500;
+  color: #625F6E;
+}
+.card-subtitle{
+    gap: 12px;
+    display: flex;
+}
+.card-subtitles{
+    display: flex;
+    gap: 12px;
+    margin-top: -15px;
+}
+.card-subtitless{
+    margin-top: 15px;
+}
+.path{
+    margin-top: 12px;
+}
+.card-left-4 .path-subtitle-box {
+    height: 84px;
+    border: 1px solid var(--Stroke-Primary, #E6E8EA);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.card-left-4 .path-subtitle-box .path {
+  font-size: 15px;
+  font-weight: 500;
+  color: #625F6E;
+  margin: 0;
+}
+
+.card-left-4 .path-subtitle-box .card-subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #625F6E;
+  margin: 2px 0 0;
+}

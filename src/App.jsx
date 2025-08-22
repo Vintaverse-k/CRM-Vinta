@@ -16,6 +16,7 @@ import Reports from "./Components/sidebarpath/Reports";
 import Portfolio from "./Components/sidebarpath/Portfolio";
 import ProductManagement from "./Components/sidebarpath/ProductManagement";
 import AllTeam from "./Components/sidebarpath/AllTeam";
+import ProductTeam from "./Components/sidebarpath/ProductTeam";
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/portfolio" element={<Portfolio/>} />
         <Route path="/productmanagement" element={<ProductManagement/>} />
         <Route path="/allteam" element={<AllTeam/>} />
+        <Route path="/productteam" element={<ProductTeam/>} />
         
       </Routes>
     </Router>

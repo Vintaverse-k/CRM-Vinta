@@ -64,7 +64,11 @@ const ProjectOverview = () => {
           <div className="portfolio-box">
             <img src="/assets/Folder.svg" alt="Portfolio" className="icon-18" />
             <span>My Portfolio</span>
-            <span className="status on-track">On track 
+            <span className="status on-track">
+  <span className="label">
+    
+            <img src="/assets/orangedot.svg" alt="Portfolio" className="icon-20" />
+    On track</span>
               <img src="/assets/img1.png" alt="Portfolio" className="icon-18" />
               <img src="/assets/3dot.svg" alt="Portfolio" className="icon-18" />
             </span>
@@ -100,21 +104,24 @@ const ProjectOverview = () => {
           </div>
 
           <p className="summary-title">Summary</p>
-          <p className="summary-text">
-            This is a sample project status update in Traskbito. Use status updates to
-            communicate the progress of your project with your teammates, skip the…
+          <p className="summary-text">This is a sample project status update in Traskbito
           </p>
+        <br/>
+          <p className="summary-text-01">Use status updates to communicate the progress of your project with your teammates, skip the</p>
 
-          <div className="status-footer">
-            <img src="/assets/img1.png" alt="user" className="avatar-28" />
-            <span>Juyed Ahmed <br/> 10 days ago</span>
-          </div>
+<div className="status-footer">
+  <img src="/assets/img1.png" alt="user" className="avatar-28" />
+  <span>
+    <span className="user-name">Juyed Ahmed</span><br />
+    <span className="date">10 days ago</span>
+  </span>
+</div>
 
           {/* Moved icons to bottom right */}
           <div className="status-card-actions bottom-actions">
-            <button className="icon-btn"><img src="/assets/like.svg" alt="Share" className="icon-18" /></button>
-            <button className="icon-btn"><img src="/assets/link.svg" alt="Edit" className="icon-18" /></button>
-            <button className="icon-btn"><img src="/assets/3dot.svg" alt="More" className="icon-18" /></button>
+            <button className="icon-btn--00"><img src="/assets/like.svg" alt="Share" className="icon-18" /></button>
+            <button className="icon-btn--00"><img src="/assets/link.svg" alt="Edit" className="icon-18" /></button>
+            <button className="icon-btn--00"><img src="/assets/3dot.svg" alt="More" className="icon-18" /></button>
           </div>
         </div>
 
@@ -146,9 +153,9 @@ const ProjectOverview = () => {
               <h4 className="status-card-title">Apr 21 – May 19</h4>
             </div>
             <div className="status-card-actions">
-              <button className="icon-btn"><img src="/assets/Folder.svg" alt="Download" className="icon-18" /></button>
-              <button className="icon-btn"><img src="/assets/filter.svg" alt="Filter" className="icon-18" /></button>
-              <button className="icon-btn"><img src="/assets/Folder.svg" alt="More" className="icon-18" /></button>
+              <button className="icon-btn--00"><img src="/assets/Folder.svg" alt="Download" className="icon-18" /></button>
+              <button className="icon-btn--00"><img src="/assets/filter.svg" alt="Filter" className="icon-18" /></button>
+              <button className="icon-btn--00"><img src="/assets/Folder.svg" alt="More" className="icon-18" /></button>
             </div>
           </div>
           <p className="msg-row">

@@ -40,6 +40,42 @@ const taskData = {
       status: "On Track",
       assignedTo: 3,
     },
+    {
+      name: "Product Team",
+      icon: "assets/Omail.svg",
+      startDate: "28/04/2025",
+      dueDate: "@Developer Team",
+      progress: 90,
+      status: "On Track",
+      assignedTo: 4,
+    },
+    {
+      name: "Developer Team",
+      icon: "assets/zepto.svg",
+      startDate: "28/04/2025",
+      dueDate: "@Ui Designer Team",
+      progress: 30,
+      status: "At Risk",
+      assignedTo: 3,
+    },
+    {
+      name: "Hr Team",
+      icon: "assets/cognify.svg",
+      startDate: "27/04/2025",
+      dueDate: "@Marketing Team",
+      progress: 40,
+      status: "On Track",
+      assignedTo: 3,
+    },
+    {
+      name: "SEO Team",
+      icon: "assets/dyser.svg",
+      startDate: "27/04/2025",
+      dueDate: "@Web Team",
+      progress: 30,
+      status: "On Track",
+      assignedTo: 3,
+    },
   ],
 };
 
@@ -138,7 +174,7 @@ const TaskSection = ({ title, data, currentPage, totalPages, onPrev, onNext }) =
 
 const ListContent = () => {
   const repeatedTodoTasks = [...taskData.todo, ...taskData.todo];
-  const tasksPerPage = 4;
+  const tasksPerPage = 10;
   const totalPages = Math.ceil(repeatedTodoTasks.length / tasksPerPage);
 
   const [currentPage, setCurrentPage] = useState(1);

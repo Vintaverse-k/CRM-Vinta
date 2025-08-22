@@ -11,6 +11,7 @@ const ProjectBoard = () => {
         <div className="source-item-01">
           <img src="assets/manual.svg" alt="manual" className="icon-18" /> Manually
         </div>
+        <p className="source-ptag">Task Templates</p>
         <div className="source-item-01">
           <img src="assets/chrome.svg" alt="ai-ui-kit" className="icon-18" /> Matex AI Meeting Assistance UI Kit
         </div>

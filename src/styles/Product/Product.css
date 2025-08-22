@@ -72,6 +72,9 @@
   border-radius: 12px;
   padding: 16px;
 }
+.status-card card-one{
+  height: 338px;
+}
 .section-titles01 {
   font-size: 16px;
   font-weight: 500;
@@ -193,7 +196,15 @@ margin-top: -16px;
   color: #ff6a3d;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 12px;
+}
+
+.on-track .label {
+  background: var(--State-Error-Lighter, #FFF0EA);
+  border: 1px solid var(--State-Error-Light, #FFDCCE);
+  padding: 2px 6px;
+  border-radius: 4px;
+  gap: 4px;
 }
 
 .status-header {
@@ -263,16 +274,17 @@ margin-top: -16px;
   justify-content: end;
   gap: 10px;
   margin-top: -20px;
+  margin-bottom: 16px;
 }
 
-.icon-btn {
+.icon-btn--00 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 28px;
   height: 28px;
   border-radius: 6px;
-  border: 1px solid #eee;
+  border: none;
   background: #fff;
   cursor: pointer;
   transition: background 0.2s, opacity 0.2s;
@@ -285,7 +297,8 @@ margin-top: -16px;
 
 .summary-title {
   font-weight: 500;
-  margin: 6px 0 4px;
+  padding-top: 24px;
+  /* margin: 6px 0 4px; */
   font-size: 16px;
   color: #020204;
 }
@@ -297,13 +310,29 @@ margin-top: -16px;
   line-height: 1.5;
   margin: 0 0 10px;
 }
+.summary-text-01 {
+  color: #625F6E;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  /* margin: 0 0 10px; */
+}
 
 .status-footer {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #666;
+  /* color: #666;  */
   font-size: 13px;
+}
+
+.status-footer .user-name {
+  color: #625F6E; 
+}
+
+.status-footer .date {
+  color: #625F6E;
+
 }
 
 .summary-actions {
@@ -376,7 +405,11 @@ margin-top: -16px;
   width: 18px;
   height: 18px;
 }
-
+.icon-20{
+  width: 5px;
+  height: 5px;
+  /* display: flex; */
+}
 .avatar-28 {
   width: 28px;
   height: 28px;
@@ -431,7 +464,7 @@ margin-top: -16px;
 
 .task-source-01 {
   width: 420px;
-  height: 276px;
+  /* height: 276px; */
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 12px;
@@ -450,7 +483,7 @@ padding: 16px;
   font-size: 16px;
   font-weight:500;
   color: #020204;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .source-item-01 {
@@ -464,6 +497,7 @@ padding: 16px;
   font-weight: 500;
   color: #625F6E;
   margin-top: 16px;
+  width: 388px;
 }
 
 .add-source-01 {
@@ -481,6 +515,7 @@ padding: 16px;
 .section-card-01 {
   width: 320px;
   height: 284px;
+  margin-top: -80px;
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 12px;
@@ -652,4 +687,10 @@ padding: 16px;
   font-weight: 500;
   color: #020204;
   margin: 0;
+}
+.source-ptag{
+  font-size: 14px;
+  text-align: left;
+  color: #625F6E;
+  font-weight: 400;
 }
