@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/Portfolio/Portfolio.css";
+import "../../styles/ProductTeam/Priority.css";
 import { FiMoreVertical } from "react-icons/fi";
 
 const taskData = {
@@ -57,7 +57,7 @@ const TaskRow = ({ task }) => (
 
 // TaskSection with Pagination
 const TaskSection = ({ title, data, currentPage, totalPages, onPrev, onNext }) => (
-  <div className="sections-01">
+  <div className="sectionss-101">
     <div className="section-titles-01">{title}</div>
     <table>
       <thead>
@@ -96,7 +96,7 @@ const ListContent = () => {
   const handleNext = () => setCurrentPage(prev => Math.min(prev + 1, totalPages));
 
   return (
-    <div className="list-container">
+    <div className="list-container__909">
       <TaskSection
         title="To do"
         data={currentTasks}

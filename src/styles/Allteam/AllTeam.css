@@ -78,7 +78,7 @@
   gap: 20px;
   white-space: nowrap;
   margin-bottom: 24px;
-  margin-top: -20px;
+  margin-top: -35px;
   width: 1104px;
   margin-left: -28px;
 }
@@ -92,8 +92,8 @@
 }
 
 .allteam-icon-btn {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
   width: 40px;
   height: 40px;
   padding: 8px 12px;
@@ -108,23 +108,38 @@
   transition: background-color 0.2s ease;
 }
 
-.allteam-btn-filter {
-  background: var(--Alpha-Neutral-alpha-4, #0202040A);
-  width: 149px;
+.allteam-btn-filters-wrapper {
+  position: relative;
+  width: 232px;
   height: 40px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.allteam-btn-filters {
+  width: 100%;
+  height: 100%;
+  padding: 8px 12px 8px 36px; 
+  background: var(--Alpha-Neutral-alpha-4, #0202040A);
   border: 1px solid #e0e0e0;
-  padding: 8px 12px;
   border-radius: 8px;
   font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
   color: #625F6E;
   font-size: 14px;
+  outline: none;
   transition: background-color 0.2s ease;
 }
-.allteam-btn-filter-01{
+
+.allteam-btn-filter-01 {
   background: var(--Alpha-Neutral-alpha-4, #0202040A);
   width: 105px;
   height: 40px;
@@ -317,29 +332,37 @@ input[type="checkbox"] {
 .allteam-list-container thead {
   background: transparent;
 }
+
+
 .task-row-team-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
+  flex-direction: row;      
+  align-items: center;       
+  gap: 12px;                 
+}
+
+.team-text-container {
+  display: flex;
+  flex-direction: column;    
+  justify-content: center;   
 }
 
 .team-name-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.team-icon {
-  width: 24px;
-  height: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1f2937;
 }
 
 .member-count-text {
   font-size: 12px;
   font-weight: 400;
   color: #625F6E;
-  margin-left: 28px;
+  margin-left: 0;           
+}
+
+.team-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .member-images-container {
@@ -359,6 +382,7 @@ input[type="checkbox"] {
   margin-left: 0;
 }
 
+/* Pagination styles */
 .pagination-container {
   display: flex;
   justify-content: space-between;
@@ -368,28 +392,29 @@ input[type="checkbox"] {
   margin-top: 1rem;
 }
 .pagination-container button {
-    background-color: #FFFFFF;
-  color: #020204;      
-  border: 1px solid var(--Stroke-Primary, #E6E8EA);  
-  padding: 8px 16px;        
-  border-radius: 8px;      
-  cursor: pointer;          
-  font-size: 12x;
+  background-color: #FFFFFF;
+  color: #020204;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
   transition: background-color 0.3s ease;
 }
 
 .pagination-container button:disabled {
-  background-color: #FFFFFF; 
+  background-color: #FFFFFF;
   cursor: not-allowed;
   color: #020204;
 }
 
 .pagination-container button:hover:not(:disabled) {
-  background-color: #593BF2; 
+  background-color: #593BF2;
   color: white;
 }
-.pagination-container span{
-    color: #020204;
-    font-size: 14px;
-    font-weight: 500;
+
+.pagination-container span {
+  color: #020204;
+  font-size: 14px;
+  font-weight: 500;
 }

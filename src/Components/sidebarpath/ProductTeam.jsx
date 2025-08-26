@@ -14,7 +14,7 @@ const ProductTeam = () => {
     { label: "Overview", icon: "assets/portoverview.svg" },
     { label: "Priority", icon: "assets/portlist.svg" },
     { label: "Feed", icon: "assets/portboard.svg" },
-    { label: "Team", icon: "assets/portcalendar.svg" },
+    { label: "Team", icon: "assets/teamtabs.svg" },
     {
       label: "TimeSheet",
       icon: "assets/clock.svg",
@@ -52,8 +52,8 @@ const ProductTeam = () => {
               View and manage All Product Team members in one place.
             </p>
           </div>
-          <div className="header-actions">
-              <button className="btn-outline">
+           <div className="dashboard-manage-task-header-actions">
+              <button className="dashboard-manage-task-btn-outline">
                 <img
                   src="assets/share.svg"
                   alt="Share Icon"
@@ -61,8 +61,18 @@ const ProductTeam = () => {
                   height={24}
                 />
                 Share Tasks
-              </button>
-              <button className="btn-primary">+ Add Team</button>
+              </button><button className="dashboard-manage-task-btn-primary">
+  <img
+  src="assets/plus-sign2.svg"
+  alt="Plus Icon"
+  width={16}
+  height={16}
+  style={{ marginRight: '8px', verticalAlign: 'middle' }}
+/>
+
+  New Task
+</button>
+
             </div>
         
 

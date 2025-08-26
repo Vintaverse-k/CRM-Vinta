@@ -142,7 +142,6 @@
 }
 
 
-/* Card backgrounds */
 .mytask-bg-purple-light {
   background-color: #ede9fe;
   width: 261px;
@@ -374,7 +373,6 @@
   padding: 8px;
 }
 
-/* Progress Circle */
 .mytask-progress-circle {
   position: relative;
   width: 56px;
@@ -413,7 +411,6 @@
   font-size: 0.875rem;
 }
 
-/* Total Time Worked */
 .mytask-total-time-worked .mytask-time-count {
   font-size: 16px;
   font-weight: 500;
@@ -427,14 +424,12 @@
   margin-left: 0.5rem;
 }
 
-/* Bottom Grid */
 .mytask-bottom-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-/* Task Completed */
 .mytask-task-completed .mytask-progress-ring-wrapper {
   position: relative;
   width: 192px;
@@ -461,7 +456,6 @@
   stroke-linecap: round;
 }
 
-/* Progress Text */
 .mytask-progress-text {
   position: absolute;
   top: 50%;
@@ -473,7 +467,6 @@
   width: 140px;
 }
 
-/* Progress Breakdown */
 .mytask-progress-breakdown {
   display: flex;
   justify-content: space-around;
@@ -482,7 +475,6 @@
   color: #4b5563;
 }
 
-/* Recent Activity */
 .mytask-recent-activity .mytask-activity-list {
   display: flex;
   flex-direction: column;
@@ -575,9 +567,9 @@ background: #FF692E0A;
 
 .mytask-btn-outline {
   display: flex;
-  align-items: center;   /* icon + text ek line me */
+  align-items: center; 
   justify-content: center;
-  gap: 6px;              /* thoda gap icon aur text ke beech */
+  gap: 6px;              
 }
 
 .btn-icon {

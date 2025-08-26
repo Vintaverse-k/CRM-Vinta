@@ -344,12 +344,13 @@ input[type="checkbox"] {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   font-size: 14px;
-  min-width: 232px;
+  width: 232px;
+  height: 40px;
 }
 
 .portfolio-task-project-button {
   background: rgba(2, 2, 4, 0.04);
-  width: 149px;
+  width: 118px;
   height: 40px;
   border: 1px solid #e0e0e0;
   padding: 8px 12px;

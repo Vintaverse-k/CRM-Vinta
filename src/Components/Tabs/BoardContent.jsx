@@ -70,23 +70,23 @@ const tasks = {
 
 const BoardContent = () => {
   const renderCard = (task) => (
-    <div className="taskboard-card" key={task.title + Math.random()}>
-      <div className="taskboard-status-priority">
-        <span className={`taskboard-status ${task.status.replace(/\s/g, '').toLowerCase()}`}>{task.status}</span>
-        <span className={`taskboard-priority ${task.priority.toLowerCase()}`}>
-          <img src="assets/cflag.svg" alt="priority-icon" className="taskboard-priority-icon" />
+    <div className="board-content-manage-card" key={task.title + Math.random()}>
+      <div className="board-content-manage-status-priority">
+        <span className={`board-content-manage-status ${task.status.replace(/\s/g, '').toLowerCase()}`}>{task.status}</span>
+        <span className={`board-content-manage-priority ${task.priority.toLowerCase()}`}>
+          <img src="assets/cflag.svg" alt="priority-icon" className="board-content-manage-priority-icon" />
           {task.priority}
         </span>
       </div>
-      <h4 className="taskboard-title">{task.title}</h4>
-      <p className="taskboard-desc">{task.desc}</p>
-      <div className="taskboard-footer">
-        <div className="taskboard-avatars">
+      <h4 className="board-content-manage-title">{task.title}</h4>
+      <p className="board-content-manage-desc">{task.desc}</p>
+      <div className="board-content-manage-footer">
+        <div className="board-content-manage-avatars">
           {task.avatars.map((avatar, i) => (
             <img key={i} src={avatar} alt="avatar" />
           ))}
         </div>
-        <div className="taskboard-icons">
+        <div className="board-content-manage-icons">
           <img src="assets/fileicon.svg" alt="files" /> {task.files}
           <img src="assets/messages.svg" alt="comments" /> {task.comments}
         </div>
@@ -95,12 +95,12 @@ const BoardContent = () => {
   );
 
   const renderColumnHeader = (title, count, iconSrc) => (
-    <div className="taskboard-column-header">
-      <div className="taskboard-left-header">
+    <div className="board-content-manage-column-header">
+      <div className="board-content-manage-left-header">
         <img src={iconSrc} alt="section-icon" />
         <h3>{title} <span>{count}</span></h3>
       </div>
-      <div className="taskboard-right-header">
+      <div className="board-content-manage-right-header">
         <img src="assets/plussign.svg" alt="add" />
         <img src="assets/3dot.svg" alt="menu" />
       </div>
@@ -108,39 +108,39 @@ const BoardContent = () => {
   );
 
   return (
-    <div className="taskboard-wrapper">
-      <div className="taskboard-top-bar">
-        <div className="taskboard-top-left-buttons">
-          <button className="taskboard-btn">
+    <div className="board-content-manage-wrapper">
+      <div className="board-content-manage-top-bar">
+        <div className="board-content-manage-top-left-buttons">
+          <button className="board-content-manage-btn">
             <img src="assets/group.svg" alt="group" /> Group: Status
           </button>
-          <button className="taskboard-btn">
+          <button className="board-content-manage-btn">
             <img src="assets/colum.svg" alt="columns" /> Columns
           </button>
         </div>
-        <div className="taskboard-top-right-buttons">
-          <input type="text" className="taskboard-search-input" placeholder="Search Task..." />
-          <button className="taskboard-btn">All Project</button>
-          <button className="taskboard-icon-btn">
+        <div className="board-content-manage-top-right-buttons">
+          <input type="text" className="board-content-manage-search-input" placeholder="Search Task..." />
+          <button className="board-content-manage-btn">All Project</button>
+          <button className="board-content-manage-icon-btn">
             <img src="assets/listbar.svg" alt="list" />
           </button>
         </div>
       </div>
 
-      <div className="taskboard-container">
-        <div className="taskboard-column">
+      <div className="board-content-manage-container">
+        <div className="board-content-manage-column">
           {renderColumnHeader("To do", tasks.todo.length, "assets/todoboard.svg")}
           {tasks.todo.map(renderCard)}
         </div>
-        <div className="taskboard-column">
+        <div className="board-content-manage-column">
           {renderColumnHeader("In Progress", tasks.inProgress.length, "assets/todoboard.svg")}
           {tasks.inProgress.map(renderCard)}
         </div>
-        <div className="taskboard-column">
+        <div className="board-content-manage-column">
           {renderColumnHeader("In Reviewed", tasks.inReviewed.length, "assets/todoboard.svg")}
           {tasks.inReviewed.map(renderCard)}
         </div>
-        <div className="taskboard-column">
+        <div className="board-content-manage-column">
           {renderColumnHeader("Completed", tasks.completed.length, "assets/todoboard.svg")}
           {tasks.completed.map(renderCard)}
         </div>

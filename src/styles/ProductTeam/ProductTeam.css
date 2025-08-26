@@ -16,7 +16,7 @@
   scrollbar-width: thin;
   scrollbar-color: #a78bfa transparent;
   margin-top: 52px;
-  margin-left: -1170px; /* This seems very specific; adjust as needed */
+  margin-left: -1170px; 
 }
 
 .mytask-main-content::-webkit-scrollbar {

@@ -73,7 +73,7 @@ const Timesheet = () => {
         </div>
          <div className="allteam-right-controls__101 ">
           <button className="allteam-btn-filter right-width-extra-medium-01"><img src="assets/groupteam.svg" alt="icon" />Group Assignee  <img src="assets/downarrow.svg" alt="icon" /></button>
-          <button className="allteam-btn-filter right-width-extra-medium-02"><img src="assets/setting.svg" alt="icon" />Customize</button>
+          <button className="allteam-btn-filter right-width-extra-medium-02"><img src="assets/settings-01.svg" alt="icon" />Customize</button>
           <button className="allteam-btn-filter right-width-extra-medium-03"><img src="assets/filter.svg" alt="icon" />Filte By  <img src="assets/downarrow.svg" alt="icon" /></button>
         </div>
       </div>

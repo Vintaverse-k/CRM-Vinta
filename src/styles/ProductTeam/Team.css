@@ -124,6 +124,29 @@
   font-size: 14px;
   transition: background-color 0.2s ease;
 }
+.allteam-btnn-filters {
+  display: flex;              
+  align-items: center;         
+  justify-content: space-between;
+  gap: 8px;                   
+  width: 131px;
+  height: 40px;
+  padding: 8px 12px;
+  background: var(--Alpha-Neutral-alpha-4, #0202040A);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #625F6E;
+  font-size: 14px;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+
+.allteam-btnn-filters img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
 
 .allteam-btn-filter__01 {
   background: var(--Alpha-Neutral-alpha-4, #0202040A);

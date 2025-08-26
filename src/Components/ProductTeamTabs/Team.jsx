@@ -195,8 +195,10 @@ const Team = () => {
          
         </div>
          <div className="allteam-right-controls__01 width-extra-medium">
-          <button className="allteam-btn-filter">
-            <img src="assets/downarrow.svg" alt="icon" />Filter By</button>
+          <button className="allteam-btnn-filters">
+                        <img src="assets/filter.svg" alt="icon" />
+            Filter By
+            <img src="assets/downarrow.svg" alt="icon" /></button>
           
         </div>
       </div>
@@ -268,7 +270,7 @@ const Team = () => {
           <div>Page {currentPage} of {totalPages}</div>
           <div>
             <button onClick={handlePrev} disabled={currentPage === 1}>
-              Previews
+              Preview
             </button>
             <button onClick={handleNext} disabled={currentPage === totalPages}>
               Next

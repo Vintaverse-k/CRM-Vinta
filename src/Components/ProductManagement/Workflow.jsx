@@ -19,39 +19,46 @@ const ProjectBoard = () => {
           <img src="assets/intakeplus.svg" alt="add" className="icon-18" /> Intake source
         </div>
       </div>
-<div className="centered-image-container">
-  <img src="assets/leftrightarrow.png" alt="Centered Image" />
-</div>
+
+      <div className="centered-image-container">
+        <img src="assets/leftrightarrow.png" alt="Centered Image" />
+      </div>
 
       {/* Sections Row */}
       <div className="sections-row-01">
+
         {/* To do */}
         <div className="section-card-01">
-          <h4>Section
-             <img src="assets/3dot.svg" alt="ai-ui-kit" className="workflow-icons" />
-          </h4>
-          
+          <div className="section-card-header">
+            <h4>Section</h4>
+            <img src="assets/3dot.svg" alt="menu" className="workflow-icons" />
+          </div>
+
           <div className="title-tasks-row-01">
             <div className="title-section-01">
               <span className="dot purple"></span> To do
             </div>
             <p className="tasks-01">
-               <img src="assets/projectchek.svg" alt="manual" className="workflow-icons-01" />
-              3 incomplete tasks</p>
+              <img src="assets/projectchek.svg" alt="manual" className="workflow-icons-01" />
+              3 incomplete tasks
+            </p>
           </div>
+
           <div className="task-02">
-          <p>When tasks move to this section, do this automatically:</p>
+            <p>When tasks move to this section, do this automatically:</p>
           </div>
-              <div className="automation-box-01">
-  <span>
-    <img src="assets/manual.svg" alt="arrow" className="workflow-icons" /> When Task is moved to a section 
-    <img src="assets/3dot.svg" alt="arrow" className="workflow-icons" />
-  </span>
-  <div className="status-row-01">
-    <p className="extra-text-01">Your left side text</p>
-    <p className="status-01">Active</p>
-  </div>
-</div>
+
+          <div className="automation-box-01">
+            <span>
+              <img src="assets/manual.svg" alt="arrow" className="workflow-icons" /> When Task is moved to a section
+              <img src="assets/3dot.svg" alt="arrow" className="workflow-icons" />
+            </span>
+            <div className="status-row-01">
+              <p className="extra-text-01">Your left side text</p>
+              <p className="status-01">Active</p>
+            </div>
+          </div>
+
           <div className="add-action-01">
             <img src="assets/intakeplus.svg" alt="add-action" className="workflow-icons20" /> More actions
           </div>
@@ -59,30 +66,36 @@ const ProjectBoard = () => {
 
         {/* In Progress */}
         <div className="section-card-01">
-          <h4>Section</h4>
+          <div className="section-card-header">
+            <h4>Section</h4>
+            <img src="assets/3dot.svg" alt="menu" className="workflow-icons" />
+          </div>
+
           <div className="title-tasks-row-01">
             <div className="title-section-01">
               <span className="dot purple"></span> In Progress
             </div>
             <p className="tasks-01">
-               <img src="assets/projectchek.svg" alt="manual" className="workflow-icons-01" />
-              incomplete tasks</p>
+              <img src="assets/projectchek.svg" alt="manual" className="workflow-icons-01" />
+              incomplete tasks
+            </p>
           </div>
 
           <div className="task-02">
-          <p>When tasks move to this section, do this automatically:</p>
+            <p>When tasks move to this section, do this automatically:</p>
           </div>
-             <div className="automation-box-01">
-  <span>
-    <img src="assets/manual.svg" alt="arrow" className="workflow-icons" /> When Task is moved to a section
 
-    <img src="assets/3dot.svg" alt="arrow" className="workflow-icons" />
-  </span>
-  <div className="status-row-01">
-    <p className="extra-text-01">Your left side text</p>
-    <p className="status-01">Active</p>
-  </div>
-</div>
+          <div className="automation-box-01">
+            <span>
+              <img src="assets/manual.svg" alt="arrow" className="workflow-icons" /> When Task is moved to a section
+              <img src="assets/3dot.svg" alt="arrow" className="workflow-icons" />
+            </span>
+            <div className="status-row-01">
+              <p className="extra-text-01">Your left side text</p>
+              <p className="status-01">Active</p>
+            </div>
+          </div>
+
           <div className="add-action-01">
             <img src="assets/intakeplus.svg" alt="add-action" className="workflow-icons20" /> More actions
           </div>
@@ -90,30 +103,35 @@ const ProjectBoard = () => {
 
         {/* Done */}
         <div className="section-card-01">
-          <h4>Section</h4>
+          <div className="section-card-header">
+            <h4>Section</h4>
+            <img src="assets/3dot.svg" alt="menu" className="workflow-icons" />
+          </div>
+
           <div className="title-tasks-row-01">
             <div className="title-section-01">
               <span className="dot blue"></span> Done
             </div>
             <p className="tasks-01">
               <img src="assets/projectchek.svg" alt="manual" className="workflow-icons-01" />
-              3 incomplete tasks</p>
+              3 incomplete tasks
+            </p>
           </div>
 
           <div className="task-02">
-          <p>When tasks move to this section, do this automatically:</p>
+            <p>When tasks move to this section, do this automatically:</p>
           </div>
-         <div className="automation-box-01">
-  <span>
-    <img src="assets/manual.svg" alt="arrow" className="workflow-icons" /> When Task is moved to a section
 
-    <img src="assets/3dot.svg" alt="arrow" className="workflow-icons" />
-  </span>
-  <div className="status-row-01">
-    <p className="extra-text-01">Your left side text</p>
-    <p className="status-01">Active</p>
-  </div>
-</div>
+          <div className="automation-box-01">
+            <span>
+              <img src="assets/manual.svg" alt="arrow" className="workflow-icons" /> When Task is moved to a section
+              <img src="assets/3dot.svg" alt="arrow" className="workflow-icons" />
+            </span>
+            <div className="status-row-01">
+              <p className="extra-text-01">Your left side text</p>
+              <p className="status-01">Active</p>
+            </div>
+          </div>
 
           <div className="add-action-01">
             <img src="assets/intakeplus.svg" alt="add-action" className="workflow-icons20" /> More actions

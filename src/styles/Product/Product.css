@@ -154,7 +154,8 @@ margin-top: -16px;
 .link-btn-01 {
   width: 100%;
   max-width: 682px;
-  border: 1px solid var(--Stroke-Primary, #E6E8EA);
+  border: none;
+  /* border: 1px solid var(--Stroke-Primary, #E6E8EA); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -446,6 +447,12 @@ margin-top: -16px;
 
 
 
+.section-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
 
 
 .board-container-01 {
@@ -514,7 +521,7 @@ padding: 16px;
 
 .section-card-01 {
   width: 320px;
-  height: 284px;
+  /* height: 284px; */
   margin-top: -80px;
   background: #fff;
   border: 1px solid #ddd;
@@ -576,6 +583,7 @@ padding: 16px;
 .automation-box-01 span {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
   flex-wrap: nowrap; 
 }

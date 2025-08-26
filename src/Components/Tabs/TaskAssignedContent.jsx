@@ -17,56 +17,56 @@ const tasks = [
 
 const TaskAssignedContent = () => {
   return (
-    <div class="task-list-container">
-  <div class="task-list-header">
-    <div class="header-controls-left">
-      <button class="header-button">
-        <img src="assets/group.svg" alt="group" /> Group: Status
-      </button>
-      <button class="header-button">
-        <img src="assets/colum.svg" alt="columns" /> Columns
-      </button>
-    </div>
-    <div class="header-actions-right">
-      <input type="text" class="header-search-input" placeholder="Search Task..." />
-      <button class="header-button">All Project</button>
-      <button class="view-toggle-button-custom">
-        <img src="assets/listbar.svg" alt="list" />
-      </button>
-    </div>
-  </div>
+    <div className="task-manage-content-list-container">
+      <div className="task-manage-content-list-header">
+        <div className="task-manage-content-header-controls-left">
+          <button className="task-manage-content-header-button">
+            <img src="assets/group.svg" alt="group" /> Group: Status
+          </button>
+          <button className="task-manage-content-header-button">
+            <img src="assets/colum.svg" alt="columns" /> Columns
+          </button>
+        </div>
+        <div className="task-manage-content-header-actions-right">
+          <input type="text" className="task-manage-content-header-search-input" placeholder="Search Task..." />
+          <button className="task-manage-content-header-button">All Project</button>
+          <button className="task-manage-content-view-toggle-button">
+            <img src="assets/listbar.svg" alt="list" />
+          </button>
+        </div>
+      </div>
     
       {/* Task Table Section */}
-      <div className="board-container">
-        <div className="board-column full-width">
-          <div className="board-column-header-01">
-            <div className="left-header">
+      <div className="task-manage-content-board-container">
+        <div className="task-manage-content-board-column full-width">
+          <div className="task-manage-content-column-header">
+            <div className="task-manage-content-left-header">
               <img src="assets/todoicon.svg" alt="list" />
               <h3>To do</h3>
             </div>
-            <div className="right-header">
-              <button className="btnnn">
+            <div className="task-manage-content-right-header">
+              <button className="task-manage-content-add-button">
                 <img src="assets/plussign.svg" alt="list" />
               </button>
             </div>
           </div>
 
-          <div className="task-table-wrapper">
-            <div className="task-table-header">
-              <div className="checkbox-col"><input type="checkbox" /></div>
-              <div className="task-name-col">Task Name</div>
-              <div className="priority-col">Priority</div>
-              <div className="due-col">Due Date</div>
-              <div className="menu-col"></div>
+          <div className="task-manage-content-table-wrapper">
+            <div className="task-manage-content-table-header">
+              <div className="task-manage-content-checkbox-col"><input type="checkbox" /></div>
+              <div className="task-manage-content-task-name-col">Task Name</div>
+              <div className="task-manage-content-priority-col">Priority</div>
+              <div className="task-manage-content-due-col">Due Date</div>
+              <div className="task-manage-content-menu-col"></div>
             </div>
 
             {tasks.map((task, idx) => (
-              <div className="task-table-row" key={idx}>
-                <div className="checkbox-col"><input type="checkbox" /></div>
-                <div className="task-name-col">{task.name}</div>
-                <div className={`priority-col ${task.priority.toLowerCase()}`}>{task.priority}</div>
-                <div className="due-col">{task.due}</div>
-                <div className="menu-col">⋮</div>
+              <div className="task-manage-content-table-row" key={idx}>
+                <div className="task-manage-content-checkbox-col"><input type="checkbox" /></div>
+                <div className="task-manage-content-task-name-col">{task.name}</div>
+                <div className={`task-manage-content-priority-col ${task.priority.toLowerCase()}`}>{task.priority}</div>
+                <div className="task-manage-content-due-col">{task.due}</div>
+                <div className="task-manage-content-menu-col">⋮</div>
               </div>
             ))}
           </div>

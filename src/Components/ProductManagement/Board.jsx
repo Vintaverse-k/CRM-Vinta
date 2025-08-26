@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/Tabs/Board.css";
+import "../../styles/Productmanagement/Board.css";
 
 
 

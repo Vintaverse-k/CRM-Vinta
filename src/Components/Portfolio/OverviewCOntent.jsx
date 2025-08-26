@@ -218,6 +218,7 @@ const TaskRow = ({ task }) => {
         </div>
       </td>
       <td>
+        
         <StatusTag status={task.status} />
       </td>
       <td>

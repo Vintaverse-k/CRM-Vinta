@@ -1,8 +1,9 @@
 /* ListContent Component Styles */
-.list-container {
+.list-container__909 {
   padding: 30px;
   font-size: 14px;
   color: #1f1f1f;
+  margin-top: -20px;
 }
 
 .top-bar-011 {
@@ -52,12 +53,13 @@
   min-width: 232px;
 }
 
-.sections-01 {
+.sectionss-101 {
   width: 1104px;
   margin-left: -32px;
+  margin-top: -20px;
   background: white;
   border-radius: 12px;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA);
   margin-bottom: 24px;
   padding: 20px;
 }
@@ -92,6 +94,7 @@ th,
 td {
   padding: 14px 10px;
   vertical-align: middle;
+  background-color: white;
 }
 
 tbody tr {

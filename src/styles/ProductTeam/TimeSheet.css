@@ -127,22 +127,6 @@
   transition: background-color 0.2s ease;
 }
 
-.allteam-btn-filter__101 {
-  background: var(--Alpha-Neutral-alpha-4, #0202040A);
-  width: 149px;
-  height: 40px;
-  border: 1px solid #e0e0e0;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  color: #625F6E;
-  font-size: 14px;
-  transition: background-color 0.2s ease;
-}
 
 .allteam-icon-btn__101 {
   background: none;
@@ -171,10 +155,36 @@ width: 141px;
 }
 .right-width-extra-medium-01{
 width: 184px;
+height: 40px;
 }
 .right-width-extra-medium-02{
 width: 121px;
+height: 40px;
 }
 .right-width-extra-medium-03{
 width: 131px;
+height: 40px;
+}
+
+.allteam-btn-filter,
+.allteam-btn-filter__101 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  gap: 6px;
+  padding: 8px 12px;
+  height: 40px;
+  font-size: 14px;
+  color: #625F6E;
+  background: var(--Alpha-Neutral-alpha-4, #0202040A);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.allteam-btn-filter img,
+.allteam-btn-filter__101 img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
 }

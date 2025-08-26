@@ -1,4 +1,4 @@
-.board-content-manage-container {
+.taskboard-container {
   /* margin-left: -28px; */
   display: flex;
   gap: 20px;
@@ -6,7 +6,7 @@
   overflow-x: auto;
 }
 
-.board-content-manage-column {
+.taskboard-column {
   width: 261px;
   border: 1px solid var(--Stroke-Primary, #E6E8EA);
   background: #F7F6F9;
@@ -14,7 +14,7 @@
   padding: 15px;
 }
 
-.board-content-manage-column h3 {
+.taskboard-column h3 {
   gap: 8px;
   display: flex;
   justify-content: space-between;
@@ -23,14 +23,14 @@
   margin-bottom: 15px;
 }
 
-.board-content-manage-column h3 span {
+.taskboard-column h3 span {
   background: #e2e2f0;
   padding: 2px 8px;
   border-radius: 8px;
   font-size: 14px;
 }
 
-.board-content-manage-card {
+.taskboard-card {
   background: #fff;
   padding: 15px;
   border-radius: 10px;
@@ -38,14 +38,13 @@
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
-.board-content-manage-status-priority {
+.taskboard-status-priority {
   display: flex;
   /* justify-content: space-between; */
   margin-bottom: 10px;
-  gap: 8px;
 }
 
-.board-content-manage-title {
+.taskboard-title {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 6px;
@@ -56,7 +55,7 @@
   text-overflow: ellipsis;  
 }
 
-.board-content-manage-desc {
+.taskboard-desc {
   font-size: 14px;
   font-weight: 400;
   color: #625F6E;
@@ -64,14 +63,14 @@
   line-height: 1.5;
 }
 
-.board-content-manage-status {
+.taskboard-status {
   font-size: 12px;
   padding: 2px 6px;
   border-radius: 6px;
   color: #5a4ad1;
 }
 
-.board-content-manage-priority {
+.taskboard-priority {
   font-size: 12px;
   padding: 2px 6px;
   border-radius: 6px;
@@ -80,23 +79,23 @@
 }
 
 /* Status colors */
-.board-content-manage-status.notstarted { background: #593BF20A; color: #593BF2; }
-.board-content-manage-status.inresearch { background: #593BF20A; color: #593BF2; }
-.board-content-manage-status.inreviewed { background: #e8e0ff; color: #5a4ad1; }
-.board-content-manage-status.completed { background: #32ABB90A; color: #32ABB9; }
+.taskboard-status.notstarted { background: #593BF20A; color: #593BF2; }
+.taskboard-status.inresearch { background: #593BF20A; color: #593BF2; }
+.taskboard-status.inreviewed { background: #e8e0ff; color: #5a4ad1; }
+.taskboard-status.completed { background: #32ABB90A; color: #32ABB9; }
 
 /* Priority colors */
-.board-content-manage-priority.high { background: #AC3CFF0A; color:  #AC3CFF; }
-.board-content-manage-priority.low { background: #fff0d6; color: #f0ad4e; }
+.taskboard-priority.high { background: #AC3CFF0A; color:  #AC3CFF; }
+.taskboard-priority.low { background: #fff0d6; color: #f0ad4e; }
 
-.board-content-manage-footer {
+.taskboard-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
 }
 
-.board-content-manage-avatars img {
+.taskboard-avatars img {
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -104,14 +103,14 @@
   border: 2px solid #fff;
 }
 
-.board-content-manage-icons img {
+.taskboard-icons img {
   width: 16px;
   height: 16px;
   margin-left: 8px;
   vertical-align: middle;
 }
 
-.board-content-manage-column-header {
+.taskboard-column-header {
   width: 249px;
   height: 38px;
   border-radius: 6px;
@@ -123,44 +122,44 @@
   margin-left: -10px;
 }
 
-.board-content-manage-left-header {
+.taskboard-left-header {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.board-content-manage-right-header img {
+.taskboard-right-header img {
   margin-left: 8px;
   cursor: pointer;
 }
 
-.board-content-manage-priority-icon {
+.taskboard-priority-icon {
   width: 14px;
   height: 14px;
   margin-right: 4px;
   vertical-align: middle;
 }
 
-.board-content-manage-top-bar {
+.taskboard-top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
 }
 
-.board-content-manage-top-left-buttons {
+.taskboard-top-left-buttons {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.board-content-manage-top-right-buttons {
+.taskboard-top-right-buttons {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.board-content-manage-btn {
+.taskboard-btn {
   font-size: 14px;
   font-weight: 500;
   display: flex;
@@ -172,21 +171,20 @@
   background: #0202040A;
   color: #625F6E;
   cursor: pointer;
-  height: 40px;
 }
 
-.board-content-manage-icon-btn {
+.taskboard-icon-btn {
   background: none;
   border: none;
   padding: 6px;
   cursor: pointer;
 }
 
-.board-content-manage-search-input {
+.taskboard-search-input {
   padding: 8px;
-  border-radius: 8px;
+  width: 232px;
+  border-radius: 6px;
   border: 1px solid #ccc;
   background-color: rgba(2, 2, 4, 0.04);
-width: 232px;
-height: 40px;
+
 }

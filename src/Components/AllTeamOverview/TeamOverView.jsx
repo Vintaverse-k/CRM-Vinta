@@ -40,6 +40,7 @@ const taskData = {
       status: "On Track",
       assignedTo: 3,
     },
+    // duplicated for pagination demo
     {
       name: "Product Team",
       icon: "assets/Omail.svg",
@@ -87,17 +88,13 @@ const TaskRow = ({ task }) => {
       </td>
       <td>
         <div className="task-row-team-container">
-          <div className="team-name-row">
-            <img
-              src={task.icon}
-              alt="project icon"
-              className="team-icon"
-            />
-            <span style={{ fontWeight: "bold", fontSize:"14px" }}>{task.name}</span>
+          <img src={task.icon} alt="project icon" className="team-icon" />
+          <div className="team-text-container">
+            <div className="team-name-row">{task.name}</div>
+            <div className="member-count-text">
+              {task.assignedTo} Member{task.assignedTo > 1 ? "s" : ""}
+            </div>
           </div>
-          <span className="member-count-text">
-            {task.assignedTo} Member{task.assignedTo > 1 ? "s" : ""}
-          </span>
         </div>
       </td>
       <td>
@@ -158,7 +155,9 @@ const TaskSection = ({ title, data, currentPage, totalPages, onPrev, onNext }) =
 
       {/* Pagination */}
       <div className="pagination-container">
-        <span>Page {currentPage} of {totalPages}</span>
+        <span>
+          Page {currentPage} of {totalPages}
+        </span>
         <div style={{ display: "flex", gap: "10px" }}>
           <button onClick={onPrev} disabled={currentPage === 1}>
             Prev
@@ -194,28 +193,45 @@ const ListContent = () => {
     <div className="allteam-list-container">
       <div className="allteam-top-bar">
         <div className="allteam-left-controls">
-          <button className="allteam-btn-filter-01">Memeber <img
+          <button className="allteam-btn-filter-01">
+            Memeber{" "}
+            <img
               src="assets/downarrow.svg"
               alt="icon"
-            /></button>
-          <button className="allteam-btn-filter-01">Created
-            <img
-              src="assets/downarrow.svg"
-              alt="icon"/>
+            />
           </button>
-          <button className="allteam-btn-filter-01">Creator
+          <button className="allteam-btn-filter-01">
+            Created
             <img
               src="assets/downarrow.svg"
-              alt="icon"/>
+              alt="icon"
+            />
           </button>
-          <button className="allteam-btn-filter-01">Short
+          <button className="allteam-btn-filter-01">
+            Creator
             <img
               src="assets/downarrow.svg"
-              alt="icon"/>
+              alt="icon"
+            />
+          </button>
+          <button className="allteam-btn-filter-01">
+            Short
+            <img
+              src="assets/downarrow.svg"
+              alt="icon"
+            />
           </button>
         </div>
         <div className="allteam-right-controls">
-          <button className="allteam-btn-filter">All Projects</button>
+          <div className="allteam-btn-filters-wrapper">
+            <img src="assets/search1.svg" alt="Search" className="search-icon" />
+            <input
+              type="text"
+              placeholder="Search Task..."
+              className="allteam-btn-filters"
+            />
+          </div>
+
           <button className="allteam-icon-btn">
             <img
               src="assets/listbar.svg"

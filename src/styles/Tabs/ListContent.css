@@ -39,6 +39,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  height: 40px;
   padding: 8px 12px;
   border: 1px solid var(--Alpha-Neutral-alpha-8, #02020414);
   border-radius: 6px;
@@ -60,16 +61,14 @@
 }
 
 .header-search-field {
+  background-color: rgba(2, 2, 4, 0.04);
   padding: 8px 12px;
   border: 1px solid #d1d5db;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 14px;
-  min-width: 200px;
+  width: 232px;
+  height: 40px;
 }
-
-
-
-
 
 .left-controls,
 .right-controls {
