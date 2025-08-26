@@ -1,0 +1,175 @@
+.Team {
+  font-family: 'Inter', sans-serif;
+  width: 1104px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA)
+}
+
+.Team table {
+  width: 100%;
+  border-collapse: collapse; 
+}
+
+.Team th,
+.Team td {
+  text-align: left;
+  padding: 12px 16px;
+  color: #625F6E;
+  vertical-align: middle;
+  font-size: 14px;
+  background-color: white;
+}
+
+.Team .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.Team .teams img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: -6px;
+  border: 2px solid white;
+}
+
+.Team .options {
+  font-size: 20px;
+  text-align: center;
+  color: #6b7280;
+}
+.Team td{
+    font-size: 14px;
+    font-weight: 500;
+    color: #625F6E;
+}
+.Team th{
+    font-size: 12px;
+    font-weight: 500;
+    color: #625F6E;
+}
+.team-pagination {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #020204;
+  padding: 0 10px;
+}
+
+.team-pagination button {
+  background-color: white;
+  border: none;
+  color: #020204;
+  padding: 6px 14px;
+  margin-left: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA)
+}
+
+.team-pagination button:disabled {
+    width: 83px;
+  background-color: white;
+  cursor: not-allowed;
+}
+
+.team-pagination button:not(:disabled):hover {
+  background-color: #0056b3;
+}
+.allteam-top-bar__01 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  white-space: nowrap;
+  margin-bottom: 24px;
+  margin-top: -20px;
+  width: 1104px;
+  /* margin-left: -28px; */
+}
+
+.allteam-left-controls__01,
+.allteam-right-controls__01 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 28px;
+}
+
+.allteam-btn-filter__01 {
+  background: var(--Alpha-Neutral-alpha-4, #0202040A);
+  width: 105px;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #625F6E;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.allteam-btn-filter__01 {
+  background: var(--Alpha-Neutral-alpha-4, #0202040A);
+  width: 149px;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #625F6E;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.allteam-icon-btn__01 {
+  background: none;
+  border: none;
+  height: 40px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #625F6E;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.width-small{
+width: 94px;
+}
+.width-Medium{
+width: 147px;
+}
+.width-medium{
+width: 108px;
+}
+.width-large{
+width: 108px;
+}
+.width-extra-medium{
+width: 131px;
+}

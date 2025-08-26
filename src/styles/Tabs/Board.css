@@ -1,20 +1,19 @@
-.board-container {
-  margin-left: -28px;
+.taskboard-container {
+  /* margin-left: -28px; */
   display: flex;
   gap: 20px;
   width: 1104px;
-  /* padding: 20px; */
   overflow-x: auto;
 }
 
-.board-column {
+.taskboard-column {
   width: 261px;
-  background: var(--Background-Surface-Neutral-Lv2, #F7F6F9);
+  background: #F7F6F9;
   border-radius: 10px;
   padding: 15px;
 }
 
-.board-column h3 {
+.taskboard-column h3 {
   gap: 8px;
   display: flex;
   justify-content: space-between;
@@ -23,14 +22,14 @@
   margin-bottom: 15px;
 }
 
-.board-column h3 span {
+.taskboard-column h3 span {
   background: #e2e2f0;
   padding: 2px 8px;
   border-radius: 8px;
   font-size: 14px;
 }
 
-.board-card {
+.taskboard-card {
   background: #fff;
   padding: 15px;
   border-radius: 10px;
@@ -38,23 +37,24 @@
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
-.card-status-priority {
+.taskboard-status-priority {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.board-card h4 {
+
+.taskboard-title {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 6px;
   color: #020204;
   line-height: 1.4;
-    white-space: nowrap;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;  
 }
 
-.board-card p {
+.taskboard-desc {
   font-size: 14px;
   font-weight: 400;
   color: #625F6E;
@@ -62,14 +62,14 @@
   line-height: 1.5;
 }
 
-.status {
+.taskboard-status {
   font-size: 12px;
   padding: 2px 6px;
   border-radius: 6px;
   color: #5a4ad1;
 }
 
-.priority {
+.taskboard-priority {
   font-size: 12px;
   padding: 2px 6px;
   border-radius: 6px;
@@ -78,23 +78,23 @@
 }
 
 /* Status colors */
-.status.notstarted { background: #593BF20A; color: #593BF2; }
-.status.inresearch { background: #593BF20A; color: #593BF2; }
-.status.inreviewed { background: #e8e0ff; color: #5a4ad1; }
-.status.completed { background: #32ABB90A; color: #32ABB9; }
+.taskboard-status.notstarted { background: #593BF20A; color: #593BF2; }
+.taskboard-status.inresearch { background: #593BF20A; color: #593BF2; }
+.taskboard-status.inreviewed { background: #e8e0ff; color: #5a4ad1; }
+.taskboard-status.completed { background: #32ABB90A; color: #32ABB9; }
 
 /* Priority colors */
-.priority.high { background: #AC3CFF0A; color:  #AC3CFF; }
-.priority.low { background: #fff0d6; color: #f0ad4e; }
+.taskboard-priority.high { background: #AC3CFF0A; color:  #AC3CFF; }
+.taskboard-priority.low { background: #fff0d6; color: #f0ad4e; }
 
-.card-footer {
+.taskboard-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
 }
 
-.avatars img {
+.taskboard-avatars img {
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -102,66 +102,63 @@
   border: 2px solid #fff;
 }
 
-.card-icons img {
+.taskboard-icons img {
   width: 16px;
   height: 16px;
   margin-left: 8px;
   vertical-align: middle;
 }
-.board-column-header {
+
+.taskboard-column-header {
   width: 249px;
   height: 38px;
   border-radius: 6px;
-  background: var(--Background-Surface-Neutral-Lv3, #F8FAFB);
+  background: #F8FAFB;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
   margin-left: -10px;
-margin-right: auto;
 }
 
-.left-header {
+.taskboard-left-header {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.right-header img {
+.taskboard-right-header img {
   margin-left: 8px;
   cursor: pointer;
 }
 
-.priority-icon {
+.taskboard-priority-icon {
   width: 14px;
   height: 14px;
   margin-right: 4px;
   vertical-align: middle;
 }
-/* 
-.board-wrapper {
-  padding: 20px;
-} */
 
-.top-bar {
+.taskboard-top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
 }
 
-.top-left-buttons{
+.taskboard-top-left-buttons {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-.top-right-buttons {
-  /* margin-right: -50px; */
-display: flex;
+
+.taskboard-top-right-buttons {
+  display: flex;
   align-items: center;
   gap: 12px;
 }
-.btnn {
+
+.taskboard-btn {
   font-size: 14px;
   font-weight: 500;
   display: flex;
@@ -170,31 +167,20 @@ display: flex;
   padding: 8px 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background: var(--Alpha-Neutral-alpha-4, #0202040A);
-color: #625F6E;
+  background: #0202040A;
+  color: #625F6E;
   cursor: pointer;
 }
 
-.icon-btnn {
+.taskboard-icon-btn {
   background: none;
   border: none;
   padding: 6px;
   cursor: pointer;
 }
 
-.search-input {
+.taskboard-search-input {
   padding: 8px;
   border-radius: 6px;
   border: 1px solid #ccc;
-}
-
-.card-title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.card-desc {
-  font-size: 13px;
-  color: #888;
 }

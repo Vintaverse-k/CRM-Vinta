@@ -12,7 +12,6 @@
   margin-left: -1170px;
   flex: 1;
   padding: 2rem;
-  font-family: "Inter", sans-serif;
   color: #1f2937;
   overflow-y: auto;
   scrollbar-width: thin;
@@ -477,7 +476,6 @@
   stroke-linecap: round;
 }
 
-/* Progress Text */
 .mytask-progress-text--01 {
   position: absolute;
   top: 50%;
@@ -489,13 +487,19 @@
   width: 140px;
 }
 
-/* Progress Breakdown */
 .mytask-progress-breakdown--01 {
   display: flex;
   justify-content: space-around;
   margin-top: 1rem;
-  font-weight: 600;
-  color: #4b5563;
+  font-weight: 500;
+  color: #625f6e;
+  font-size: 14px;
+}
+
+.mytask-progress-breakdown--01 span {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
 }
 
 /* Recent Activity */
@@ -695,4 +699,11 @@
   align-items: center;
   justify-content: center;
   padding: 20px 16px 16px 16px;
+}
+
+
+.mytask-menu-btn--001{
+display: flex;
+align-items: center;
+gap: 8px;
 }

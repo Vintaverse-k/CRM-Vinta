@@ -1,9 +1,12 @@
 
+body {
+  background: #f9fafb;
+}
+
 .dashboard-container {
   display: flex;
   height: 100vh;
-  font-family: 'Inter', sans-serif;
-  /* background: #f9fafb; */
+  /* background: #f8fafb; */
   color: #111827;
 }
 .stats-wrapper {
@@ -31,7 +34,9 @@
 
 /* Header */
 .header-section {
-  margin: 20px 50px;
+  width: 1104px;
+  height: 56px;
+  margin: 20px 0px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -48,6 +53,7 @@
   font-weight: 400;
   font-size: 16px;
   color: #625F6E;
+  margin-top: 4px;
 }
 
 .header-actions {
@@ -97,8 +103,8 @@ border: 1px solid rgba(2, 2, 4, 0.08);
 /* Stats Section */
 .stats-section {
   display: grid;
-  grid-template-columns: repeat(2, 264px); /* Exact width of cards */
-  gap: 12px 12px; /* gap: row-gap column-gap */
+  grid-template-columns: repeat(2, 264px); 
+  gap: 12px 12px;
 }
 
 .stat-card {
@@ -115,6 +121,7 @@ border: 1px solid rgba(2, 2, 4, 0.08);
 }
 .stat-header {
   display: flex;
+  /* flex-direction: column; */
   justify-content: space-between;
   align-items: center;
   font-size: 0.85rem;
@@ -191,7 +198,6 @@ border: 1px solid rgba(2, 2, 4, 0.08);
 
 
 
-/* Timeline project */
 .timeline-project {
   width: 540px;
   height: 292px;
@@ -262,11 +268,13 @@ border: 1px solid rgba(2, 2, 4, 0.08);
 }
 
 .conduct-meeting {
-  width: 216px;
+  width: 214px;
   height: 44px;
   display: flex;
-  justify-content: center;
-  background-color: #c7d2fe;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgba(89, 59, 242, 0.06);
+  border: 1px solid #593BF21F;
   color: #020204;
   font-size: 14px;
   font-weight: 400;
@@ -278,10 +286,12 @@ border: 1px solid rgba(2, 2, 4, 0.08);
     font-size: 14px;
   font-weight: 400;
   display: flex;
-  justify-content: center;
-  background-color: #bae6fd;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgba(186, 230, 253, 0.06);
   color: #020204;
   margin-left: 20px;
+  border: 1px solid #32ABB91F
 }
 
 .finalize-presentations {
@@ -289,12 +299,14 @@ border: 1px solid rgba(2, 2, 4, 0.08);
   height: 44px;
     font-size: 14px;
   font-weight: 400;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
   display: flex;
-  background: #32ABB90A;
+  background: rgba(50, 171, 185, 0.039);
   color: #020204;
   margin-left: auto;
   font-size: 14px;
+  border: 1px solid #32ABB914
 }
 
 .design-research {
@@ -302,15 +314,15 @@ border: 1px solid rgba(2, 2, 4, 0.08);
   height: 44px;
     font-size: 14px;
   font-weight: 400;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
   display: flex;
-  background: #0202040A;
-
+  background: rgba(2, 2, 4, 0.039);
   color: #020204;
   margin-left: auto;
+  border: 1px solid #0202041A
 }
 
-/* Time Tracker */
 .time-tracker {
   background: white;
   flex: 1;
@@ -322,7 +334,7 @@ border: 1px solid rgba(2, 2, 4, 0.08);
   justify-content: space-between;
   gap: 16px;
   width: 524px;
-  height: 406px;
+  height: 390px;
   margin-top: -420px;
   margin-left: 570px;
 }
@@ -351,7 +363,7 @@ border: 1px solid var(--Stroke-Primary, #E6E8EA);
 
 /* Current Task Tracker */
 .tracker-current-task {
-  border-bottom: 1px solid #0202040F;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA);
   border-radius: 12px;
   padding: 16px 20px;
   display: flex;
@@ -362,8 +374,10 @@ border: 1px solid var(--Stroke-Primary, #E6E8EA);
 }
 
 .task-name {
-  margin-left: -25px;
-  width: 492px;
+  margin-top: -16px;
+  border-radius: 8px;
+  margin-left: -22px;
+  width: 476px;
   height: 32px;
   background: #625F6E0A;
   display: flex;
@@ -380,6 +394,17 @@ border: 1px solid var(--Stroke-Primary, #E6E8EA);
   height: 20px;
   border-radius: 6px;
   object-fit: contain;
+  margin-left: 12px;
+}
+.slack-logo2{
+   width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  object-fit: contain;
+  vertical-align: middle;
+  gap: 2px;
+  
+  /* margin-left: 12px; */
 }
 
 .timer-display {
@@ -409,13 +434,13 @@ border: 1px solid var(--Stroke-Primary, #E6E8EA);
   justify-content: center;
 }
 
-.time{
+.time-01{
   font-size: 40px;
   font-weight: 500;
 }
 .timer-display .seconds {
   font-weight: 500;
-  color: #6b7280;
+  color: #625F6E;
   font-size: 40px;
 }
 
@@ -432,6 +457,7 @@ border: 1px solid var(--Stroke-Primary, #E6E8EA);
   border: none;
   transition: background-color 0.3s ease;
 }
+
 .previous-tasks-name{
   font-size: 14px;
   font-weight: 400;
@@ -461,9 +487,11 @@ linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100
   background-color: #6d28d9;
 }
 
-.btn-stop {
+.btn-stops {
   width: 89px;
   height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA);
   background: var(--Background-Surface-Default, #FFFFFF);
 
 }
@@ -487,8 +515,8 @@ linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100
   color: #10b981;
 }
 
-/* Task List Section */
 .task-list-section {
+  width: 1104px;
   background: white;
   border-radius: 12px;
   padding: 24px 32px;
@@ -496,9 +524,9 @@ linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin-top: -35px;
 }
 
-/* Task List Header */
 .task-list-header {
   display: flex;
   justify-content: space-between;
@@ -521,7 +549,8 @@ linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100
   font-size: 0.95rem;
   color: #374151;
   outline: none;
-  width: 220px;
+  width: 232px;
+  height: 40px;
   transition: border-color 0.3s ease;
 }
 
@@ -636,7 +665,7 @@ color: #AC3CFF;
 .stats-and-workload-wrapper {
   display: flex;
   gap: 24px;
-  margin-top: 24px;
+  margin-top: -9px;
 }
 
 .stats-section {
@@ -696,21 +725,21 @@ color: #AC3CFF;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  box-sizing: border-box; /* padding aur border ko width height me include karne ke liye */
+  box-sizing: border-box;
 }
 
 .progress-bar {
   display: flex;
   gap: 4px;
-  height: 30px; /* height badhaya */
+  height: 30px; 
   align-items: center;
 }
 
 .bar {
-  width: 12px;  /* width badhaya */
+  width: 12px; 
   height: 100%;
   background: #d1d5db;
-  border-radius: 4px; /* rounded edges thode zyada */
+  border-radius: 4px; 
   transition: background-color 0.3s ease;
 }
 

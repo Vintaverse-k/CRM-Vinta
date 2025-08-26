@@ -283,22 +283,23 @@ const ListContent = () => {
   const repeatedTodoTasks = [...taskData.todo, ...taskData.todo]; 
 
   return (
-    <div className="list-container">
-      <div className="top-bar-011">
-        <div className="left-controls">
-          <input
-            type="text"
-            placeholder="Search Task..."
-            className="search-input"
-          />
-        </div>
-        <div className="right-controls">
-          <button className="btn-01">All Projects</button>
-          <button className="icon-btnn">
-            <img src="assets/listbar.svg" alt="icon" className="btn-icon-02" />
-          </button>
-        </div>
-      </div>
+    <div class="portfolio-task-container">
+  <div class="portfolio-task-header">
+    <div class="portfolio-task-controls-left">
+      <input
+        type="text"
+        placeholder="Search Task..."
+        class="portfolio-task-search-input"
+      />
+    </div>
+    <div class="portfolio-task-actions-right">
+      <button class="portfolio-task-project-button">All Projects</button>
+      <button class="portfolio-task-view-toggle">
+        <img src="assets/filter.svg" alt="icon" class="portfolio-task-view-icon" />
+      </button>
+    </div>
+  </div>
+
 
       <TaskSection title="To do" data={repeatedTodoTasks} />
       {/* <TaskSection title="In Progress" data={taskData.inProgress} /> */}

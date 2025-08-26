@@ -1,9 +1,9 @@
 /* Container */
-.list-container {
-  /* background: #f7f8fa; */
+.list-container-09 {
   padding: 30px;
   font-size: 14px;
   color: #1f1f1f;
+  margin-top: -20px;
 }
 
 .top-bar {
@@ -16,6 +16,60 @@
   white-space: nowrap;
   margin-bottom: 24px;
 }
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  width: 1104px;
+  margin-left: -28px;
+  margin-top: -20px;
+  
+}
+
+.header-controls-group,
+.header-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-btn-style {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid var(--Alpha-Neutral-alpha-8, #02020414);
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #625f6e;
+}
+
+.view-toggle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid var(--Stroke-Primary, #e6e8ea);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.header-search-field {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 200px;
+}
+
+
+
+
 
 .left-controls,
 .right-controls {

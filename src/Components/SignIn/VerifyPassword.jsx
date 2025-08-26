@@ -20,7 +20,7 @@ const VerifyPassword = () => {
       <div className="left-side-05">
         <form className="signin-box-05" onSubmit={handleSubmit}>
           <img src="assets/logo.svg" alt="Logo" className="logo-05" />
-          <h2>Set Your Password</h2>
+          <h2>Create a new Password</h2>
           <p>Must be at least 8 characters.</p>
 
           <div className="input-group-05 password-wrapper-05">

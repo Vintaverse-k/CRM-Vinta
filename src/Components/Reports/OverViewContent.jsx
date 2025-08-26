@@ -105,7 +105,7 @@ const OverviewContent = () => {
               </div>
             ))}
           </div>
-          <h2 className="chart-heading">My Task Chart</h2>
+          <h2 className="chart-heading">Total 12 Portfolio</h2>
           <div className="mytask-chart-placeholder--001">Chart goes here</div>
         </div>
 

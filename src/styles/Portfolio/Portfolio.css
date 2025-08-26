@@ -9,7 +9,6 @@
   margin-left: -1170px;
   flex: 1;
   padding: 2rem;
-  font-family: "Inter", sans-serif;
   color: #1f2937;
   overflow-y: auto;
   scrollbar-width: thin;
@@ -60,17 +59,20 @@
   background: var(--Alpha-Neutral-alpha-4, #0202040A);
   color: #625F6E;
 }
-
+.icon-btnnn{
+  background: none;
+  border: none;
+}
 .mytask-btn-primary--001 {
   color: white;
   background: linear-gradient(85.28deg, #593BF2 0.71%, #863AFA 100.79%);
 }
 
-/* ListContent Component Styles */
-.list-container {
+.list-container-list {
   padding: 30px;
   font-size: 14px;
   color: #1f1f1f;
+  margin-top: -20px;
 }
 
 .top-bar-011 {
@@ -305,4 +307,81 @@ input[type="checkbox"] {
 }
 .list-container thead {
   background: transparent;
+}
+.portfolio-task-container {
+  padding: 30px;
+  font-size: 14px;
+  color: #1f1f1f;
+  margin-top: -20px;
+}
+
+.portfolio-task-header {
+  width: 1104px;
+  margin-left: -28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  white-space: nowrap;
+  margin-bottom: 24px;
+}
+
+.portfolio-task-controls-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.portfolio-task-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.portfolio-task-search-input {
+  background: rgba(2, 2, 4, 0.04);
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  min-width: 232px;
+}
+
+.portfolio-task-project-button {
+  background: rgba(2, 2, 4, 0.04);
+  width: 149px;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #625f6e;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.portfolio-task-view-toggle {
+  background: rgba(2, 2, 4, 0.04);
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--Alpha-Neutral-alpha-8, #02020414);
+  /* padding: 8px 12px; */
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #625f6e;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.portfolio-task-view-icon {
+  width: 24px;
+  height: 24px;
 }

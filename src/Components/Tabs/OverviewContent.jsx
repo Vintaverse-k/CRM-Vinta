@@ -6,18 +6,40 @@ const OverviewContent = () => {
       {/* Summary Cards */}
       <section className="mytask-summary-cards">
         {[
-          { title: "Completed", bgClass: "bg-purple-light", iconColor: "purple" },
-          { title: "Updated", bgClass: "bg-purple-lightest", iconColor: "purple" },
-          { title: "Created", bgClass: "bg-cyan-light", iconColor: "cyan" },
-          { title: "Due soon", bgClass: "bg-orange-light", iconColor: "orange" },
-        ].map(({ title, bgClass, iconColor }, idx) => (
+          {
+            title: "Completed",
+            bgClass: "bg-purple-light",
+            iconColor: "purple",
+            icon: "assets/completemytask.svg",
+          },
+          {
+            title: "Updated",
+            bgClass: "bg-purple-lightest",
+            iconColor: "purple",
+            icon: "assets/updatemytask.svg",
+          },
+          {
+            title: "Created",
+            bgClass: "bg-cyan-light",
+            iconColor: "cyan",
+            icon: "assets/createdmytask.svg",
+          },
+          {
+            title: "Due soon",
+            bgClass: "bg-orange-light",
+            iconColor: "orange",
+            icon: "assets/duemytask.svg",
+          },
+        ].map(({ title, bgClass, iconColor, icon }, idx) => (
           <div key={idx} className={`mytask-card ${bgClass}`}>
             <div className="mytask-card-header">
               <div className={`mytask-icon-circle mytask-icon-${iconColor}`}>
-                <img src="assets/complete-2.svg" alt="Icon" className="mytask-priority-icon" />
+                <img src={icon} alt={`${title} Icon`} className="mytask-priority-icon" />
               </div>
               <h3 className="mytask-card-title">{title}</h3>
-              <button className="mytask-menu-btn">...</button>
+              <button className="mytask-menu-btn">
+                <img src="assets/3dot.svg" alt="Menu Icon" />
+              </button>
             </div>
             <div className="mytask-card-content">
               <h2 className="mytask-card-number">12</h2>
@@ -36,7 +58,9 @@ const OverviewContent = () => {
             <h3 className="mytask-card-title">
               <img src="assets/totaltime.svg" alt="Icon" /> Priority Breakdown
             </h3>
-            <button className="mytask-menu-btn">...</button>
+            <button className="mytask-menu-btn">
+              <img src="assets/3dot.svg" alt="Icon" />
+            </button>
           </div>
           <div className="mytask-priority-list">
             {Array(3).fill(0).map((_, idx) => (
@@ -58,7 +82,9 @@ const OverviewContent = () => {
             <h3 className="mytask-card-title">
               <img src="assets/status.svg" alt="Icon" /> Status Overview
             </h3>
-            <button className="mytask-menu-btn">...</button>
+            <button className="mytask-menu-btn">
+              <img src="assets/3dot.svg" alt="Icon" />
+            </button>
           </div>
           <div className="mytask-status-list">
             {[
@@ -98,7 +124,9 @@ const OverviewContent = () => {
             <h3 className="mytask-card-title">
               <img src="assets/totaltime.svg" alt="Icon" /> Total Time Worked
             </h3>
-            <button className="mytask-menu-btn">...</button>
+            <button className="mytask-menu-btn">
+              <img src="assets/3dot.svg" alt="Icon" />
+            </button>
           </div>
           <p className="mytask-time-count">
             13h 32m 09s <span className="mytask-increase">+1.5%</span>
@@ -112,7 +140,9 @@ const OverviewContent = () => {
             <h3 className="mytask-card-title">
               <img src="assets/taskassign.svg" alt="Icon" /> Task completed by assignee
             </h3>
-            <button className="mytask-menu-btn">...</button>
+            <button className="mytask-menu-btn">
+              <img src="assets/3dot.svg" alt="Icon" />
+            </button>
           </div>
           <div className="mytask-progress-ring-wrapper">
             <img src="assets/chart.png" alt="Progress ring" />
@@ -130,7 +160,9 @@ const OverviewContent = () => {
             <h3 className="mytask-card-title">
               <img src="assets/recent.svg" alt="Icon" /> Recent activity
             </h3>
-            <button className="mytask-menu-btn">...</button>
+            <button className="mytask-menu-btn">
+              <img src="assets/3dot.svg" alt="Icon" />
+            </button>
           </div>
           <div className="mytask-activity-list">
             <div className="mytask-activity-group">

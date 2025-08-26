@@ -44,7 +44,7 @@
 }
 
 .view__btn--001.active--01 {
-  background: #f3f3f3;
+  background: white;
   color: #030303;
   border: 1px solid #e6e8ea;
 }
@@ -68,7 +68,6 @@
   cursor: pointer;
 }
 
-/* === CALENDAR === */
 .calendar__section--01 {
   /* width: 880px;  */
   /* height: 724px;  */
@@ -111,8 +110,9 @@
   display: flex;
 }
 
-/* === SIDEBAR === */
 .calendar__sidebar1--01 {
+  margin-top: -10px;
+  background-color: white;
   width: 52px;
   /* height: 724px; */
   border: 1px solid #e6e8ea;
@@ -138,9 +138,11 @@
 }
 
 .meeting__holder--01 {
+  margin-top: -10px;
   width: 118.29px;  
   height: 200px;   
   padding: 8px;
+  background-color: white;
   border-right: 1px solid #e6e8ea;
   border-bottom: 1px solid #e6e8ea;
   box-sizing: border-box;
@@ -217,6 +219,8 @@ color: #625F6E;
   cursor: pointer;
 }
 .custom__left__column--01 {
+  margin-top: -10px;
+  background-color: white;
   width: 227px;
   border: 1px solid #e6e8ea;
   border-top: none;
@@ -257,9 +261,9 @@ color: #625F6E;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 20px;
 }
-.mytask-title __01{
+.mytask-title__01{
   font-size: 20px;
   font-weight: 500;
   color: #020204;

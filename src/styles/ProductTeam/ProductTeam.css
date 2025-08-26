@@ -1,7 +1,6 @@
 .mytask-container {
   display: flex;
   min-height: 100vh;
-  font-family: "Inter", sans-serif;
   color: #1f2937;
 }
 
@@ -16,7 +15,7 @@
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #a78bfa transparent;
-  margin-top: 20px;
+  margin-top: 52px;
   margin-left: -1170px; /* This seems very specific; adjust as needed */
 }
 
@@ -30,8 +29,8 @@
 }
 
 /* Header */
-.mytask-header {
-  margin-top: 20px;
+.mytask-header{
+  margin-top: -15px;
   margin-bottom: 1.5rem;
   display: flex;
   justify-content: space-between;

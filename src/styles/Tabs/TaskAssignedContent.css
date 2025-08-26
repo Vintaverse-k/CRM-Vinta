@@ -1,3 +1,4 @@
+
 .TaskAssignedContent {
   font-family: 'Inter', sans-serif;
   padding: 20px;
@@ -24,7 +25,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  /* background: #e5e7eb; */
+  border: 1px solid var(--Alpha-Neutral-alpha-8, #02020414);
   padding: 8px 12px;
   border-radius: 6px;
   font-size: 14px;
@@ -42,7 +43,8 @@
 
 /* Column Box */
 .full-width {
-  width: 100%;
+  width: 1104px;
+  margin-left: -30px;
   border: 1px solid var(--Stroke-Primary, #E6E8EA);
   background: #fff;
   border-radius: 12px;
@@ -172,4 +174,60 @@
   color: #6b7280;
   cursor: pointer;
   flex-shrink: 0;
+}
+/* Container */
+.task-list-container {
+  padding: 30px;
+  font-size: 14px;
+  color: #1f1f1f;
+  margin-top: -20px;
+}
+
+.task-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  width: 1104px;
+  margin-left: -28px;
+  margin-top: -20px;
+}
+
+.header-controls-left,
+.header-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid rgba(2, 2, 4, 0.08);
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #625f6e;
+}
+
+.view-toggle-button-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #e6e8ea;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.header-search-input {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 200px;
 }

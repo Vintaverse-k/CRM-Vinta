@@ -256,7 +256,7 @@ const TaskSection = ({ title, data }) => {
     <div className="section">
       <div className="section-titles01">
         <img
-          src={title === "To do" ? "assets/todo.svg" : "assets/inprogress.svg"}
+          src={title === "To do" ? "assets/inprogress.svg" : "assets/inprogress.svg"}
           alt={`${title} icon`}
           className="section-dot-img"
         />

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Sidebar from "../SideBar/Sidebar";
 import "../../styles/Inbox/Inbox.css";
 
-// Import all tab components according to tab names
 import Activity from "../Inbox/Activity";
 import Archive from "../Inbox/Archive";
 import Bookmark from "../Inbox/Bookmark";

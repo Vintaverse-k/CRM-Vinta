@@ -630,6 +630,9 @@ padding: 16px;
   height: 18px;
   object-fit: contain;
 }
+.workflow-icons20{
+  margin-left:8px;
+}
 .section-card-01 {
   position: relative; 
 }

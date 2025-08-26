@@ -8,7 +8,6 @@
   margin-left: -1170px;
   flex: 1;
   padding: 2rem;
-  font-family: "Inter", sans-serif;
   color: #1f2937;
   overflow-y: auto;
   scrollbar-width: thin;
@@ -158,7 +157,7 @@
 
 .allteam-section {
   width: 1104px;
-  height: 712px;
+  /* height: 712px; */
   margin-left: -32px;
   background: white;
   border-radius: 12px;

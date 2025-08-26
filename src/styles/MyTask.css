@@ -9,11 +9,12 @@
 }
 
 .mytask-main-content {
-  margin-top: 20px;
+  margin-top: 52px;
   margin-left: -1170px;
+  /* background-color: white; */
+  background-color: #F8FAFB;
   flex: 1;
   padding: 2rem;
-  font-family: "Inter", sans-serif;
   color: #1f2937;
   overflow-y: auto;
   scrollbar-width: thin;
@@ -28,8 +29,8 @@
 }
 
 /* Header */
-.mytask-header {
-  margin-top: 20px;
+.mytask-headers {
+  margin-top: -20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -123,6 +124,7 @@
 .mytask-card-header {
   display: flex;
   align-items: center;
+  margin-top: -12px;
   margin-bottom: 1rem;
 }
 .mytask-icon-circle {
@@ -198,6 +200,7 @@
   font-size: 14px;
   font-weight: 400;
   color: #625F6E;
+  margin-left: 44px;
 }
 
 /* Card content */
@@ -223,9 +226,13 @@
   color: #593BF2;
 }
 .mytask-percent-cyan {
+  font-size: 12px;
+  font-weight: 400;
   color: #0891b2;
 }
 .mytask-percent-orange {
+  font-size: 12px;
+  font-weight: 400;
   color: #ea580c;
 }
 .mytask-desc {
@@ -566,6 +573,18 @@ background: #FF692E0A;
 
 }
 
+.mytask-btn-outline {
+  display: flex;
+  align-items: center;   /* icon + text ek line me */
+  justify-content: center;
+  gap: 6px;              /* thoda gap icon aur text ke beech */
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
 
 
 

@@ -8,7 +8,6 @@ const Activity = () => {
       {/* Past 7 Days */}
       <div className="task-section">
         <h3 className="section-title01">
-          <img src="assets/Folder.svg" alt="Folder" className="icon" />
           Past 7 Days
         </h3>
         <div className="task-subtitle">
@@ -73,8 +72,29 @@ const Activity = () => {
             <h4>Slack</h4>
             <p>Integrate your top tools for Communications in a few clicks.</p>
           </div>
-          <span className="task-date">6 days ago</span>
+          <span className="task-date">Apr 25</span>
         </div>
+           <h3 className="section-title">
+  <span className="title-left">
+    <img src="assets/messages.svg" alt="Messages" className="icon" />
+    Hi Juyed Ahmed, your favorite tools are here
+  </span>
+  <img src="assets/BlueDot.svg" alt="More Options" className="icon-right" />
+</h3>
+        <div className="tool-card">
+          <img
+            src="https://a.slack-edge.com/80588/marketing/img/icons/icon_slack_hash_colored.png"
+            alt="Slack"
+            className="tool-icon"
+          />
+          <div className="tool-info">
+            <h4>Slack</h4>
+            <p>Integrate your top tools for Communications in a few clicks.</p>
+          </div>
+          <span className="task-date">Apr 25</span>
+        </div>
+        
+
       </div>
     </div>
   );

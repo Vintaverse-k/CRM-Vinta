@@ -53,7 +53,7 @@ const ProjectBoard = () => {
   </div>
 </div>
           <div className="add-action-01">
-            <img src="assets/intakeplus.svg" alt="add-action" className="workflow-icons" /> More actions
+            <img src="assets/intakeplus.svg" alt="add-action" className="workflow-icons20" /> More actions
           </div>
         </div>
 
@@ -84,7 +84,7 @@ const ProjectBoard = () => {
   </div>
 </div>
           <div className="add-action-01">
-            <img src="assets/intakeplus.svg" alt="add-action" className="workflow-icons" /> More actions
+            <img src="assets/intakeplus.svg" alt="add-action" className="workflow-icons20" /> More actions
           </div>
         </div>
 
@@ -116,7 +116,7 @@ const ProjectBoard = () => {
 </div>
 
           <div className="add-action-01">
-            <img src="assets/intakeplus.svg" alt="add-action" className="workflow-icons" /> More actions
+            <img src="assets/intakeplus.svg" alt="add-action" className="workflow-icons20" /> More actions
           </div>
         </div>
       </div>

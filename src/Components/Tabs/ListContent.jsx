@@ -188,13 +188,14 @@ const TaskRow = ({ task }) => (
     </td>
     <td>{task.dueDate}</td>
     <td className="status-cell">
-      <img
-        src={"assets/Stop.svg"}
-        alt="status icon"
-        className="status-icon"
-      />
-      <span className="status-dot">{task.status}</span>
-    </td>
+  <img
+    src="assets/Stop.svg"
+    alt="status icon"
+    className="status-icon"
+  />
+  <span className="status-text">{task.status}</span>
+</td>
+
 
     <td>
       <ProgressBar percent={task.progress} />
@@ -245,25 +246,24 @@ const TaskSection = ({ title, data }) => {
 
 const ListContent = () => {
   return (
-    <div className="list-container">
-       <div className="top-bar">
-        <div className="top-left-buttons">
-          <button className="btnn">
-            <img src="assets/group.svg" alt="group" /> Group: Status
-          </button>
-          <button className="btnn">
-            <img src="assets/colum.svg" alt="columns" /> Columns
-          </button>
-        </div>
-        <div className="top-right-buttons">
-          <input type="text" className="search-input" placeholder="Search Task..." />
-          <button className="btnn">All Project</button>
-          <button className="icon-btnn">
-            <img src="assets/listbar.svg" alt="list" />
-          </button>
-        </div>
-      </div>
-
+    <div className="list-container-09">
+<div className="dashboard-header">
+  <div className="header-controls-group">
+    <button className="header-btn-style">
+      <img src="assets/group.svg" alt="group" /> Group: Status
+    </button>
+    <button className="header-btn-style">
+      <img src="assets/colum.svg" alt="columns" /> Columns
+    </button>
+  </div>
+  <div className="header-actions-group">
+    <input type="text" className="header-search-field" placeholder="Search Task..." />
+    <button className="header-btn-style">All Project</button>
+    <button className="view-toggle-button">
+      <img src="assets/listbar.svg" alt="list" />
+    </button>
+  </div>
+</div>
 
       <TaskSection title="To do" data={taskData.todo} />
       <TaskSection title="In Progress" data={taskData.inProgress} />

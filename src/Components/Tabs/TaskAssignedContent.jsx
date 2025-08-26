@@ -17,24 +17,25 @@ const tasks = [
 
 const TaskAssignedContent = () => {
   return (
-     <div className="list-container">
-       <div className="top-bar">
-        <div className="top-left-buttons">
-          <button className="btnn">
-            <img src="assets/group.svg" alt="group" /> Group: Status
-          </button>
-          <button className="btnn">
-            <img src="assets/colum.svg" alt="columns" /> Columns
-          </button>
-        </div>
-        <div className="top-right-buttons">
-          <input type="text" className="search-input" placeholder="Search Task..." />
-          <button className="btnn">All Project</button>
-          <button className="icon-btnn">
-            <img src="assets/listbar.svg" alt="list" />
-          </button>
-        </div>
-      </div>
+    <div class="task-list-container">
+  <div class="task-list-header">
+    <div class="header-controls-left">
+      <button class="header-button">
+        <img src="assets/group.svg" alt="group" /> Group: Status
+      </button>
+      <button class="header-button">
+        <img src="assets/colum.svg" alt="columns" /> Columns
+      </button>
+    </div>
+    <div class="header-actions-right">
+      <input type="text" class="header-search-input" placeholder="Search Task..." />
+      <button class="header-button">All Project</button>
+      <button class="view-toggle-button-custom">
+        <img src="assets/listbar.svg" alt="list" />
+      </button>
+    </div>
+  </div>
+    
       {/* Task Table Section */}
       <div className="board-container">
         <div className="board-column full-width">

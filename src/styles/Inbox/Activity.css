@@ -1,11 +1,12 @@
 .task-dashboard {
-  font-family: Arial, sans-serif;
   padding: 20px;
   min-height: 100vh;
+  /* margin-top: -20px; */
 }
 
-/* Sections */
 .task-section {
+  width: 1104px;
+  margin-left: -28px;
   background: #fff;
   border: 1px solid var(--Stroke-Primary, #E6E8EA);
   border-radius: 10px;
@@ -62,13 +63,15 @@
   align-items: center;
   gap: 6px;
 }
-
+.task-section h3{
+  font-size: 16px;
+  font-weight: 500;
+  color: #625F6E;
+}
 .task-date {
   color: #666;
   font-size: 13px;
 }
-
-/* Tools Section */
 .tool-card {
   display: flex;
   align-items: center;

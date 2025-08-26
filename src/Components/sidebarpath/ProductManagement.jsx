@@ -73,10 +73,21 @@ const ProductManagement = () => {
               projects.
             </p>
           </div>
-          <div className="mytask-header-buttons">
-            <button className="mytask-btn-outline">Share Tasks</button>
-            <button className="mytask-btn-primary">+ New Task</button>
-          </div>
+         <div className="header-actions">
+              <button className="btn-outline">
+                <img
+                  src="assets/share.svg"
+                  alt="Share Icon"
+                  width={24}
+                  height={24}
+                />
+                Share Tasks
+              </button>
+              <button className="btn-primary">+ Add Team</button>
+            </div>
+          
+
+
         </header>
 
         {/* Tabs */}

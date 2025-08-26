@@ -90,8 +90,8 @@ const ProjectOverview = () => {
         <div className="status-header">
           <span className="on-track-label">On Track</span>
           <button className="update-status-btn">
-            <img src="/assets/downarrow.svg" alt="update" className="icon-15" />
             <span>Update status</span>
+            <img src="/assets/downarrow.svg" alt="update" className="icon-15" />
           </button>
         </div>
 

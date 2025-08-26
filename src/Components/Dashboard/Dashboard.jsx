@@ -30,102 +30,70 @@ const Dashboard = () => {
 
           <div className="stats-and-workload-wrapper">
 
-            <div className="stats-section">
+           <div className="stats-section">
 
-              {/* Stat Cards */}
-              <div className="stat-card light-blue">
-                <div className="stat-header">
-                  <img
-                    src="assets/task.svg"
-                    alt="Tasks Icon"
-                    width={28}
-                    height={28}
-                  />
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/512/512142.png"
-                    alt="Menu Icon"
-                    width={20}
-                    height={20}
-                    style={{ cursor: 'pointer' }}
-                  />
-                </div>
-                <h3>Total tasks</h3>
-                <div className="stat-value">
-                  86 <span className="percentage">↑ 20%</span>
-                </div>
-                <p>Tasks finished last month</p>
-              </div>
+  {/* Stat Cards */}
+  <div className="stat-card light-blue">
+    <div className="stat-header">
+      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <img src="assets/complete.svg" alt="Tasks Icon" width={28} height={28} />
+        <h3>Total tasks</h3>
+      </div>
+      <img src="assets/3dot.svg" alt="Menu Icon" width={20} height={20} style={{ cursor: "pointer" }} />
+    </div>
 
-              <div className="stat-card light-orange">
-                <div className="stat-header">
-                  <img
-                    src="assets/complete.svg"
-                    alt="Tasks Icon"
-                    width={28}
-                    height={28}
-                  />
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/512/512142.png"
-                    alt="Menu Icon"
-                    width={20}
-                    height={20}
-                    style={{ cursor: 'pointer' }}
-                  />
-                </div>
-                <h3>Completed Tasks</h3>
-                <div className="stat-value">
-                  22 <span className="percentage">↑ 20%</span>
-                </div>
-                <p>Tasks finished last month</p>
-              </div>
+    <div className="stat-value">
+      86 <span className="percentage">↑ 20%</span>
+    </div>
+    <p>Tasks finished last month</p>
+  </div>
 
-              <div className="stat-card light-green">
-                <div className="stat-header">
-                  <img
-                    src="assets/complete.svg"
-                    alt="Tasks Icon"
-                    width={28}
-                    height={28}
-                  />
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/512/512142.png"
-                    alt="Menu Icon"
-                    width={20}
-                    height={20}
-                    style={{ cursor: 'pointer' }}
-                  />
-                </div>
-                <h3>Overdue Tasks</h3>
-                <div className="stat-value">
-                  25 <span className="percentage">↑ 20%</span>
-                </div>
-                <p>Tasks finished last month</p>
-              </div>
+  <div className="stat-card light-orange">
+    <div className="stat-header">
+      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <img src="assets/complete.svg" alt="Tasks Icon" width={28} height={28} />
+        <h3>Completed Tasks</h3>
+      </div>
+      <img src="assets/3dot.svg" alt="Menu Icon" width={20} height={20} style={{ cursor: "pointer" }} />
+    </div>
 
-              <div className="stat-card light-purple">
-                <div className="stat-header">
-                  <img
-                    src="assets/opentask.svg"
-                    alt="Tasks Icon"
-                    width={28}
-                    height={28}
-                  />
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/512/512142.png"
-                    alt="Menu Icon"
-                    width={20}
-                    height={20}
-                    style={{ cursor: 'pointer' }}
-                  />
-                </div>
-                <h3>Open Tasks</h3>
-                <div className="stat-value">
-                  40 <span className="percentage">↑ 20%</span>
-                </div>
-                <p>Tasks finished last month</p>
-              </div>
+    <div className="stat-value">
+      22 <span className="percentage">↑ 20%</span>
+    </div>
+    <p>Tasks finished last month</p>
+  </div>
 
-            </div>
+  <div className="stat-card light-green">
+    <div className="stat-header">
+      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <img src="assets/complete.svg" alt="Tasks Icon" width={28} height={28} />
+        <h3>Overdue Tasks</h3>
+      </div>
+      <img src="assets/3dot.svg" alt="Menu Icon" width={20} height={20} style={{ cursor: "pointer" }} />
+    </div>
+
+    <div className="stat-value">
+      25 <span className="percentage">↑ 20%</span>
+    </div>
+    <p>Tasks finished last month</p>
+  </div>
+
+  <div className="stat-card light-purple">
+    <div className="stat-header">
+      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <img src="assets/opentask.svg" alt="Tasks Icon" width={28} height={28} />
+        <h3>Open Tasks</h3>
+      </div>
+      <img src="assets/3dot.svg" alt="Menu Icon" width={20} height={20} style={{ cursor: "pointer" }} />
+    </div>
+
+    <div className="stat-value">
+      40 <span className="percentage">↑ 20%</span>
+    </div>
+    <p>Tasks finished last month</p>
+  </div>
+
+</div>
 
             {/* Right Side: Workload Wrapper */}
             <div className="workload-wrapper">
@@ -205,7 +173,7 @@ const Dashboard = () => {
               <div className="timeline-tasks">
                 <div className="task conduct-meeting">
                   <img
-                    src="assets/complete.svg"
+                    src="assets/conductteam.svg"
                     alt="Meeting Icon"
                     width={28}
                     height={28}
@@ -215,7 +183,7 @@ const Dashboard = () => {
                 </div>
                 <div className="task clients-emails">
                   <img
-                    src="assets/complete.svg"
+                    src="assets/finalteam.svg"
                     alt="Email Icon"
                     width={28}
                     height={28}
@@ -259,7 +227,13 @@ const Dashboard = () => {
                   />
                   Time Tracker
                 </h3>
-                <button className="btn-history">History</button>
+                <button className="btn-history">
+                   <img
+                    src="assets/clock.svg"
+                    alt="Slack"
+                    className="slack-logo2"
+                  />
+                  History</button>
               </div>
               <div className="tracker-current-task">
                 <div className="task-name">
@@ -280,7 +254,7 @@ const Dashboard = () => {
                     />
                     Mon, 23 Apr 2025
                   </div>
-                  <div className="time">
+                  <div className="time-01">
                     32:40:<span className="seconds">10</span>
                   </div>
                 </div>
@@ -295,7 +269,7 @@ const Dashboard = () => {
                     />
                     Pause
                   </button>
-                  <button className="btn-stop">
+                  <button className="btn-stops">
                     <img
                       src="assets/Stop.svg"
                       alt="Stop Icon"
@@ -335,7 +309,7 @@ const Dashboard = () => {
           {/* Task List Section */}
           <div className="task-list-section">
             <div className="task-list-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <h3 style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                 <img
                   src="assets/tasklist.svg"
                   alt="List Icon"
@@ -351,12 +325,12 @@ const Dashboard = () => {
                 </select>
                 <button className="btn-filter">
                   <img
-                    src="https://cdn-icons-png.flaticon.com/512/2089/2089670.png"
+                    src="assets/timeline-2.svg"
                     alt="Settings Icon"
-                    width={20}
-                    height={20}
+                    width={40}
+                    height={40}
                   />
-                </button>
+                  </button>
               </div>
             </div>
 
