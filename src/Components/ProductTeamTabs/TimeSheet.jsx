@@ -1,5 +1,6 @@
   import React, { useState } from "react";
   import "../../styles/ProductTeam/TimeSheet.css"; 
+  // my-crm-app/src/styles/ProductTeam/TimeSheet.css
 const hoursData = {
   1: [7, 8, 7, 8, 9, 7, 6],
   2: [8, 8, 8, 8, 8, 8, 8],

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import "../../styles/AllTeam/AllTeam.css";
+import "../../styles/AllTeam/Allteam.css";
+// my-crm-app/src/styles/Allteam/AllTeam.css
 import { FiMoreVertical } from "react-icons/fi";
+
 
 const taskData = {
   todo: [
