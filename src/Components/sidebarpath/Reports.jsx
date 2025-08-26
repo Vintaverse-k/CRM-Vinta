@@ -17,8 +17,8 @@ const MyTask = () => {
             <p className="mytask-subtitle--01">Analyze your workflow with detailed task and project data.
             </p>
           </div>
-          <div className="header-actions">
-              <button className="btn-outline">
+        <div className="dashboard-manage-task-header-actions">
+              <button className="dashboard-manage-task-btn-outline">
                 <img
                   src="assets/share.svg"
                   alt="Share Icon"
@@ -27,9 +27,8 @@ const MyTask = () => {
                 />
                 Share Tasks
               </button>
-              <button className="btn-primary">+ Add Team</button>
+              <button className="dashboard-manage-task-btn-primary">+ Add Team</button>
             </div>
-        
 
         </header>
 

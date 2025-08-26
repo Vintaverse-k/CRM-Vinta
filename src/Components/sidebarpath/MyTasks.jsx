@@ -52,8 +52,8 @@ const MyTask = () => {
               Short description will be placed here
             </p>
           </div>
-          <div className="header-actions">
-              <button className="btn-outline">
+           <div className="dashboard-manage-task-header-actions">
+              <button className="dashboard-manage-task-btn-outline">
                 <img
                   src="assets/share.svg"
                   alt="Share Icon"
@@ -62,7 +62,7 @@ const MyTask = () => {
                 />
                 Share Tasks
               </button>
-              <button className="btn-primary">+ New Task</button>
+              <button className="dashboard-manage-task-btn-primary">+ New Task</button>
             </div>
           
 

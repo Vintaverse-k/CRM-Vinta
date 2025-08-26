@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "../SideBar/Sidebar";
 import "../../styles/Portfolio/Portfolio.css";
-import OverviewContent from "../Portfolio/OverViewCOntent";
+import OverviewContent from "../Portfolio/OverviewContents";
 
 const MyTask = () => {
   return (
@@ -17,8 +17,8 @@ const MyTask = () => {
             <p className="mytask-subtitle--01">Track project health and progress across teams.
             </p>
           </div>
-          <div className="header-actions">
-              <button className="btn-outline">
+           <div className="dashboard-manage-task-header-actions">
+              <button className="dashboard-manage-task-btn-outline">
                 <img
                   src="assets/share.svg"
                   alt="Share Icon"
@@ -27,7 +27,7 @@ const MyTask = () => {
                 />
                 Share Tasks
               </button>
-              <button className="btn-primary">+ Add Team</button>
+              <button className="dashboard-manage-task-btn-primary">+ Add Team</button>
             </div>
           
 

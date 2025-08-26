@@ -179,7 +179,7 @@ const StatusTag = ({ status }) => {
   return (
     <div className="status-cell">
       <span
-        className="status-dot"
+        className="status-dot-02"
         style={{ color: getColor(status), fontWeight: 600 }}
       >
         ●

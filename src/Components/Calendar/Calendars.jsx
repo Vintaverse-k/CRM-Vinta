@@ -143,18 +143,18 @@ const Calendar = () => {
             Easily schedule and manage tasks by day, week, or month.
           </p>
         </div>
-        <div className="header-actions">
-          <button className="btn-outline">
-            <img
-              src="assets/share.svg"
-              alt="Share Icon"
-              width={24}
-              height={24}
-            />
-            Share Tasks
-          </button>
-          <button className="btn-primary">+ New Task</button>
-        </div>
+        <div className="dashboard-manage-task-header-actions">
+              <button className="dashboard-manage-task-btn-outline">
+                <img
+                  src="assets/share.svg"
+                  alt="Share Icon"
+                  width={24}
+                  height={24}
+                />
+                Share Tasks
+              </button>
+              <button className="dashboard-manage-task-btn-primary">+ New Task</button>
+            </div>
       </header>
 
       <div className="task__bar--001">
