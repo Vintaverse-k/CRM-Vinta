@@ -4,13 +4,13 @@
 }
 
 .task__btns {
-    margin-top: -20px;
+    margin-top: -52px;
   display: flex;
   gap: 16px;
   align-items: center;
   justify-content:space-between;
   width: 1104px;
-  margin-left: -28px;
+  /* margin-left: -28px; */
 }
 .task__actions {
   display: flex;

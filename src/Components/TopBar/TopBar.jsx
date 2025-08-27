@@ -19,8 +19,11 @@ const TopBar = () => {
           <img src={topbarData.videoIcon} alt="video" />
         </button>
         <button className="integrate-btn" aria-label="Integrate">
-          <img src={topbarData.integrateIcon} alt="integrate" />
+          <img src={topbarData.integrate} alt="integrate" />
           <span>Integrate</span>
+          
+
+          <img src={topbarData.integrateIcon} alt="integrate" />
         </button>
         <img src={topbarData.profileImage} alt="profile" className="profile-img" />
         <span className="dropdown" aria-label="User menu">⌄</span>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../../styles/Reports/Reports.css"
 const OverviewContent = () => {
   return (
     <>
@@ -10,37 +10,40 @@ const OverviewContent = () => {
             title: "My Complete tasks",
             bgClass: "bg-purple-light--01",
             iconColor: "purple",
+            icon: "assets/mycomplete.svg",
           },
           {
             title: "My Incomplete tasks",
             bgClass: "bg-purple-lightest--01",
             iconColor: "purple",
+            icon: "assets/reportcomplete.svg",
           },
           {
             title: "My Overdue Task",
             bgClass: "bg-cyan-light--01",
             iconColor: "cyan",
+            icon: "assets/reportoverdue.svg",
           },
           {
             title: "My Total tasks",
             bgClass: "bg-orange-light--01",
             iconColor: "orange",
+            icon: "assets/reporttotaltask.svg",
           },
-        ].map(({ title, bgClass, iconColor }, idx) => (
+        ].map(({ title, bgClass, iconColor, icon }, idx) => (
           <div key={idx} className={`mytask-card--01 ${bgClass}`}>
             <div className="mytask-card-header--01">
               <div
                 className={`mytask-icon-circle--01 mytask-icon-${iconColor}--01`}
               >
                 <img
-                  src="assets/mycomplete.svg"
+                  src={icon}
                   alt="Icon"
                   className="mytask-priority-icon--01"
                 />
               </div>
               <h3 className="mytask-card-title--01">{title}</h3>
               <button className="mytask-menu-btn--01">
-                {" "}
                 <img src="assets/3dot.svg" alt="Icon" />
               </button>
             </div>
@@ -53,14 +56,13 @@ const OverviewContent = () => {
 
       {/* Lower Grid */}
       <section className="mytask-lower-grid--01">
-        {/* status overview */}
+        {/* Status Overview */}
         <div className="mytask-card--01 mytask-status-overview--01">
           <div className="mytask-card-header--01">
             <h3 className="mytask-card-title--01">
-              <img src="assets/status.svg" alt="Icon" /> Status Overview
+              <img src="assets/portfolioicon.svg" alt="Icon" /> Status Overview
             </h3>
             <button className="mytask-menu-btn--011">
-              {" "}
               Filter <img src="assets/filter.svg" alt="Icon" />
             </button>
           </div>
@@ -113,9 +115,13 @@ const OverviewContent = () => {
         <div className="mytask-card--01 mytask-priority-breakdown--01">
           <div className="mytask-card-header--01">
             <h3 className="mytask-card-title--01">
-              <img src="assets/totaltime.svg" alt="Icon" /> Priority Breakdown
+              <img src="assets/incomplete.svg" alt="Icon" /> Incomplete tasks by project
             </h3>
-            <button className="mytask-menu-btn--01">...</button>
+
+            <button className="mytask-menu-btn--001">
+              See All
+              <img src="assets/downarrow.svg" alt="Icon" />
+            </button>
           </div>
           <div className="mytask-priority-list--01">
             {Array(3)
@@ -132,9 +138,8 @@ const OverviewContent = () => {
               ))}
           </div>
           <div className="mytask-chart-placeholder--pi">
-  <img src="assets/pichart.png" alt="Chart" className="chart-image" />
-</div>
-
+            <img src="assets/pichart.png" alt="Chart" className="chart-image" />
+          </div>
         </div>
       </section>
 
@@ -191,7 +196,7 @@ const OverviewContent = () => {
           <div className="mytask-chart-placeholder--01">Chart goes here</div>
         </div>
 
-        {/* Task Completed */}
+        {/* Goals by Status */}
         <div className="mytask-card--01 mytask-task-completed--01">
           <div className="mytask-card-header--01">
             <h3 className="mytask-card-title--01">
@@ -207,11 +212,17 @@ const OverviewContent = () => {
           </div>
           <div className="mytask-progress-breakdown--01">
             <span>
-              <img src="assets/purple.svg" alt="Icon" />To DO</span>
+              <img src="assets/purple.svg" alt="Icon" />
+              To DO
+            </span>
             <span>
-              <img src="assets/blue.svg" alt="Icon" />In Progress</span>
+              <img src="assets/blue.svg" alt="Icon" />
+              In Progress
+            </span>
             <span>
-              <img src="assets/orange.svg" alt="Icon" />Done</span>
+              <img src="assets/orange.svg" alt="Icon" />
+              Done
+            </span>
           </div>
         </div>
       </section>

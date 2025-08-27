@@ -64,9 +64,9 @@
 }
 
 .icon-btn img {
-  width: 16px;
-  height: 16px;
-  filter: invert(1);
+  width: 24px;
+  height: 24px;
+  /* filter: invert(1); */
 }
 
 .integrate-btn {

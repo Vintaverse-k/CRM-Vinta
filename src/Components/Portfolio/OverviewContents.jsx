@@ -60,24 +60,6 @@ const taskData = {
       status: "On Track",
       assignedTo: 3,
     },
-    {
-      name: "Orbit - web3 website design",
-      icon: "assets/orbit.svg",
-      startDate: "25/04/2025",
-      dueDate: "25/05/2025",
-      progress: 60,
-      status: "On Track",
-      assignedTo: 3,
-    },
-    {
-      name: "Orbit - web3 website design",
-      icon: "assets/orbit.svg",
-      startDate: "25/04/2025",
-      dueDate: "25/05/2025",
-      progress: 60,
-      status: "On Track",
-      assignedTo: 3,
-    },
   ],
 };
 
@@ -113,10 +95,7 @@ const ProgressBar = ({ percent }) => {
       if (!start) start = timestamp;
       const elapsed = timestamp - start;
       const duration = 800;
-      const progressPercent = Math.min(
-        (elapsed / duration) * percent,
-        percent
-      );
+      const progressPercent = Math.min((elapsed / duration) * percent, percent);
       setProgress(progressPercent);
       if (elapsed < duration) {
         animationFrameId = requestAnimationFrame(animate);
@@ -218,7 +197,6 @@ const TaskRow = ({ task }) => {
         </div>
       </td>
       <td>
-        
         <StatusTag status={task.status} />
       </td>
       <td>
@@ -245,6 +223,33 @@ const TaskRow = ({ task }) => {
 const TaskSection = ({ title, data }) => {
   return (
     <div className="sections-01">
+      <div className="portfolio-task-header">
+        <div className="portfolio-task-controls-left">
+          <input
+            type="text"
+            placeholder="Search Task..."
+            className="portfolio-task-search-input"
+          />
+        </div>
+        <div className="portfolio-task-actions-right">
+          <button className="portfolio-task-project-button">
+            All Projects
+            <img
+              src="assets/downarrow.svg"
+              alt="icon"
+              className="portfolio-task-view-icon"
+            />
+          </button>
+          <button className="portfolio-task-view-toggle">
+            <img
+              src="assets/filter.svg"
+              alt="icon"
+              className="portfolio-task-view-icon"
+            />
+          </button>
+        </div>
+      </div>
+
       <div className="section-titles-01">
         <img
           src={title === "To do" ? "assets/todo.svg" : "assets/inprogress.svg"}
@@ -281,29 +286,11 @@ const TaskSection = ({ title, data }) => {
 };
 
 const ListContent = () => {
-  const repeatedTodoTasks = [...taskData.todo, ...taskData.todo]; 
+  const repeatedTodoTasks = [...taskData.todo, ...taskData.todo];
 
   return (
-    <div class="portfolio-task-container">
-  <div class="portfolio-task-header">
-    <div class="portfolio-task-controls-left">
-      <input
-        type="text"
-        placeholder="Search Task..."
-        class="portfolio-task-search-input"
-      />
-    </div>
-    <div class="portfolio-task-actions-right">
-      <button class="portfolio-task-project-button">All Projects</button>
-      <button class="portfolio-task-view-toggle">
-        <img src="assets/filter.svg" alt="icon" class="portfolio-task-view-icon" />
-      </button>
-    </div>
-  </div>
-
-
+    <div className="portfolio-task-container">
       <TaskSection title="To do" data={repeatedTodoTasks} />
-      {/* <TaskSection title="In Progress" data={taskData.inProgress} /> */}
     </div>
   );
 };

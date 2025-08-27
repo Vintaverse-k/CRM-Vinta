@@ -17,6 +17,8 @@ const taskData = {
   done: [
     { name: "Landing Page Completed", priority: "High", startDate: "Varun walia", dueDate: "20/04/2025", progress: 100, status: "Done", assignedTo: 1 },
     { name: "Website Deployment", priority: "High", startDate: "Leisha", dueDate: "22/04/2025", progress: 100, status: "Done", assignedTo: 1 },
+    { name: "Website Deployment", priority: "High", startDate: "Leisha", dueDate: "22/04/2025", progress: 100, status: "Done", assignedTo: 1 },
+    { name: "Website Deployment", priority: "High", startDate: "Leisha", dueDate: "22/04/2025", progress: 100, status: "Done", assignedTo: 1 },
   ],
 };
 
