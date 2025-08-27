@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../../styles/Tabs/OverviewContent.css"
 const OverviewContent = () => {
   return (
     <>
@@ -54,7 +54,7 @@ const OverviewContent = () => {
       <section className="mytask-lower-grid">
         {/* Priority Breakdown */}
         <div className="mytask-card mytask-priority-breakdown">
-          <div className="mytask-card-header">
+          <div className="mytask-card-header-0101">
             <h3 className="mytask-card-title">
               <img src="assets/totaltime.svg" alt="Icon" /> Priority Breakdown
             </h3>
@@ -78,7 +78,7 @@ const OverviewContent = () => {
 
         {/* Status Overview */}
         <div className="mytask-card mytask-status-overview">
-          <div className="mytask-card-header">
+          <div className="mytask-card-header-0101">
             <h3 className="mytask-card-title">
               <img src="assets/status.svg" alt="Icon" /> Status Overview
             </h3>
@@ -120,7 +120,7 @@ const OverviewContent = () => {
       <section className="mytask-bottom-grid">
         {/* Total Time Worked */}
         <div className="mytask-card mytask-total-time-worked">
-          <div className="mytask-card-header">
+          <div className="mytask-card-header-0101">
             <h3 className="mytask-card-title">
               <img src="assets/totaltime.svg" alt="Icon" /> Total Time Worked
             </h3>
@@ -136,7 +136,7 @@ const OverviewContent = () => {
 
         {/* Task Completed */}
         <div className="mytask-card mytask-task-completed">
-          <div className="mytask-card-header">
+          <div className="mytask-card-header-0101">
             <h3 className="mytask-card-title">
               <img src="assets/taskassign.svg" alt="Icon" /> Task completed by assignee
             </h3>
@@ -156,7 +156,7 @@ const OverviewContent = () => {
 
         {/* Recent Activity */}
         <div className="mytask-card mytask-recent-activity">
-          <div className="mytask-card-header">
+          <div className="mytask-card-header-0101">
             <h3 className="mytask-card-title">
               <img src="assets/recent.svg" alt="Icon" /> Recent activity
             </h3>

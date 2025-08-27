@@ -48,6 +48,15 @@
   border: 1px solid #e6e8ea;
 }
 
+.task__btns-01 {
+    margin-top: -20px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content:space-between;
+  width: 1104px;
+  /* margin-left: -28px; */
+}
 .task__actions--001 {
   display: flex;
   gap: 12px;

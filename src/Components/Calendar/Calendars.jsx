@@ -161,7 +161,7 @@ const Calendar = () => {
         <div className="task__details__container--01">
           {/* Optional details */}
         </div>
-        <div className="task__btns">
+        <div className="task__btns-01">
           <div className="view__switcher">
             {["Day", "Week", "Month"].map((item) => (
               <button

@@ -1,6 +1,6 @@
 import React from "react";
-import "../../styles/ProductManagement/Board.css";
-
+import "../../styles/Productsmange/Board.css";
+// my-crm-app/src/styles/ProductManagement/Board.css
 
 
 const tasks = {
