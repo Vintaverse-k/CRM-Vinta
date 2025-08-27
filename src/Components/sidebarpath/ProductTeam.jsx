@@ -52,30 +52,27 @@ const ProductTeam = () => {
               View and manage All Product Team members in one place.
             </p>
           </div>
-           <div className="dashboard-manage-task-header-actions">
-              <button className="dashboard-manage-task-btn-outline">
-                <img
-                  src="assets/share.svg"
-                  alt="Share Icon"
-                  width={24}
-                  height={24}
-                />
-                Share Tasks
-              </button><button className="dashboard-manage-task-btn-primary">
-  <img
-  src="assets/plus-sign2.svg"
-  alt="Plus Icon"
-  width={16}
-  height={16}
-  style={{ marginRight: '8px', verticalAlign: 'middle' }}
-/>
-
-  New Task
-</button>
-
-            </div>
-        
-
+          <div className="dashboard-manage-task-header-actions">
+            <button className="dashboard-manage-task-btn-outline">
+              <img
+                src="assets/share.svg"
+                alt="Share Icon"
+                width={24}
+                height={24}
+              />
+              Share Tasks
+            </button>
+            <button className="dashboard-manage-task-btn-primary">
+              <img
+                src="assets/plus-sign2.svg"
+                alt="Plus Icon"
+                width={16}
+                height={16}
+                style={{ marginRight: "8px", verticalAlign: "middle" }}
+              />
+              New Task
+            </button>
+          </div>
         </header>
 
         {/* Tabs */}

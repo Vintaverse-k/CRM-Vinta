@@ -166,7 +166,7 @@
   align-items: center;
   gap: 6px;
   padding: 8px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--Alpha-Neutral-alpha-8, #02020414);
   border-radius: 8px;
   background: #0202040A;
   color: #625F6E;

@@ -69,30 +69,36 @@ const tasks = {
 };
 
 const BoardContent = () => {
-  const renderCard = (task) => (
-    <div className="taskboard-card" key={task.title + Math.random()}>
-      <div className="taskboard-status-priority">
-        <span className={`taskboard-status ${task.status.replace(/\s/g, '').toLowerCase()}`}>{task.status}</span>
-        <span className={`taskboard-priority ${task.priority.toLowerCase()}`}>
-          <img src="assets/cflag.svg" alt="priority-icon" className="taskboard-priority-icon" />
-          {task.priority}
-        </span>
+const renderCard = (task) => (
+  <div className="taskboard-card" key={task.title + Math.random()}>
+    <div className="taskboard-status-priority">
+      <span className={`taskboard-status ${task.status.replace(/\s/g, '').toLowerCase()}`}>
+        {task.status}
+      </span>
+      <span className={`taskboard-priority ${task.priority.toLowerCase()}`}>
+        <img
+          src={task.priority === "High" ? "assets/flag.svg" : "assets/yellowflag.svg"}
+          alt="priority-icon"
+          className="taskboard-priority-icon"
+        />
+        {task.priority}
+      </span>
+    </div>
+    <h4 className="taskboard-title">{task.title}</h4>
+    <p className="taskboard-desc">{task.desc}</p>
+    <div className="taskboard-footer">
+      <div className="taskboard-avatars">
+        {task.avatars.map((avatar, i) => (
+          <img key={i} src={avatar} alt="avatar" />
+        ))}
       </div>
-      <h4 className="taskboard-title">{task.title}</h4>
-      <p className="taskboard-desc">{task.desc}</p>
-      <div className="taskboard-footer">
-        <div className="taskboard-avatars">
-          {task.avatars.map((avatar, i) => (
-            <img key={i} src={avatar} alt="avatar" />
-          ))}
-        </div>
-        <div className="taskboard-icons">
-          <img src="assets/fileicon.svg" alt="files" /> {task.files}
-          <img src="assets/messages.svg" alt="comments" /> {task.comments}
-        </div>
+      <div className="taskboard-icons">
+        <img src="assets/fileicon.svg" alt="files" /> {task.files}
+        <img src="assets/messages.svg" alt="comments" /> {task.comments}
       </div>
     </div>
-  );
+  </div>
+);
 
   const renderColumnHeader = (title, count, iconSrc) => (
     <div className="taskboard-column-header">
@@ -133,15 +139,15 @@ const BoardContent = () => {
           {tasks.todo.map(renderCard)}
         </div>
         <div className="taskboard-column">
-          {renderColumnHeader("In Progress", tasks.inProgress.length, "assets/todoboard.svg")}
+          {renderColumnHeader("In Progress", tasks.inProgress.length, "assets/inprogress.svg")}
           {tasks.inProgress.map(renderCard)}
         </div>
         <div className="taskboard-column">
-          {renderColumnHeader("In Reviewed", tasks.inReviewed.length, "assets/todoboard.svg")}
+          {renderColumnHeader("In Reviewed", tasks.inReviewed.length, "assets/yellowdotstop.svg")}
           {tasks.inReviewed.map(renderCard)}
         </div>
         <div className="taskboard-column">
-          {renderColumnHeader("Completed", tasks.completed.length, "assets/todoboard.svg")}
+          {renderColumnHeader("Completed", tasks.completed.length, "assets/greendot.svg")}
           {tasks.completed.map(renderCard)}
         </div>
       </div>

@@ -110,29 +110,8 @@ font-weight: 400;
 color: #625F6E;
 margin-top: -16px;
 }
-.roles-list {
-  display: flex;
-  gap: 20px;
-}
 
-.roles-list h4 {
-  font-size: 14px;
-  font-weight: 500;
-  color: #625F6E;
-}
 
-.roles-list p {
-  font-size: 12px;
-  font-weight: 400;
-  color: #625F6E;
-}
-
-.role-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 6px 0;
-}
 
 .add-member {
   display: inline-flex;
@@ -200,13 +179,6 @@ margin-top: -16px;
   gap: 12px;
 }
 
-.on-track .label {
-  background: var(--State-Error-Lighter, #FFF0EA);
-  border: 1px solid var(--State-Error-Light, #FFDCCE);
-  padding: 2px 6px;
-  border-radius: 4px;
-  gap: 4px;
-}
 
 .status-header {
   display: flex;
@@ -333,46 +305,59 @@ margin-top: -16px;
 
 .status-footer .date {
   color: #625F6E;
-
 }
-
 .summary-actions {
+  width: 322px;
+  height: 52px;
   display: flex;
   gap: 10px;
-  margin-top: 34px;
+  align-items: center;
+  justify-content: space-between;
   background-color: #F8FAFB;
+  padding: 8px;
+  border-radius: 12px;
+  margin-left: -18px;
+  margin-top: 55px;
+  box-sizing: border-box;
 }
 
-.toggle-btn {
+.toggle-btn{
+  flex-grow: 1;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
   background: none;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.view-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border: 1px solid #e5e7eb;
-  background: #fff;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 140px;
-  height: 36px;
   font-size: 14px;
   font-weight: 500;
+  height: 36px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 8px 16px 8px 0;
-
 }
+.view-btn {
+  flex-grow: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: white;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  font-weight: 500;
+  height: 36px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 
 .toggle-btn:hover,
 .view-btn:hover {
@@ -704,4 +689,94 @@ padding: 16px;
   text-align: left;
   color: #625F6E;
   font-weight: 400;
+}
+.role-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+}
+
+.role-item > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.roles-list h4{
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #625F6E;
+  margin: 0;
+  line-height: 1.2;
+}
+.roles-list p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #625F6E;
+  margin: 0;
+  line-height: 1.2;
+}
+.roles-list {
+  display: flex;
+  gap: 20px;
+}
+
+.role-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 0;
+}
+.timeline-card {
+  width: 322px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.timeline-row {
+  display: flex;
+}
+
+.timeline-left {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 8px;
+}
+
+.timeline-point {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-icon {
+  width: 24px;
+  height: 24px;
+  z-index: 2;
+}
+
+.timeline-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #625F6E;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 24px;
+  left: 18px;
+  width: 2px;
+  height: 50px;
+  background-color: transparent; 
+  border-left: 1.5px dashed #CDC4FB;  
+  z-index: 1;
 }

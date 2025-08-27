@@ -36,7 +36,9 @@ const ProjectBoard = () => {
 
           <div className="title-tasks-row-01">
             <div className="title-section-01">
-              <span className="dot purple"></span> To do
+              {/* Replaced dot span with image */}
+              <img src="assets/bluestodot.svg" alt="To do status" className="status-dot-img" />
+              To do
             </div>
             <p className="tasks-01">
               <img src="assets/projectchek.svg" alt="manual" className="workflow-icons-01" />
@@ -73,7 +75,9 @@ const ProjectBoard = () => {
 
           <div className="title-tasks-row-01">
             <div className="title-section-01">
-              <span className="dot purple"></span> In Progress
+              {/* Replaced dot span with image */}
+              <img src="assets/inprogress.svg" alt="In Progress status" className="status-dot-img" />
+              In Progress
             </div>
             <p className="tasks-01">
               <img src="assets/projectchek.svg" alt="manual" className="workflow-icons-01" />
@@ -110,7 +114,9 @@ const ProjectBoard = () => {
 
           <div className="title-tasks-row-01">
             <div className="title-section-01">
-              <span className="dot blue"></span> Done
+              {/* Replaced dot span with image */}
+              <img src="assets/greendot.svg" alt="Done status" className="status-dot-img" />
+              Done
             </div>
             <p className="tasks-01">
               <img src="assets/projectchek.svg" alt="manual" className="workflow-icons-01" />

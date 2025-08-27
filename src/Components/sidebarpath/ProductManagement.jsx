@@ -55,39 +55,48 @@ const ProductManagement = () => {
               />
               Project Management
               <img
-              src="/assets/downarrow.svg"
-              alt="Add Member"
-              className="icon-09"
-            />
+                src="/assets/downarrow.svg"
+                alt="Add Member"
+                className="icon-09"
+              />
+              <img
+                src="/assets/productstar.svg"
+                alt="Add Member"
+                className="icon-09"
+              />  
+              <span className="on-track-badge">
+  <img src="/assets/orangedot.svg" alt="status" className="on-track-icon" />
+  On Track
+</span>
 
 
-            <img
-              src="/assets/productstar.svg"
-              alt="Add Member"
-              className="icon-09"
-            />
-            On Track
             </h1>
             <p className="mytask-subtitle">
               Coordinate tasks, teams, and timelines to successfully deliver
               projects.
             </p>
           </div>
-         <div className="header-actions">
-              <button className="btn-outline">
-                <img
-                  src="assets/share.svg"
-                  alt="Share Icon"
-                  width={24}
-                  height={24}
-                />
-                Share Tasks
-              </button>
-              <button className="btn-primary">+ Add Team</button>
-            </div>
-          
-
-
+          <div className="dashboard-manage-task-header-actions">
+            <button className="dashboard-manage-task-btn-outline">
+              <img
+                src="assets/share.svg"
+                alt="Share Icon"
+                width={24}
+                height={24}
+              />
+              Share Tasks
+            </button>
+            <button className="dashboard-manage-task-btn-primary">
+              <img
+                src="assets/plus-sign2.svg"
+                alt="Plus Icon"
+                width={16}
+                height={16}
+                style={{ marginRight: "8px", verticalAlign: "middle" }}
+              />
+              Add Team
+            </button>
+          </div>
         </header>
 
         {/* Tabs */}

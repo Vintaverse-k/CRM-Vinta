@@ -1,95 +1,22 @@
 import React, { useState, useEffect } from "react";
-import "../../styles/Productmanagement/List.css"; 
+import "../../styles/Productmanagement/List.css";
 import { FiMoreVertical } from "react-icons/fi";
 
 const taskData = {
   todo: [
-    {
-      name: "Develop High-fidelities UI",
-      priority: "Medium",
-      startDate: "Varun walia",
-      dueDate: "23/05/2025",
-      progress: 90,
-      status: "In Review",
-      assignedTo: 4,
-    },
-    {
-      name: "Real Estate website Design",
-      priority: "Low",
-      startDate: "Leisha",
-      dueDate: "26/05/2025",
-      progress: 30,
-      status: "Reviewed",
-      assignedTo: 3,
-    },
-    {
-      name: "Matex AI Meting assistance",
-      priority: "Medium",
-      startDate: "Manoj Kumar",
-      dueDate: "25/05/2025",
-      progress: 40,
-      status: "In Review",
-      assignedTo: 3,
-    },
-    
+    { name: "Develop High-fidelities UI", priority: "Medium", startDate: "Varun walia", dueDate: "23/05/2025", progress: 90, status: "In Review", assignedTo: 4 },
+    { name: "Real Estate website Design", priority: "Low", startDate: "Leisha", dueDate: "26/05/2025", progress: 30, status: "Reviewed", assignedTo: 3 },
+    { name: "Matex AI Meting assistance", priority: "Medium", startDate: "Manoj Kumar", dueDate: "25/05/2025", progress: 40, status: "In Review", assignedTo: 3 },
   ],
   inProgress: [
-    {
-      name: "Taskito- Task management web",
-      priority: "High",
-      startDate: "Varun walia",
-      dueDate: "26/05/2025",
-      progress: 70,
-      status: "In Review",
-      assignedTo: 3,
-    },
-    {
-      name: "Cliency client management web",
-      priority: "High",
-      startDate: "Manoj Kumar",
-      dueDate: "25/05/2025",
-      progress: 45,
-      status: "In Review",
-      assignedTo: 3,
-    },
-    {
-      name: "Cognify - AI hiring management",
-      priority: "High",
-      startDate: "Leisha",
-      dueDate: "24/05/2025",
-      progress: 60,
-      status: "In Review",
-      assignedTo: 3,
-    },
-    {
-      name: "Orbit - web3 website design",
-      priority: "High",
-      startDate: "Shubham",
-      dueDate: "24/05/2025",
-      progress: 40,
-      status: "In Review",
-      assignedTo: 3,
-    },
+    { name: "Taskito- Task management web", priority: "High", startDate: "Varun walia", dueDate: "26/05/2025", progress: 70, status: "In Review", assignedTo: 3 },
+    { name: "Cliency client management web", priority: "High", startDate: "Manoj Kumar", dueDate: "25/05/2025", progress: 45, status: "In Review", assignedTo: 3 },
+    { name: "Cognify - AI hiring management", priority: "High", startDate: "Leisha", dueDate: "24/05/2025", progress: 60, status: "In Review", assignedTo: 3 },
+    { name: "Orbit - web3 website design", priority: "High", startDate: "Shubham", dueDate: "24/05/2025", progress: 40, status: "In Review", assignedTo: 3 },
   ],
   done: [
-    {
-      name: "Landing Page Completed",
-      priority: "Low",
-      startDate: "Varun walia",
-      dueDate: "20/04/2025",
-      progress: 100,
-      status: "Done",
-      assignedTo: 1,
-    },
-    {
-      name: "Website Deployment",
-      priority: "Medium",
-      startDate: "Leisha",
-      dueDate: "22/04/2025",
-      progress: 100,
-      status: "Done",
-      assignedTo: 1,
-    },
+    { name: "Landing Page Completed", priority: "High", startDate: "Varun walia", dueDate: "20/04/2025", progress: 100, status: "Done", assignedTo: 1 },
+    { name: "Website Deployment", priority: "High", startDate: "Leisha", dueDate: "22/04/2025", progress: 100, status: "Done", assignedTo: 1 },
   ],
 };
 
@@ -101,10 +28,26 @@ const userImages = {
   "Harshit": "/assets/img1.png",
 };
 
-const PriorityTag = ({ level }) => {
-  const iconSrc = "assets/cflag.svg";
+const PriorityTag = ({ level, section }) => {
+  // Icons can be changed per priority if needed
+  const flagIcons = {
+    Low: "assets/yellowflag.svg",
+    Medium: "assets/yellowflag.svg",
+    High: "assets/flag.svg",
+  };
+
+  const iconSrc = flagIcons[level] || "assets/flag-default.svg";
+
+  let className = `product-manage-priority-tag ${level.toLowerCase()}`;
+
+  if (level === "High") {
+    if (section === "To do") className += " high-todo";
+    else if (section === "In Progress") className += " high-inprogress";
+    else if (section === "Done") className += " high-done";
+  }
+
   return (
-    <span className={`product-manage-priority-tag ${level.toLowerCase()}`}>
+    <span className={className}>
       <img src={iconSrc} alt={`${level} icon`} className="product-manage-priority-icon" />
       {level}
     </span>
@@ -124,9 +67,7 @@ const AvatarGroup = ({ count, names }) => (
           alt={`User ${names[i]}`}
           className="product-manage-assigned-avatar"
         />
-        <span className="product-manage-assigned-name">
-          {names[i]}
-        </span>
+        <span className="product-manage-assigned-name">{names[i]}</span>
       </div>
     ))}
   </div>
@@ -181,13 +122,11 @@ const ProgressBar = ({ percent }) => {
   );
 };
 
-const TaskRow = ({ task }) => (
+const TaskRow = ({ task, section }) => (
   <tr className="product-manage-table-row">
-    <td>
-      <input type="checkbox" className="product-manage-checkbox" />
-    </td>
+    <td><input type="checkbox" className="product-manage-checkbox" /></td>
     <td>{task.name}</td>
-    <td><PriorityTag level={task.priority} /></td>
+    <td><PriorityTag level={task.priority} section={section} /></td>
     <td><AvatarGroup count={1} names={[task.startDate]} /></td>
     <td>{task.dueDate}</td>
     <td className="product-manage-status-cell">
@@ -199,47 +138,64 @@ const TaskRow = ({ task }) => (
   </tr>
 );
 
-const TaskSection = ({ title, data }) => (
-  <div className="product-manage-section">
-    <div className="product-manage-section-title">
-      <img
-        src={"assets/inprogress.svg"}
-        alt={`${title} icon`}
-        className="product-manage-section-icon"
-      />
-      {title}
-    </div>
+const sectionIcons = {
+  "To do": "assets/bluestodot.svg",
+  "In Progress": "assets/inprogress.svg",
+  "Done": "assets/greendot.svg",
+};
 
-    <table className="product-manage-table">
-      <thead className="product-manage-table-header">
-        <tr>
-          <th><input type="checkbox" className="product-manage-checkbox" /></th>
-          <th>Task Name</th>
-          <th>Priority</th>
-          <th>Assigned To</th>
-          <th>Due Date</th>
-          <th>Status</th>
-          <th>Progress</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((task, i) => (
-          <TaskRow key={i} task={task} />
-        ))}
-      </tbody>
-    </table>
-  </div>
-);
+const TaskSection = ({ title, data }) => {
+  const rightImageSrc = "assets/plussign.svg"; 
 
-const ListContent = () => {
   return (
-    <div className="list-product-manage-container">
-      <TaskSection title="To do" data={taskData.todo} />
-      <TaskSection title="In Progress" data={taskData.inProgress} />
-      <TaskSection title="Done" data={taskData.done} />
+    <div className="product-manage-section">
+      <div className="product-manage-section-title" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <img
+            src={sectionIcons[title] || "assets/defaultdot.svg"}
+            alt={`${title} icon`}
+            className="product-manage-section-icon"
+          />
+          <span>{title}</span>
+        </div>
+
+        {/* Right aligned image */}
+        <img
+          src={rightImageSrc}
+          alt="Right side icon"
+          style={{ width: '20px', height: '20px', cursor: 'pointer' }}
+        />
+      </div>
+
+      <table className="product-manage-table">
+        <thead className="product-manage-table-header">
+          <tr>
+            <th><input type="checkbox" className="product-manage-checkbox" /></th>
+            <th>Task Name</th>
+            <th>Priority</th>
+            <th>Assigned To</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Progress</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((task, i) => (
+            <TaskRow key={i} task={task} section={title} />
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
+
+const ListContent = () => (
+  <div className="list-product-manage-container">
+    <TaskSection title="To do" data={taskData.todo} />
+    <TaskSection title="In Progress" data={taskData.inProgress} />
+    <TaskSection title="Done" data={taskData.done} />
+  </div>
+);
 
 export default ListContent;

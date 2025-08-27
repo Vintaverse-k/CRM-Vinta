@@ -65,10 +65,10 @@ const ProjectOverview = () => {
             <img src="/assets/Folder.svg" alt="Portfolio" className="icon-18" />
             <span>My Portfolio</span>
             <span className="status on-track">
-  <span className="label">
-    
-            <img src="/assets/orangedot.svg" alt="Portfolio" className="icon-20" />
-    On track</span>
+         <span className="on-track-badge">
+  <img src="/assets/orangedot.svg" alt="status" className="on-track-icon" />
+  On Track
+</span>
               <img src="/assets/img1.png" alt="Portfolio" className="icon-18" />
               <img src="/assets/3dot.svg" alt="Portfolio" className="icon-18" />
             </span>
@@ -139,31 +139,32 @@ const ProjectOverview = () => {
               <span>Subscribe</span>
             </button>
             <button className="view-btn">
-              <img src="/assets/downarrow.svg" alt="View" className="icon-15" />
               <span>View Summary</span>
+              <img src="/assets/downarrow.svg" alt="View" className="icon-15" />
             </button>
           </div>
         </div>
 
-        {/* Timeline */}
-        <div className="status-card card-three">
-          <div className="status-card-head">
-            <div className="status-card-titlewrap">
-              <img src="/assets/Calendar.svg" alt="Calendar" className="icon-18" />
-              <h4 className="status-card-title">Apr 21 – May 19</h4>
-            </div>
-            <div className="status-card-actions">
-              <button className="icon-btn--00"><img src="/assets/Folder.svg" alt="Download" className="icon-18" /></button>
-              <button className="icon-btn--00"><img src="/assets/filter.svg" alt="Filter" className="icon-18" /></button>
-              <button className="icon-btn--00"><img src="/assets/Folder.svg" alt="More" className="icon-18" /></button>
-            </div>
-          </div>
-          <p className="msg-row">
-            <img src="/assets/messages.svg" alt="msg" className="icon-16" />
-            <span>Send message to members</span>
-          </p>
-        </div>
+        <div className="timeline-card">
+  <div className="timeline-row">
+    <div className="timeline-left">
+      <div className="timeline-point">
+        <img src="/assets/timeline.svg" alt="Calendar" className="timeline-icon" />
+        <span className="timeline-text">Apr 21 – May 19</span>
       </div>
+
+      <div className="timeline-line"></div>
+
+      <div className="timeline-point">
+        <img src="/assets/timemessage.svg" alt="Message" className="timeline-icon" />
+        <span className="timeline-text">Send message to members</span>
+        
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
     </div>
   );
 };

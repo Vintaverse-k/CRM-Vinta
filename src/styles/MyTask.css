@@ -578,7 +578,25 @@ background: #FF692E0A;
   display: inline-block;
 }
 
+.on-track-badge {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;        
+  width: auto;         
+  padding: 4px 10px;
+  background-color: #FFF0EA;  
+  color: #FF692E;              
+  border-radius: 8px;        
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 8px;    
+  gap: 6px;      
+}
 
+.on-track-icon {
+  width: 5px;
+  height: 5px;
+}
 
 
 

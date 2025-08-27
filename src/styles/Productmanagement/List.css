@@ -182,3 +182,54 @@
   height: 16px;
   cursor: pointer;
 }
+/* Base styles for priority tags */
+.product-manage-priority-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* Low Priority */
+.product-manage-priority-tag.low {
+  background-color: rgba(255, 200, 76, 0.04);
+
+  color: #FFC84C;
+}
+
+.product-manage-priority-tag.medium {
+background-color: rgba(255, 200, 76, 0.04);
+
+  color: #FFC84C;
+}
+
+.product-manage-priority-tag.high {
+  background-color: #fee2e2; 
+  color: #b91c1c;
+}
+
+.product-manage-priority-tag.high-todo {
+background-color: rgba(255, 105, 46, 0.04);
+
+  color: #FF692E;
+}
+
+.product-manage-priority-tag.high-inprogress {
+  background-color: rgba(89, 59, 242, 0.04);
+ 
+  color: #593BF2;
+}
+
+.product-manage-priority-tag.high-done {
+ background-color: rgba(255, 105, 46, 0.04);
+
+  color: #FF692E;
+}
+
+.product-manage-priority-icon {
+  width: 14px;
+  height: 14px;
+}
