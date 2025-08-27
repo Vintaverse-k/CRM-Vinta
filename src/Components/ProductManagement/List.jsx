@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../styles/Productmanage/List.css";
+import "../../styles/Productsmanage/Lists.css";
 import { FiMoreVertical } from "react-icons/fi";
 
 const taskData = {

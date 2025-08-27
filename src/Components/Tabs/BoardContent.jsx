@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/ProductManagement/Board.css";
+import "../../styles/Productsmanage/Boards.css";
 // my-crm-app/src/styles/ProductManagement/Board.css
 
 
