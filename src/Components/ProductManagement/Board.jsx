@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/Productmanagement/Board.css";
+import "../../styles/ProductManagement/Board.css";
 
 
 
