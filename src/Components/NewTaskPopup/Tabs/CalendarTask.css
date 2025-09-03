@@ -1,0 +1,71 @@
+.calendar-task-container {
+  padding: 25px 30px;
+  max-width: 514px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calendar-task-container h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.calendar-task-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.calendar-task-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #555;
+}
+
+.calendar-task-group input,
+.calendar-task-group select,
+.calendar-task-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.calendar-task-group input:focus,
+.calendar-task-group select:focus,
+.calendar-task-group textarea:focus {
+  border-color: #722ED1;
+  box-shadow: 0 0 8px rgba(114, 46, 209, 0.3);
+  outline: none;
+}
+
+.calendar-task-btn {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.calendar-task-btn button {
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #722ED1, #9b59b6);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.calendar-task-btn button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(114, 46, 209, 0.4);
+}

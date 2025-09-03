@@ -2,112 +2,13 @@ import React, { useState, useEffect } from "react";
 import "../../styles/Tabs/ListContent.css";
 import { FiMoreVertical } from "react-icons/fi";
 
-const taskData = {
-  todo: [
-    {
-      name: "Develop High-fidelities UI",
-      priority: "Medium",
-      startDate: "28/04/2025",
-      dueDate: "23/05/2025",
-      progress: 90,
-      status: "In Review",
-      assignedTo: 4,
-    },
-    {
-      name: "Real Estate website Design",
-      priority: "Low",
-      startDate: "28/04/2025",
-      dueDate: "26/05/2025",
-      progress: 30,
-      status: "Reviewed",
-      assignedTo: 3,
-    },
-    {
-      name: "Matex AI Meting assistance",
-      priority: "Medium",
-      startDate: "27/04/2025",
-      dueDate: "25/05/2025",
-      progress: 40,
-      status: "In Review",
-      assignedTo: 3,
-    },
-    {
-      name: "Triply AI Travel planner UI Design",
-      priority: "High",
-      startDate: "27/04/2025",
-      dueDate: "24/05/2025",
-      progress: 30,
-      status: "Reviewed",
-      assignedTo: 3,
-    },
-    {
-      name: "Tumo Productive Landing page",
-      priority: "Low",
-      startDate: "26/04/2025",
-      dueDate: "23/04/2025",
-      progress: 20,
-      status: "In Review",
-      assignedTo: 3,
-    },
-  ],
-  inProgress: [
-    {
-      name: "Taskito- Task management web",
-      priority: "High",
-      startDate: "26/04/2025",
-      dueDate: "26/05/2025",
-      progress: 70,
-      status: "In Review",
-      assignedTo: 3,
-    },
-    {
-      name: "Cliency client management web",
-      priority: "High",
-      startDate: "25/04/2025",
-      dueDate: "25/05/2025",
-      progress: 45,
-      status: "In Review",
-      assignedTo: 3,
-    },
-    {
-      name: "Cognify - AI hiring management",
-      priority: "High",
-      startDate: "24/04/2025",
-      dueDate: "24/05/2025",
-      progress: 60,
-      status: "In Review",
-      assignedTo: 3,
-    },
-    {
-      name: "Orbit - web3 website design",
-      priority: "High",
-      startDate: "23/04/2025",
-      dueDate: "24/05/2025",
-      progress: 40,
-      status: "In Review",
-      assignedTo: 3,
-    },
-  ],
-};
-
 const PriorityTag = ({ level }) => {
-  const iconSrc = "assets/cflag.svg"; 
-
+  const iconSrc = "assets/cflag.svg";
   return (
     <span className={`priority-tag ${level.toLowerCase()}`}>
       <img src={iconSrc} alt={`${level} icon`} className="priority-icon" />
       {level}
     </span>
-  );
-};
-
-const AvatarGroup = ({ count }) => {
-  return (
-    <div className="avatar-group">
-      {Array.from({ length: count }).map((_, i) => (
-        <div key={i} className="avatar"></div>
-      ))}
-    </div>
   );
 };
 
@@ -117,32 +18,21 @@ const ProgressBar = ({ percent }) => {
   const normalizedRadius = radius - stroke * 0.5;
   const circumference = 2 * Math.PI * normalizedRadius;
 
-  const [progress, setProgress] = useState(0);
+  const [animatedPercent, setAnimatedPercent] = useState(0);
 
   useEffect(() => {
-    let animationFrameId;
-    let start = null;
-
-    const animate = (timestamp) => {
-      if (!start) start = timestamp;
-      const elapsed = timestamp - start;
-      const duration = 800;
-      const progressPercent = Math.min(
-        (elapsed / duration) * percent,
-        percent
-      );
-      setProgress(progressPercent);
-      if (elapsed < duration) {
-        animationFrameId = requestAnimationFrame(animate);
+    let start = 0;
+    const step = () => {
+      start += 1;
+      if (start <= percent) {
+        setAnimatedPercent(start);
+        requestAnimationFrame(step);
       }
     };
-
-    animationFrameId = requestAnimationFrame(animate);
-
-    return () => cancelAnimationFrame(animationFrameId);
+    step();
   }, [percent]);
 
-  const offset = circumference - (progress / 100) * circumference;
+  const offset = circumference - (animatedPercent / 100) * circumference;
 
   return (
     <div className="progress-circle-wrapper">
@@ -168,7 +58,7 @@ const ProgressBar = ({ percent }) => {
           className="progress-ring"
         />
       </svg>
-      <div className="progress-circle-text">{Math.round(progress)}%</div>
+      <div className="progress-circle-text">{animatedPercent}%</div>
     </div>
   );
 };
@@ -183,20 +73,27 @@ const TaskRow = ({ task }) => (
       <PriorityTag level={task.priority} />
     </td>
     <td>{task.startDate}</td>
+
+    {/* Assigned User Image */}
     <td>
-      <AvatarGroup count={task.assignedTo} />
+      {task.assignedImage ? (
+        <img
+          src={task.assignedImage}
+          alt="Assigned User"
+          width={40}
+          height={40}
+          style={{ borderRadius: "50%", objectFit: "cover" }}
+        />
+      ) : (
+        <span>No User</span>
+      )}
     </td>
+
     <td>{task.dueDate}</td>
     <td className="status-cell">
-  <img
-    src="assets/Stop.svg"
-    alt="status icon"
-    className="status-icon"
-  />
-  <span className="status-text">{task.status}</span>
-</td>
-
-
+      <img src="assets/Stop.svg" alt="status icon" className="status-icon" />
+      <span className="status-text">{task.status}</span>
+    </td>
     <td>
       <ProgressBar percent={task.progress} />
     </td>
@@ -206,67 +103,68 @@ const TaskRow = ({ task }) => (
   </tr>
 );
 
-const TaskSection = ({ title, data }) => {
-  return (
-    <div className="section">
-      <div className="section-titles01">
-        <img
-          src={title === "To do" ? "assets/todo.svg" : "assets/inprogress.svg"}
-          alt={`${title} icon`}
-          className="section-dot-img"
-        />
-        {title}
-      </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th>
-              <input type="checkbox" />
-            </th>
-            <th>Task Name</th>
-            <th>Priority</th>
-            <th>Started Date</th>
-            <th>Assigned To</th>
-            <th>Due Date</th>
-            <th>Status</th>
-            <th>Progress</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((task, i) => (
-            <TaskRow key={i} task={task} />
-          ))}
-        </tbody>
-      </table>
+const TaskSection = ({ title, data }) => (
+  <div className="section">
+    <div className="section-titles01">
+      <img
+        src={title === "To do" ? "assets/todo.svg" : "assets/inprogress.svg"}
+        alt={`${title} icon`}
+        className="section-dot-img"
+      />
+      {title}
     </div>
-  );
-};
 
-const ListContent = () => {
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <input type="checkbox" />
+          </th>
+          <th>Task Name</th>
+          <th>Priority</th>
+          <th>Started Date</th>
+          <th>Assigned To</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Progress</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {data.map((task, i) => (
+          <TaskRow key={i} task={task} />
+        ))}
+      </tbody>
+    </table>
+  </div>
+);
+
+const ListContent = ({ tasks }) => {
   return (
     <div className="list-container-09">
-<div className="dashboard-header">
-  <div className="header-controls-group">
-    <button className="header-btn-style">
-      <img src="assets/group.svg" alt="group" /> Group: Status
-    </button>
-    <button className="header-btn-style">
-      <img src="assets/colum.svg" alt="columns" /> Columns
-    </button>
-  </div>
-  <div className="header-actions-group">
-    <input type="text" className="header-search-field" placeholder="Search Task..." />
-    <button className="header-btn-style">All Project</button>
-    <button className="view-toggle-button">
-      <img src="assets/listbar.svg" alt="list" />
-    </button>
-  </div>
-</div>
+      <div className="dashboard-header">
+        <div className="header-controls-group">
+          <button className="header-btn-style">
+            <img src="assets/group.svg" alt="group" /> Group: Status
+          </button>
+          <button className="header-btn-style">
+            <img src="assets/colum.svg" alt="columns" /> Columns
+          </button>
+        </div>
+        <div className="header-actions-group">
+          <input
+            type="text"
+            className="header-search-field"
+            placeholder="Search Task..."
+          />
+          <button className="view-toggle-button">
+            <img src="assets/listbar.svg" alt="list" />
+          </button>
+        </div>
+      </div>
 
-      <TaskSection title="To do" data={taskData.todo} />
-      <TaskSection title="In Progress" data={taskData.inProgress} />
+      <TaskSection title="To do" data={tasks.todo} />
+      <TaskSection title="In Progress" data={tasks.inProgress} />
     </div>
   );
 };

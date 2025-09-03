@@ -131,7 +131,6 @@ body {
 
 .dashboard-manage-task-percentage {
 background-color: rgba(89, 59, 242, 0.02);
-/* border-top: 1px solid rgba(89, 59, 242, 0.02); */
 border-top: 1px solid #593BF20F;
   color: #4f46e5;
   font-weight: 600;
@@ -140,6 +139,8 @@ border-top: 1px solid #593BF20F;
   border-radius: 6px;
   width: 54px;
   height: 24px;
+  display: inline-flex;
+  gap: 5px;
 }
 
 .dashboard-manage-task-stat-card h3 {
@@ -361,6 +362,9 @@ border-top: 1px solid #593BF20F;
   color: #374151;
   width: 105px;
   height: 40px;
+display: inline-flex;
+align-items: center;
+gap: 5px;
 }
 
 .dashboard-manage-task-tracker-current-task {

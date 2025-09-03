@@ -134,7 +134,7 @@ height: 40px;
 
 .calendar__sidebar1 {
     width: 104px;
-    height: 680px;
+    height: auto;
   border: 1px solid #e6e8ea;
   border-top: none;
   padding-top: 30px;

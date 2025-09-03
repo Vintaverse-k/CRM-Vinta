@@ -1,18 +1,13 @@
+
 .sidebar {
-  margin-left: -8px;
-  margin-top: -8px;
-  margin-bottom: -8px;
+  margin: -8px 0 -8px -8px;
   width: 272px;
   background-color: #1D1B27;
   color: white;
-  height: auto;
-  /* padding: 16px; */
+  padding: 16px 12px 24px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-right: 12px;
-  padding-bottom: 24px;
-  padding-left: 12px;
 }
 
 .logo {
@@ -38,7 +33,6 @@
   height: 20px;
   position: absolute;
   right: 0;
-  font-size: 14px;
   color: #aaa;
 }
 
@@ -56,19 +50,18 @@
   font-size: 14px;
   font-weight: 500;
   color: #E4E3EA;
-  transition: background 0.2s ease;
   text-decoration: none;
+  transition: background 0.2s ease;
 }
 
 .sidebar-item.active {
-border: 1px;
   border-radius: 6px;
   background-color: #593BF233;
-  color: white; 
+  color: white;
 }
 
 .sidebar-item.active img.icon {
-  filter: brightness(0) invert(1); 
+  filter: brightness(0) invert(1);
 }
 
 .icon {
@@ -114,10 +107,10 @@ border: 1px;
 .bottom .sidebar-item {
   font-weight: 500;
 }
+
 .app-container-01 {
   display: flex;
-  /* height: 100vh; */
-  width: 100vw; 
+  width: 100vw;
 }
 
 .main-content-01 {
@@ -131,14 +124,11 @@ border: 1px;
 
 .main-content-01 > .topbar {
   flex-shrink: 0;
-background-color: #F8FAFB;
+  background-color: #F8FAFB;
   border-bottom: 1px solid #d1d5db;
 }
 
-.page-content-01{
-  /* background-color: red; */
-  /* flex: 1; */
+.page-content-01 {
   overflow-y: auto;
-  /* padding: 16px; */
-  color: white;
+  color: white; 
 }

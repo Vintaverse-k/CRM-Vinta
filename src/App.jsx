@@ -6,7 +6,6 @@ import VerifyEmail from "./Components/SignIn/VerifyEmail";
 import VerifyCode from "./Components/SignIn/VerifyCode";
 import VerifyPassword from "./Components/SignIn/VerifyPassword";
 import PasswordChanged from "./Components/SignIn/PasswordChanged";
-import Dashboard from "./Components/Dashboard/Dashboard";
 import Sidebar from "./Components/SideBar/Sidebar";
 import TopBar from "./Components/TopBar/TopBar";
 import MyTask from "./Components/sidebarpath/MyTasks";
@@ -17,6 +16,7 @@ import Portfolio from "./Components/sidebarpath/Portfolio";
 import ProductManagement from "./Components/sidebarpath/ProductManagement";
 import AllTeam from "./Components/sidebarpath/AllTeam";
 import ProductTeam from "./Components/sidebarpath/ProductTeam";
+import Dashboard from "./Components/sidebarpath/Dashboard";
 
 const App = () => {
   return (

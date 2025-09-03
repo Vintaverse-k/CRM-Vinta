@@ -1,14 +1,9 @@
-.mytask-container-01 {
+.inbox-task-01-container {
   display: flex;
   min-height: 100vh;
 }
 
-.mytask-avatar-01 {
-  width: 20px;
-  height: 20px;
-}
-
-.mytask-main-content-01 {
+.inbox-task-01-main-content {
   margin-top: 52px;
   margin-left: -1170px;
   flex: 1;
@@ -20,17 +15,16 @@
   scrollbar-color: #a78bfa transparent;
 }
 
-.mytask-main-content-01::-webkit-scrollbar {
+.inbox-task-01-main-content::-webkit-scrollbar {
   width: 8px;
 }
 
-.mytask-main-content-01::-webkit-scrollbar-thumb {
+.inbox-task-01-main-content::-webkit-scrollbar-thumb {
   background-color: #a78bfa;
   border-radius: 9999px;
 }
 
-/* Header */
-.mytask-header-01 {
+.inbox-task-01-header {
   margin-top: -20px;
   display: flex;
   justify-content: space-between;
@@ -38,14 +32,14 @@
   margin-bottom: 1.5rem;
 }
 
-.mytask-title-01 {
+.inbox-task-01-title {
   font-size: 20px;
   font-weight: 500;
   color: #020204;
   margin: 0;
 }
 
-.mytask-subtitle-01 {
+.inbox-task-01-subtitle {
   font-size: 16px;
   font-weight: 400;
   color: #625f6e;
@@ -53,8 +47,7 @@
   margin-bottom: 0;
 }
 
-/* Header Buttons */
-.mytask-header-buttons-01 button {
+.inbox-task-01-header-buttons button {
   margin-left: 0.75rem;
   font-weight: 600;
   cursor: pointer;
@@ -64,12 +57,11 @@
   transition: background-color 0.2s ease;
 }
 
-.mytask-btn-outline-01,
-.mytask-btn-outline-02 {
+.inbox-task-01-btn-outline {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px; /* Added a gap for spacing between the image and text */
+  gap: 8px;
   background: var(--Alpha-Neutral-alpha-4, #0202040A);
   border-radius: 8px;
   color: #625F6E;
@@ -80,29 +72,28 @@
   cursor: pointer;
 }
 
-.mytask-btn-outline-01 {
+.inbox-task-01-btn-outline-filter {
   width: 85px;
 }
-.mytask-btn-outline-02 {
+
+.inbox-task-01-btn-outline-sort {
   width: 136px;
 }
 
-.mytask-btn-outline-01:hover,
-.mytask-btn-outline-02:hover {
+.inbox-task-01-btn-outline:hover {
   background-color: #f3f4f6;
 }
 
-.mytask-btn-primary-01 {
+.inbox-task-01-btn-primary {
   background-color: rgba(2, 2, 4, 0.04);
   color: #625F6E;
 }
 
-.mytask-btn-primary-01:hover {
+.inbox-task-01-btn-primary:hover {
   background-color: #6d28d9;
 }
 
-/* Tabs */
-.mytask-tabs-01 {
+.inbox-task-01-tabs {
   display: flex;
   gap: 2rem;
   padding-bottom: 0.75rem;
@@ -110,7 +101,7 @@
   color: #020204;
 }
 
-.mytask-tab-01 {
+.inbox-task-01-tab {
   background: none;
   border: none;
   cursor: pointer;
@@ -122,20 +113,62 @@
   gap: 0.5rem;
 }
 
-.mytask-tab-active-01 {
+.inbox-task-01-tab-active {
   color: #7c3aed;
   border-bottom: 2px solid #7c3aed;
   font-weight: 700;
 }
 
-.mytask-tabs-header-wrapper {
+.inbox-task-01-tabs-header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin-bottom: 2rem; */
 }
 
-.mytask-tab-buttons-right {
+.inbox-task-01-tab-buttons-right {
   display: flex;
   gap: 0.75rem;
+}
+
+.inbox-task-01-tab-content {
+  /* add your content styling */
+}
+
+.inbox-task-01-btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* .task-section stays the same unless you also want it renamed */
+
+.task-section {
+  width: 1104px;
+  margin-left: -28px;
+  background: #fff;
+  border: 1px solid var(--Stroke-Primary, #E6E8EA);
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Media Queries */
+@media screen and (min-width: 1728px) {
+  .inbox-task-01-main-content {
+    margin-left: -1861px !important;
+  }
+
+  .task-section {
+    width: 1794px !important;
+  }
+}
+
+@media screen and (min-width: 2048px) {
+  .inbox-task-01-main-content {
+    margin-left: -2600px !important;
+  }
+
+  .task-section {
+    width: 2500px !important;
+  }
 }

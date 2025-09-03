@@ -1,0 +1,74 @@
+.task-assign-container {
+  padding: 30px 35px;
+  border-radius: 16px;
+  max-width: 514px;
+  background: linear-gradient(145deg, #fdfdfd, #f0f0f5);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12), 0 8px 12px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.task-assign-container h3 {
+  margin-bottom: 22px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2c2c2c;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.task-assign-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.task-assign-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #444;
+}
+
+.task-assign-container input,
+.task-assign-container select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #d1d1d6;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.task-assign-container input:focus,
+.task-assign-container select:focus {
+  border-color: #722ED1;
+  box-shadow: 0 0 10px rgba(114, 46, 209, 0.25);
+  outline: none;
+  background-color: #fffefe;
+}
+
+.task-assign-btn-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.task-assign-btn-container button {
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #722ED1, #9b59b6);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 12px rgba(114, 46, 209, 0.3);
+}
+
+.task-assign-btn-container button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(114, 46, 209, 0.45);
+}

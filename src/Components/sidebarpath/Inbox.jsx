@@ -29,36 +29,32 @@ const Inbox = () => {
   };
 
   return (
-    <div className="mytask-container-01">
-      {/* Sidebar */}
+    <div className="inbox-task-01-container">
       <Sidebar />
 
-      <main className="mytask-main-content-01">
-        {/* Header */}
-        <header className="mytask-header-01">
-          <div className="mytask-header-left-01">
-            <h1 className="mytask-title-01">Inbox</h1>
-            <p className="mytask-subtitle-01">
+      <main className="inbox-task-01-main-content">
+        <header className="inbox-task-01-header">
+          <div className="inbox-task-01-header-left">
+            <h1 className="inbox-task-01-title">Inbox</h1>
+            <p className="inbox-task-01-subtitle">
               Where new tasks arrive before being organized.
             </p>
           </div>
-          <div className="mytask-header-buttons-01">
-            
-            <button className="mytask-btn-primary-01">
+          <div className="inbox-task-01-header-buttons">
+            <button className="inbox-task-01-btn-primary">
               Manage Notification
             </button>
           </div>
         </header>
 
-        {/* Tabs + Buttons Right */}
-        <div className="mytask-tabs-header-wrapper">
-          <nav className="mytask-tabs-01">
+        <div className="inbox-task-01-tabs-header-wrapper">
+          <nav className="inbox-task-01-tabs">
             {tabs.map(({ label }, idx) => (
               <button
                 key={idx}
-                className={`mytask-tab-01 ${
-                  activeTab === idx ? "mytask-tab-active-01" : ""
-                } ${label === "Task assigned to me" ? "mytask-user-tab-01" : ""}`}
+                className={`inbox-task-01-tab ${
+                  activeTab === idx ? "inbox-task-01-tab-active" : ""
+                } ${label === "Task assigned to me" ? "inbox-task-01-user-tab" : ""}`}
                 onClick={() => setActiveTab(idx)}
               >
                 {label}
@@ -66,28 +62,27 @@ const Inbox = () => {
             ))}
           </nav>
 
-          <div className="mytask-tab-buttons-right">
-            <button className="mytask-btn-outline-01">
+          <div className="inbox-task-01-tab-buttons-right">
+            <button className="inbox-task-01-btn-outline inbox-task-01-btn-outline-filter">
               <img
                 src="assets/filter.svg"
                 alt="filter"
-                className="mytask-btn-icon-01"
+                className="inbox-task-01-btn-icon"
               />
               Filter
             </button>
-            <button className="mytask-btn-outline-02">
+            <button className="inbox-task-01-btn-outline inbox-task-01-btn-outline-sort">
               <img
                 src="assets/sort.svg"
                 alt="sort"
-                className="mytask-btn-icon-01"
+                className="inbox-task-01-btn-icon"
               />
               Sort: Newest
             </button>
           </div>
         </div>
 
-        {/* Tab Content */}
-        <section className="mytask-tab-content-01">
+        <section className="inbox-task-01-tab-content">
           {renderTabContent()}
         </section>
       </main>

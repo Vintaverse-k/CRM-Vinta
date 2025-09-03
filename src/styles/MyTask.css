@@ -10,7 +10,7 @@
 
 .mytask-main-content {
   margin-top: 52px;
-  margin-left: -1170px;
+  /* margin-left: -1170px; */
   /* background-color: white; */
   background-color: #F8FAFB;
   flex: 1;
@@ -597,8 +597,3 @@ background: #FF692E0A;
   width: 5px;
   height: 5px;
 }
-
-
-
-
-

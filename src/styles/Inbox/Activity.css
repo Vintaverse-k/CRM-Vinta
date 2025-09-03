@@ -1,10 +1,10 @@
-.task-dashboard {
+.activity-inbox-01-dashboard {
   padding: 20px;
   min-height: 100vh;
   /* margin-top: -20px; */
 }
 
-.task-section {
+.activity-inbox-01-task-section {
   width: 1104px;
   margin-left: -28px;
   background: #fff;
@@ -16,26 +16,24 @@
 }
 
 
-.title-left {
+.activity-inbox-01-title-left {
   display: flex;
   align-items: center;
   gap: 6px; 
 }
 
-.icon {
+.activity-inbox-01-icon {
   width: 20px;
   height: 20px;
 }
 
-.icon-right {
+.activity-inbox-01-icon-right {
   width: 20px;
   height: 20px;
   cursor: pointer;
 }
 
-
-/* Subtitles */
-.task-subtitle {
+.activity-inbox-01-task-subtitle {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -45,8 +43,7 @@
   gap: 6px;
 }
 
-/* Task Card */
-.task-card {
+.activity-inbox-01-task-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,21 +55,21 @@
   font-weight: 500;
 }
 
-.task-card span {
+.activity-inbox-01-task-card span {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-.task-section h3{
+.activity-inbox-01-task-section h3{
   font-size: 16px;
   font-weight: 500;
   color: #625F6E;
 }
-.task-date {
+.activity-inbox-01-task-date {
   color: #666;
   font-size: 13px;
 }
-.tool-card {
+.activity-inbox-01-tool-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -82,31 +79,45 @@
   border: 1px solid var(--Stroke-Primary, #E6E8EA)
 }
 
-.tool-icon {
+.activity-inbox-01-tool-icon {
   width: 32px;
   height: 32px;
   margin-right: 10px;
 }
 
-.tool-info {
+.activity-inbox-01-tool-info {
   flex: 1;
   margin-left: 10px;
 }
 
-.tool-info h4 {
+.activity-inbox-01-tool-info h4 {
   margin: 0;
   font-size: 15px;
 }
 
-.tool-info p {
+.activity-inbox-01-tool-info p {
   margin: 4px 0 0;
   font-size: 13px;
   color: #555;
 }
 
-/* Universal icon class */
-.icon {
+.activity-inbox-01-icon {
   width: 20px;
   height: 20px;
   vertical-align: middle;
+}
+
+.activity-inbox-01-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.activity-inbox-01-section-title01 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 500;
 }

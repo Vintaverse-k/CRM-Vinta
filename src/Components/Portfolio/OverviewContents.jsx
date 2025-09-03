@@ -1,83 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles/Portfolio/Portfolio.css";
 import { FiMoreVertical } from "react-icons/fi";
-
-const taskData = {
-  todo: [
-    {
-      name: "Omail - Email Marketing website Design",
-      icon: "assets/Omail.svg",
-      startDate: "28/04/2025",
-      dueDate: "23/05/2025",
-      progress: 90,
-      status: "On Track",
-      assignedTo: 4,
-    },
-    {
-      name: "Zepto - Fintech Website Design",
-      icon: "assets/zepto.svg",
-      startDate: "28/04/2025",
-      dueDate: "26/05/2025",
-      progress: 30,
-      status: "At Risk",
-      assignedTo: 3,
-    },
-    {
-      name: "Cognify - AI Hiring Website Design",
-      icon: "assets/cognify.svg",
-      startDate: "27/04/2025",
-      dueDate: "25/05/2025",
-      progress: 40,
-      status: "On Track",
-      assignedTo: 3,
-    },
-    {
-      name: "Dyser - Fintech Webapp Design",
-      icon: "assets/dyser.svg",
-      startDate: "27/04/2025",
-      dueDate: "24/05/2025",
-      progress: 30,
-      status: "On Track",
-      assignedTo: 3,
-    },
-  ],
-  inProgress: [
-    {
-      name: "Cliency - Business Management website design",
-      icon: "assets/cliency.svg",
-      startDate: "26/04/2025",
-      dueDate: "23/04/2025",
-      progress: 20,
-      status: "On Hold",
-      assignedTo: 2,
-    },
-    {
-      name: "Orbit - web3 website design",
-      icon: "assets/orbit.svg",
-      startDate: "25/04/2025",
-      dueDate: "25/05/2025",
-      progress: 60,
-      status: "On Track",
-      assignedTo: 3,
-    },
-  ],
-};
-
-const PriorityTag = ({ level }) => {
-  const iconSrc =
-    level === "High"
-      ? "assets/high.svg"
-      : level === "Medium"
-      ? "assets/medium.svg"
-      : "assets/low.svg";
-
-  return (
-    <span className={`priority-tag ${level.toLowerCase()}`}>
-      <img src={iconSrc} alt={`${level} icon`} className="priority-icon" />
-      {level}
-    </span>
-  );
-};
 
 const ProgressBar = ({ percent }) => {
   const radius = 16;
@@ -97,13 +20,10 @@ const ProgressBar = ({ percent }) => {
       const duration = 800;
       const progressPercent = Math.min((elapsed / duration) * percent, percent);
       setProgress(progressPercent);
-      if (elapsed < duration) {
-        animationFrameId = requestAnimationFrame(animate);
-      }
+      if (elapsed < duration) animationFrameId = requestAnimationFrame(animate);
     };
 
     animationFrameId = requestAnimationFrame(animate);
-
     return () => cancelAnimationFrame(animationFrameId);
   }, [percent]);
 
@@ -157,10 +77,7 @@ const StatusTag = ({ status }) => {
 
   return (
     <div className="status-cell">
-      <span
-        className="status-dot-02"
-        style={{ color: getColor(status), fontWeight: 600 }}
-      >
+      <span className="status-dot-02" style={{ color: getColor(status), fontWeight: 600 }}>
         ●
       </span>
       <span>{status}</span>
@@ -177,8 +94,8 @@ const TaskRow = ({ task }) => {
   };
 
   const { img, name } = avatarData[task.assignedTo] || {
-    img: "assets/img1.png",
-    name: "User",
+    img: task.ownerImage ? URL.createObjectURL(task.ownerImage) : "assets/img1.png",
+    name: task.ownerName || "User",
   };
 
   return (
@@ -188,11 +105,7 @@ const TaskRow = ({ task }) => {
       </td>
       <td>
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          <img
-            src={task.icon}
-            alt="project icon"
-            style={{ width: "20px", height: "20px" }}
-          />
+          {task.icon && <img src={URL.createObjectURL(task.icon)} alt="icon" style={{ width: "20px", height: "20px" }} />}
           {task.name}
         </div>
       </td>
@@ -205,11 +118,7 @@ const TaskRow = ({ task }) => {
       <td>{task.dueDate}</td>
       <td>
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          <img
-            src={img}
-            alt={name}
-            style={{ width: "24px", height: "24px", borderRadius: "50%" }}
-          />
+          <img src={img} alt={name} style={{ width: "24px", height: "24px", borderRadius: "50%" }} />
           <span>{name}</span>
         </div>
       </td>
@@ -225,72 +134,39 @@ const TaskSection = ({ title, data }) => {
     <div className="sections-01">
       <div className="portfolio-task-header">
         <div className="portfolio-task-controls-left">
-          <input
-            type="text"
-            placeholder="Search Task..."
-            className="portfolio-task-search-input"
-          />
-        </div>
-        <div className="portfolio-task-actions-right">
-          <button className="portfolio-task-project-button">
-            All Projects
-            <img
-              src="assets/downarrow.svg"
-              alt="icon"
-              className="portfolio-task-view-icon"
-            />
-          </button>
-          <button className="portfolio-task-view-toggle">
-            <img
-              src="assets/filter.svg"
-              alt="icon"
-              className="portfolio-task-view-icon"
-            />
-          </button>
+          <input type="text" placeholder="Search Task..." className="portfolio-task-search-input" />
         </div>
       </div>
 
       <div className="section-titles-01">
-        <img
-          src={title === "To do" ? "assets/todo.svg" : "assets/inprogress.svg"}
-          alt={`${title} icon`}
-          className="section-dot-img"
-        />
+        <img src="assets/todo.svg" alt={`${title} icon`} className="section-dot-img" />
         {title}
       </div>
 
       <table>
         <thead>
           <tr>
-            <th>
-              <input type="checkbox" />
-            </th>
-            <th>
-              Task Name <span style={{ fontSize: "12px" }}>↓</span>
-            </th>
-            <th>Priority</th>
-            <th>Task Completed</th>
+            <th><input type="checkbox" /></th>
+            <th>Task Name <span style={{ fontSize: "12px" }}>↓</span></th>
+            <th>Status</th>
+            <th>Task Progress</th>
             <th>Due Date</th>
-            <th>Assigned to</th>
+            <th>Owner</th>
             <th></th>
           </tr>
         </thead>
         <tbody>
-          {data.map((task, i) => (
-            <TaskRow key={i} task={task} />
-          ))}
+          {data.map((task, i) => <TaskRow key={i} task={task} />)}
         </tbody>
       </table>
     </div>
   );
 };
 
-const ListContent = () => {
-  const repeatedTodoTasks = [...taskData.todo, ...taskData.todo];
-
+const ListContent = ({ tasks }) => {
   return (
     <div className="portfolio-task-container">
-      <TaskSection title="To do" data={repeatedTodoTasks} />
+      <TaskSection title="To do" data={tasks} />
     </div>
   );
 };

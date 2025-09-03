@@ -1,9 +1,10 @@
 .dashboard__section--01 {
   padding-left: 32px;
-  margin-left: -1175px;
   margin-top: 91px;
+  margin-left: -1175px;
 }
 
+/* === TASK BAR === */
 .task__bar--001 {
   display: flex;
   justify-content: space-between;
@@ -19,6 +20,7 @@
   flex-direction: column;
   gap: 4px;
 }
+
 .task__controls--001 {
   display: flex;
   gap: 16px;
@@ -49,14 +51,14 @@
 }
 
 .task__btns-01 {
-    margin-top: -20px;
+  margin-top: -20px;
   display: flex;
   gap: 16px;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
   width: 1104px;
-  /* margin-left: -28px; */
 }
+
 .task__actions--001 {
   display: flex;
   gap: 12px;
@@ -76,9 +78,11 @@
   cursor: pointer;
 }
 
+/* === CALENDAR WRAPPER === */
 .calendar__section--01 {
-  /* width: 880px;  */
-  /* height: 724px;  */
+  display: flex;
+  flex-direction: column;
+  width: 1156px; /* 52px sidebar + 1104px grid */
   margin-top: 20px;
 }
 
@@ -118,11 +122,11 @@
   display: flex;
 }
 
+/* === SIDEBAR (TIME) === */
 .calendar__sidebar1--01 {
+  flex: 0 0 52px; /* fix width */
   margin-top: -10px;
   background-color: white;
-  width: 52px;
-  /* height: 724px; */
   border: 1px solid #e6e8ea;
   border-top: none;
   padding-top: 30px;
@@ -140,14 +144,15 @@
 
 /* === CALENDAR GRID === */
 .calendar__main__content--01 {
+  flex: 1; /* baaki width le lega (1104px) */
   display: grid;
-  grid-template-columns: repeat(7, 118.29px);
+  grid-template-columns: repeat(7, 1fr); /* equal columns */
   grid-auto-rows: 200px;
 }
 
 .meeting__holder--01 {
   margin-top: -10px;
-  width: 118.29px;
+  width: 100%;
   height: 200px;
   padding: 8px;
   background-color: white;
@@ -157,7 +162,7 @@
 }
 
 .meeting__card--01 {
-  width: 102.29px;
+  width: 100%; /* holder ke andar adjust */
   height: 184px;
   padding: 8px 12px;
   border: 1px solid #e6e8ea;
@@ -178,11 +183,13 @@
   font-size: 12px;
   font-weight: 500;
 }
+
 .meeting__agenda--01 {
   font-size: 12px;
   font-weight: 400;
   color: #625f6e;
 }
+
 .meeting__time--01 {
   font-size: 12px;
   font-weight: 400;
@@ -218,16 +225,8 @@
   font-weight: bold;
   cursor: pointer;
 }
-.custom__left__column--01 {
-  margin-top: -10px;
-  background-color: white;
-  width: 227px;
-  border: 1px solid #e6e8ea;
-  border-top: none;
-  padding: 20px;
-  box-sizing: border-box;
-}
 
+/* === HEADER === */
 .mytask-header-buttons__01 button {
   margin-left: 0.75rem;
   font-weight: 600;
@@ -237,21 +236,26 @@
   border: 1px solid transparent;
   transition: background-color 0.2s ease;
 }
+
 .mytask-btn-outline__01 {
   background: var(--Alpha-Neutral-alpha-4, #0202040a);
   color: #374151;
   border: 1px solid var(--Alpha-Neutral-alpha-8, #02020414);
 }
+
 .mytask-btn-outline__01:hover {
   background-color: #f3f4f6;
 }
+
 .mytask-btn-primary__01 {
   background-color: #7c3aed;
   color: white;
 }
+
 .mytask-btn-primary__01:hover {
   background-color: #6d28d9;
 }
+
 .mytask-header__01 {
   margin-top: -20px;
   display: flex;
@@ -259,16 +263,71 @@
   align-items: center;
   margin-bottom: 20px;
 }
+
 .mytask-title__01 {
   font-size: 20px;
   font-weight: 500;
   color: #020204;
   margin: 0;
 }
+
 .mytask-subtitle__01 {
   font-size: 16px;
   font-weight: 400;
   color: #625f6e;
   margin-top: 0.25rem;
   margin-bottom: 0;
+}
+/* Overlay */
+.calendar-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 999;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Drawer container */
+.calendar-popup-container {
+  background-color: #fff;
+  width: 100%;
+  max-width: 514PX; 
+  height: 100%;
+  padding: 20px;
+  position: relative;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.2);
+  overflow-y: auto;
+}
+
+/* Slide-in animation */
+.right-slide {
+  animation: slideIn 0.3s forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+/* Header & Close */
+.calendar-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-popup-close-btn {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Content */
+.calendar-popup-content {
+  margin-top: 20px;
 }

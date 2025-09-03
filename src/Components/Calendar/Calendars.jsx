@@ -1,141 +1,48 @@
 import React, { useState } from "react";
 import "../../styles/Calendartab.css";
-// import Sidebar from "../SideBar/Sidebar";
+import CalendarTabForm from "../Calendar/CalendarTabForm";
 
 const Calendar = () => {
   const [view, setView] = useState("Week");
+  const [tasks, setTasks] = useState([]);
+  const [showForm, setShowForm] = useState(false);
 
   const rows = 4;
   const cols = 7;
 
-  const meetings = [
-    {
-      row: 0,
-      col: 0,
-      title: "Develop API End...",
-      time: "9:00 - 9:30 AM",
-      joiners: 3,
-      priority: "High",
-      agenda: "Backend Developer",
-    },
-    {
-      row: 0,
-      col: 3,
-      title: "Develop API End...",
-      time: "9:00 - 9:30 AM",
-      joiners: 2,
-      priority: "High",
-      agenda: "Backend Developer",
-    },
-    {
-      row: 0,
-      col: 5,
-      title: "Ensure Responsi...",
-      time: "10 AM - 11 AM",
-      joiners: 3,
-      priority: "Medium",
-      agenda: "Product Design",
-    },
-    {
-      row: 0,
-      col: 6,
-      title: "Develop API End...",
-      time: "9:00 - 9:30 AM",
-      joiners: 2,
-      priority: "High",
-      agenda: "Backend Developer",
-    },
-    {
-      row: 1,
-      col: 0,
-      title: "Implement UI C...",
-      time: "10 AM - 11 AM",
-      joiners: 3,
-      priority: "Medium",
-      agenda: "Product Design",
-    },
-    {
-      row: 1,
-      col: 1,
-      title: "Develop API End...",
-      time: "9:00 - 9:30 AM",
-      joiners: 2,
-      priority: "High",
-      agenda: "Backend Developer",
-    },
-    {
-      row: 1,
-      col: 4,
-      title: "Develop API End...",
-      time: "9:00 - 9:30 AM",
-      joiners: 3,
-      priority: "High",
-      agenda: "Backend Developer",
-    },
-    {
-      row: 1,
-      col: 6,
-      title: "Implement UI C...",
-      time: "10 AM - 11 AM",
-      joiners: 2,
-      priority: "Medium",
-      agenda: "Product Design",
-    },
-    {
-      row: 2,
-      col: 2,
-      title: "Ensure Responsi...",
-      time: "10 AM - 11 AM",
-      joiners: 2,
-      priority: "Medium",
-      agenda: "Product Design",
-    },
-    {
-      row: 2,
-      col: 5,
-      title: "Implement UI C...",
-      time: "10 AM - 11 AM",
-      joiners: 2,
-      priority: "Medium",
-      agenda: "Product Design",
-    },
-    {
-      row: 3,
-      col: 0,
-      title: "Ensure Responsi...",
-      time: "10 AM - 11 AM",
-      joiners: 3,
-      priority: "Medium",
-      agenda: "Product Design",
-    },
-    {
-      row: 3,
-      col: 4,
-      title: "Ensure Responsi...",
-      time: "10 AM - 11 AM",
-      joiners: 3,
-      priority: "Medium",
-      agenda: "Product Design",
-    },
-    {
-      row: 3,
-      col: 6,
-      title: "Ensure Responsi...",
-      time: "10 AM - 11 AM",
-      joiners: 3,
-      priority: "Medium",
-      agenda: "Product Design",
-    },
-  ];
+  const dayIndex = {
+    Sunday: 0,
+    Monday: 1,
+    Tuesday: 2,
+    Wednesday: 3,
+    Thursday: 4,
+    Friday: 5,
+    Saturday: 6,
+  };
+
+  const timeIndex = {
+    "9 AM": 0,
+    "10 AM": 1,
+    "11 AM": 2,
+    "12 PM": 3,
+    "1 PM": 4,
+    "2 PM": 5,
+  };
+
+  const handleCreateTask = (task) => {
+    const row = timeIndex[task.time] ?? 0;
+    const col = dayIndex[task.day] ?? 0;
+    const newTask = { ...task, row, col };
+    setTasks([...tasks, newTask]);
+    setShowForm(false);
+  };
 
   const getMeetingForCell = (row, col) => {
-    return meetings.find((m) => m.row === row && m.col === col);
+    return tasks.find((m) => m.row === row && m.col === col);
   };
 
   return (
     <div className="dashboard__section--01">
-      {/* <Sidebar /> */}
-
       <header className="mytask-header__01">
         <div className="mytask-header-left__01">
           <h1 className="mytask-title__01">Calendar</h1>
@@ -144,56 +51,45 @@ const Calendar = () => {
           </p>
         </div>
         <div className="dashboard-manage-task-header-actions">
-              <button className="dashboard-manage-task-btn-outline">
-                <img
-                  src="assets/share.svg"
-                  alt="Share Icon"
-                  width={24}
-                  height={24}
-                />
-                Share Tasks
-              </button>
-              <button className="dashboard-manage-task-btn-primary">+ New Task</button>
-            </div>
+          <button className="dashboard-manage-task-btn-outline">
+            <img src="assets/share.svg" alt="Share Icon" width={24} height={24} />
+            Share Tasks
+          </button>
+          <button
+            className="dashboard-manage-task-btn-primary"
+            onClick={() => setShowForm(true)}
+          >
+            + New Task
+          </button>
+        </div>
       </header>
 
-      <div className="task__bar--001">
-        <div className="task__details__container--01">
-          {/* Optional details */}
-        </div>
-        <div className="task__btns-01">
-          <div className="view__switcher">
-            {["Day", "Week", "Month"].map((item) => (
+      {/* 🔹 Slide Drawer Popup */}
+      {showForm && (
+        <div className="calendar-popup-overlay" onClick={() => setShowForm(false)}>
+          <div
+            className="calendar-popup-container right-slide"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="calendar-popup-header">
+              <h2>New Calendar Task</h2>
               <button
-                key={item}
-                className={`view__btn ${view === item ? "active" : ""}`}
-                onClick={() => setView(item)}
+                className="calendar-popup-close-btn"
+                onClick={() => setShowForm(false)}
               >
-                {item}
+                ×
               </button>
-            ))}
-          </div>
-
-          <div className="task__actions">
-            <div className="share__task__btn">
-              <img src="assets/share.svg" alt="share" />
-              <div className="btn__text">filter</div>
             </div>
 
-            <button className="add__task__btn">
-              <img src="assets/3dot.svg" alt="add" />
-              <div className="btn__text"></div>
-            </button>
+            <div className="calendar-popup-content">
+              <CalendarTabForm onCreateTask={handleCreateTask} />
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       <div className="calendar__section--01">
         <div className="calendar__days__container--01">
-          <div className="backward__arrow--01 rounded--01">
-            <img src="assets/Left.svg" alt="left" />
-          </div>
-
           {[
             "Sunday",
             "Monday",
@@ -203,20 +99,13 @@ const Calendar = () => {
             "Friday",
             "Saturday",
           ].map((day, i) => (
-            <div
-              key={i}
-              className={`sunday--01 ${i === 0 ? "item1--01" : ""} ${
-                i === 6 ? "rounded-day--01" : ""
-              }`}
-            >
+            <div key={i} className="sunday--01">
               {day}
             </div>
           ))}
         </div>
 
         <div className="main__container--01">
-          <div className="custom__left__column--01"></div>
-
           <div className="calendar__sidebar1--01">
             {["9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM"].map(
               (time, i) => (
@@ -238,10 +127,7 @@ const Calendar = () => {
                   {meeting && (
                     <div className="meeting__card--01">
                       <div className="meeting__title--01">{meeting.title}</div>
-                      <div className="meeting__time--01">
-                        {/* <img src="assets/cflag.svg" alt="flag" /> */}
-                        {meeting.time}
-                      </div>
+                      <div className="meeting__time--01">{meeting.time}</div>
                       <div className="meeting__joiners--01">
                         {Array.from({ length: meeting.joiners }).map((_, i) => (
                           <img
@@ -251,7 +137,6 @@ const Calendar = () => {
                             className="joiner__avatar--01"
                           />
                         ))}
-                        <div className="joiner__more--01">+</div>
                       </div>
                       <div
                         className={`meeting__priority--01 ${meeting.priority.toLowerCase()}--01`}

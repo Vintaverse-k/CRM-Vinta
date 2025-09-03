@@ -7,7 +7,6 @@ import TopBar from '../TopBar/TopBar';
 const Layout = ({ children }) => {
   const location = useLocation();
   const [activeTab, setActiveTab] = useState(() => {
-
     const currentPath = location.pathname;
     let activeName = 'Dashboard';
     const allItems = [
@@ -27,11 +26,11 @@ const Layout = ({ children }) => {
 
   return (
     <div className="app-container-01">
-      <div className="sidebar">
+      <div className="sidebar" tabIndex={0}>
         <div className="logo">
           <img src="assets/dashlogo.svg" alt="logo" />
           <h2>Taskbito</h2>
-          <span className="dropdown-icon">⌄</span>
+          <span className="dropdown-icon" title="More options">⌄</span>
         </div>
 
         {/* Main Menu */}
@@ -108,7 +107,7 @@ const Layout = ({ children }) => {
         <div className="page-content-01">
           {children}
         </div>
-      </div>
+      </div> 
     </div>
   );
 };
