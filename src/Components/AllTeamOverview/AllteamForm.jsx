@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/Allteam/AllTeam.css";
+import "../AllTeamOverview/AllTeamform.css"; // keep this import for your existing styles
 
 const TeamForm = ({ onAddTeam }) => {
   const [formData, setFormData] = useState({
@@ -18,7 +18,7 @@ const TeamForm = ({ onAddTeam }) => {
       [name]: name === "assignedTo" ? parseInt(value) : value,
       memberImages:
         name === "assignedTo" && prev.memberImages.length !== parseInt(value)
-          ? Array(parseInt(value)).fill("") // reset member images array
+          ? Array(parseInt(value)).fill("")
           : prev.memberImages,
     }));
   };
@@ -61,49 +61,66 @@ const TeamForm = ({ onAddTeam }) => {
   };
 
   return (
-    <form className="add-team-form" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        value={formData.name}
-        placeholder="Team Name"
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="text"
-        name="startDate"
-        value={formData.startDate}
-        placeholder="Start Date"
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="text"
-        name="dueDate"
-        value={formData.dueDate}
-        placeholder="Alias / Due"
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="number"
-        name="assignedTo"
-        value={formData.assignedTo}
-        placeholder="Members"
-        onChange={handleChange}
-        min={1}
-        required
-      />
+    <form className="All-team-form-tab" onSubmit={handleSubmit}>
+      <h3>Add New Team</h3>
 
-      {/* Team Icon Upload */}
-      <label>Upload Team Icon:</label>
-      <input type="file" accept="image/*" onChange={handleTeamIconChange} />
+      <div className="task-assign-group">
+        <label>Team Name</label>
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          placeholder="Team Name"
+          onChange={handleChange}
+          required
+        />
+      </div>
 
-      {/* Member Images Upload */}
+      <div className="task-assign-group">
+        <label>Start Date</label>
+        <input
+          type="text"
+          name="startDate"
+          value={formData.startDate}
+          placeholder="Start Date"
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+      <div className="task-assign-group">
+        <label>Alias / Due</label>
+        <input
+          type="text"
+          name="dueDate"
+          value={formData.dueDate}
+          placeholder="Alias / Due"
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+      <div className="task-assign-group">
+        <label>Number of Members</label>
+        <input
+          type="number"
+          name="assignedTo"
+          value={formData.assignedTo}
+          placeholder="Members"
+          onChange={handleChange}
+          min={1}
+          required
+        />
+      </div>
+
+      <div className="task-assign-group">
+        <label>Upload Team Icon</label>
+        <input type="file" accept="image/*" onChange={handleTeamIconChange} />
+      </div>
+
       {Array.from({ length: formData.assignedTo }).map((_, index) => (
-        <div key={index}>
-          <label>Upload Member {index + 1} Image:</label>
+        <div className="task-assign-group" key={index}>
+          <label>Upload Member {index + 1} Image</label>
           <input
             type="file"
             accept="image/*"
@@ -113,7 +130,9 @@ const TeamForm = ({ onAddTeam }) => {
         </div>
       ))}
 
-      <button type="submit">Add Team</button>
+      <div className="task-assign-btn-container">
+        <button type="submit">Add Team</button>
+      </div>
     </form>
   );
 };
