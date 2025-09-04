@@ -10,7 +10,7 @@ const NewTeamPopup = ({ onClose, onAddTeam }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="New-Task-Popup-header">
-          <h2>Create Team</h2>
+          <h2>Create ALl Team</h2>
           <button className="New-Task-Popup-close-btn" onClick={onClose}>
             ×
           </button>
