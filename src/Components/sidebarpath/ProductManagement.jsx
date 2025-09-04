@@ -12,6 +12,20 @@ const ProductManagement = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
+  const [taskData, setTaskData] = useState({
+    todo: [],
+    inProgress: [],
+    done: [],
+  });
+
+  const [boardTaskData, setBoardTaskData] = useState({
+    todo: [],
+    inProgress: [],
+    inReviewed: [],
+    completed: [],
+  });
+const [calendarTasks, setCalendarTasks] = useState([]);
+
   const tabs = [
     { label: "Overview", icon: "assets/portoverview.svg" },
     { label: "List", icon: "assets/portlist.svg" },
@@ -19,22 +33,48 @@ const ProductManagement = () => {
     { label: "Calendar", icon: "assets/portcalendar.svg" },
     { label: "Workflow", icon: "assets/portworkflow.svg" },
   ];
+const handleCreateTask = (task, source) => {
+  if (source === "Board") {
+    let key = "todo";
+    if (["Not Started", "To do"].includes(task.status)) key = "todo";
+    else if (task.status === "In Progress") key = "inProgress";
+    else if (task.status === "In Reviewed") key = "inReviewed";
+    else if (task.status === "Completed") key = "completed";
 
-  const handleCreateTask = (task) => {
-    console.log("Task created:", task);
-    // yahan apne logic implement karo jaise API call ya state update
-  };
+    setBoardTaskData((prev) => ({
+      ...prev,
+      [key]: [...prev[key], task],
+    }));
+  } else if (source === "List") {
+    let key = "todo";
+    if (task.status === "To do") key = "todo";
+    else if (task.status === "In Progress") key = "inProgress";
+    else if (task.status === "Done") key = "done";
+
+    setTaskData((prev) => ({
+      ...prev,
+      [key]: [...prev[key], task],
+    }));
+  } else if (source === "Calendar") {
+
+    setCalendarTasks((prev) => [...prev, task]);
+  }
+
+  setIsPopupOpen(false);
+};
+
 
   const renderTabContent = () => {
     switch (activeTab) {
       case 0:
         return <Overview />;
       case 1:
-        return <List />;
+        return <List taskData={taskData} />;
       case 2:
-        return <Board />;
+        return <Board boardTabTask={boardTaskData} />;
       case 3:
-        return <Calendar />;
+  return <Calendar tasks={calendarTasks} />;
+
       case 4:
         return <Workflow />;
       default:
@@ -44,7 +84,6 @@ const ProductManagement = () => {
 
   return (
     <div className="mytask-container">
-      {/* Sidebar */}
       <Sidebar />
 
       <main className="mytask-main-content">
@@ -85,12 +124,7 @@ const ProductManagement = () => {
 
           <div className="dashboard-manage-task-header-actions">
             <button className="dashboard-manage-task-btn-outline">
-              <img
-                src="assets/share.svg"
-                alt="Share Icon"
-                width={24}
-                height={24}
-              />
+              <img src="assets/share.svg" alt="Share Icon" width={24} height={24} />
               Share Tasks
             </button>
 

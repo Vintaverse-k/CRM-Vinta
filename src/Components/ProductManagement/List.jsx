@@ -2,26 +2,6 @@ import React, { useState, useEffect } from "react";
 import "../../styles/Productsmanage/Lists.css";
 import { FiMoreVertical } from "react-icons/fi";
 
-const taskData = {
-  todo: [
-    { name: "Develop High-fidelities UI", priority: "Medium", startDate: "Varun walia", dueDate: "23/05/2025", progress: 90, status: "In Review", assignedTo: 4 },
-    { name: "Real Estate website Design", priority: "Low", startDate: "Leisha", dueDate: "26/05/2025", progress: 30, status: "Reviewed", assignedTo: 3 },
-    { name: "Matex AI Meting assistance", priority: "Medium", startDate: "Manoj Kumar", dueDate: "25/05/2025", progress: 40, status: "In Review", assignedTo: 3 },
-  ],
-  inProgress: [
-    { name: "Taskito- Task management web", priority: "High", startDate: "Varun walia", dueDate: "26/05/2025", progress: 70, status: "In Review", assignedTo: 3 },
-    { name: "Cliency client management web", priority: "High", startDate: "Manoj Kumar", dueDate: "25/05/2025", progress: 45, status: "In Review", assignedTo: 3 },
-    { name: "Cognify - AI hiring management", priority: "High", startDate: "Leisha", dueDate: "24/05/2025", progress: 60, status: "In Review", assignedTo: 3 },
-    { name: "Orbit - web3 website design", priority: "High", startDate: "Shubham", dueDate: "24/05/2025", progress: 40, status: "In Review", assignedTo: 3 },
-  ],
-  done: [
-    { name: "Landing Page Completed", priority: "High", startDate: "Varun walia", dueDate: "20/04/2025", progress: 100, status: "Done", assignedTo: 1 },
-    { name: "Website Deployment", priority: "High", startDate: "Leisha", dueDate: "22/04/2025", progress: 100, status: "Done", assignedTo: 1 },
-    { name: "Website Deployment", priority: "High", startDate: "Leisha", dueDate: "22/04/2025", progress: 100, status: "Done", assignedTo: 1 },
-    { name: "Website Deployment", priority: "High", startDate: "Leisha", dueDate: "22/04/2025", progress: 100, status: "Done", assignedTo: 1 },
-  ],
-};
-
 const userImages = {
   "Varun walia": "/assets/img1.png",
   "Leisha": "/assets/img2.png",
@@ -30,8 +10,82 @@ const userImages = {
   "Harshit": "/assets/img1.png",
 };
 
+const ProgressCircle = ({ value }) => {
+  const radius = 20; 
+  const stroke = 4;
+  const normalizedRadius = radius - stroke * 2;
+  const circumference = normalizedRadius * 2 * Math.PI;
+
+  const [progress, setProgress] = useState(0);
+
+  // Animate filling circle
+  useEffect(() => {
+    let start = 0;
+    const step = () => {
+      start += 1;
+      if (start <= value) {
+        setProgress(start);
+        requestAnimationFrame(step);
+      }
+    };
+    step();
+  }, [value]);
+
+  const strokeDashoffset =
+    circumference - (progress / 100) * circumference;
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "8px",
+      }}
+    >
+      <svg height={radius * 2} width={radius * 2}>
+        {/* Background Circle */}
+        <circle
+          stroke="#e6e6e6"
+          fill="transparent"
+          strokeWidth={stroke}
+          r={normalizedRadius}
+          cx={radius}
+          cy={radius}
+        />
+        {/* Progress Circle */}
+        <circle
+          stroke=" #7c3aed"
+          fill="transparent"
+          strokeWidth={stroke}
+          strokeLinecap="round"
+          strokeDasharray={circumference}
+          strokeDashoffset={strokeDashoffset}
+          r={normalizedRadius}
+          cx={radius}
+          cy={radius}
+          style={{ transition: "stroke-dashoffset 0.3s linear" }}
+        />
+        {/* Percentage inside circle */}
+        <text
+          x="50%"
+          y="50%"
+          dy=".3em"
+          textAnchor="middle"
+          fontSize="9"
+          fill="#333"
+        >
+          {progress}%
+        </text>
+      </svg>
+      {/* Text beside circle */}
+      <span style={{ fontSize: "12px", color: "#555" }}>
+        {progress}% completed
+      </span>
+    </div>
+  );
+};
+
 const PriorityTag = ({ level, section }) => {
-  // Icons can be changed per priority if needed
   const flagIcons = {
     Low: "assets/yellowflag.svg",
     Medium: "assets/yellowflag.svg",
@@ -39,7 +93,6 @@ const PriorityTag = ({ level, section }) => {
   };
 
   const iconSrc = flagIcons[level] || "assets/flag-default.svg";
-
   let className = `product-manage-priority-tag ${level.toLowerCase()}`;
 
   if (level === "High") {
@@ -50,93 +103,66 @@ const PriorityTag = ({ level, section }) => {
 
   return (
     <span className={className}>
-      <img src={iconSrc} alt={`${level} icon`} className="product-manage-priority-icon" />
+      <img
+        src={iconSrc}
+        alt={`${level} icon`}
+        className="product-manage-priority-icon"
+      />
       {level}
     </span>
   );
 };
 
-const AvatarGroup = ({ count, names }) => (
+const AvatarGroup = ({ names }) => (
   <div className="product-manage-assigned-group">
-    {Array.from({ length: count }).map((_, i) => (
+    {names.map((name, i) => (
       <div
         key={i}
         className="product-manage-assigned-item"
-        style={{ display: "flex", alignItems: "center", gap: "6px" }}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "6px",
+        }}
       >
         <img
-          src={userImages[names[i]] || "/assets/default.jpg"}
-          alt={`User ${names[i]}`}
+          src={userImages[name] || "/assets/default.jpg"}
+          alt={`User ${name}`}
           className="product-manage-assigned-avatar"
         />
-        <span className="product-manage-assigned-name">{names[i]}</span>
+        <span className="product-manage-assigned-name">{name}</span>
       </div>
     ))}
   </div>
 );
 
-const ProgressBar = ({ percent }) => {
-  const radius = 16;
-  const stroke = 3;
-  const normalizedRadius = radius - stroke * 0.5;
-  const circumference = 2 * Math.PI * normalizedRadius;
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    let animationFrameId;
-    let start = null;
-
-    const animate = (timestamp) => {
-      if (!start) start = timestamp;
-      const elapsed = timestamp - start;
-      const duration = 800;
-      const progressPercent = Math.min((elapsed / duration) * percent, percent);
-      setProgress(progressPercent);
-      if (elapsed < duration) {
-        animationFrameId = requestAnimationFrame(animate);
-      }
-    };
-
-    animationFrameId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [percent]);
-
-  const offset = circumference - (progress / 100) * circumference;
-
-  return (
-    <div className="product-manage-progress-container">
-      <div className="product-manage-progress-circle-wrapper" style={{ width: radius * 2, height: radius * 2 }}>
-        <svg className="product-manage-progress-svg" height={radius * 2} width={radius * 2}>
-          <circle className="product-manage-progress-bg" r={normalizedRadius} cx={radius} cy={radius} />
-          <circle
-            className="product-manage-progress-fg"
-            strokeDasharray={circumference}
-            strokeDashoffset={offset}
-            r={normalizedRadius}
-            cx={radius}
-            cy={radius}
-          />
-        </svg>
-        <div className="product-manage-progress-text">{Math.round(progress)}%</div>
-      </div>
-      <span className="product-manage-progress-label">{Math.round(progress)}% Completed</span>
-    </div>
-  );
-};
-
 const TaskRow = ({ task, section }) => (
   <tr className="product-manage-table-row">
-    <td><input type="checkbox" className="product-manage-checkbox" /></td>
+    <td>
+      <input type="checkbox" className="product-manage-checkbox" />
+    </td>
     <td>{task.name}</td>
-    <td><PriorityTag level={task.priority} section={section} /></td>
-    <td><AvatarGroup count={1} names={[task.startDate]} /></td>
+    <td>
+      <PriorityTag level={task.priority} section={section} />
+    </td>
+    <td>
+      <AvatarGroup names={[task.assignedTo]} />
+    </td>
     <td>{task.dueDate}</td>
     <td className="product-manage-status-cell">
-      <img src={"assets/Stop.svg"} alt="status icon" className="product-manage-status-icon" />
+      <img
+        src={"assets/Stop.svg"}
+        alt="status icon"
+        className="product-manage-status-icon"
+      />
       <span className="product-manage-status-text">{task.status}</span>
     </td>
-    <td><ProgressBar percent={task.progress} /></td>
-    <td><FiMoreVertical className="product-manage-more-icon" /></td>
+    <td>
+      <ProgressCircle value={task.progress} />
+    </td>
+    <td>
+      <FiMoreVertical className="product-manage-more-icon" />
+    </td>
   </tr>
 );
 
@@ -147,12 +173,19 @@ const sectionIcons = {
 };
 
 const TaskSection = ({ title, data }) => {
-  const rightImageSrc = "assets/plussign.svg"; 
+  const rightImageSrc = "assets/plussign.svg";
 
   return (
     <div className="product-manage-section">
-      <div className="product-manage-section-title" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+      <div
+        className="product-manage-section-title"
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
           <img
             src={sectionIcons[title] || "assets/defaultdot.svg"}
             alt={`${title} icon`}
@@ -160,19 +193,19 @@ const TaskSection = ({ title, data }) => {
           />
           <span>{title}</span>
         </div>
-
-        {/* Right aligned image */}
         <img
           src={rightImageSrc}
           alt="Right side icon"
-          style={{ width: '20px', height: '20px', cursor: 'pointer' }}
+          style={{ width: "20px", height: "20px", cursor: "pointer" }}
         />
       </div>
 
       <table className="product-manage-table">
         <thead className="product-manage-table-header">
           <tr>
-            <th><input type="checkbox" className="product-manage-checkbox" /></th>
+            <th>
+              <input type="checkbox" className="product-manage-checkbox" />
+            </th>
             <th>Task Name</th>
             <th>Priority</th>
             <th>Assigned To</th>
@@ -192,7 +225,7 @@ const TaskSection = ({ title, data }) => {
   );
 };
 
-const ListContent = () => (
+const ListContent = ({ taskData }) => (
   <div className="list-product-manage-container">
     <TaskSection title="To do" data={taskData.todo} />
     <TaskSection title="In Progress" data={taskData.inProgress} />

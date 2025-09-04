@@ -89,7 +89,11 @@ const Calendar = () => {
       )}
 
       <div className="calendar__section--01">
+        {/* 🔹 Days Header */}
         <div className="calendar__days__container--01">
+          <div className="backward__arrow rounded__01">
+            <img src="assets/Left.svg" alt="left" />
+          </div>
           {[
             "Sunday",
             "Monday",
@@ -105,6 +109,7 @@ const Calendar = () => {
           ))}
         </div>
 
+        {/* 🔹 Calendar Grid */}
         <div className="main__container--01">
           <div className="calendar__sidebar1--01">
             {["9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM"].map(

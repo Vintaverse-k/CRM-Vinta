@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import "../../ProductManagement/Tabs/NewTaskPopup.css";
 
-import ListTab from "./ListTab";       
-import BoardTab from "./BoardTab";      
-import CalendarTab from "./CalendarTab"; 
-import WorkflowTab from "./WorkflowTab"; 
+import ListTab from "./ListTab";
+import BoardTab from "./BoardTab";
+import CalendarTab from "./CalendarTab";
+import WorkflowTab from "./WorkflowTab";
 
 const NewTaskPopup = ({ onClose, onCreateTask }) => {
   const [activeTab, setActiveTab] = useState("List");
 
   const handleCreateTask = (newTask, source) => {
-    if (onCreateTask) {
-      onCreateTask(newTask, source);
-    }
+    if (onCreateTask) onCreateTask(newTask, source);
     onClose();
   };
 
@@ -24,11 +22,12 @@ const NewTaskPopup = ({ onClose, onCreateTask }) => {
   ];
 
   return (
-    <div className="New-Task-Popup" onClick={onClose}>
+    <div className="New-Task-Popup-overlay" onClick={onClose}>
       <div
         className="New-Task-Popup-container right-slide"
         onClick={(e) => e.stopPropagation()}
       >
+        {/* Header */}
         <div className="New-Task-Popup-header">
           <h2>Project Management</h2>
           <button className="New-Task-Popup-close-btn" onClick={onClose}>
@@ -36,11 +35,14 @@ const NewTaskPopup = ({ onClose, onCreateTask }) => {
           </button>
         </div>
 
+        {/* Tabs */}
         <div className="New-Task-Popup-tabs-bar">
           {tabs.map((tab) => (
             <button
               key={tab.name}
-              className={`New-Task-Popup-tab-btn ${activeTab === tab.name ? "active" : ""}`}
+              className={`New-Task-Popup-tab-btn ${
+                activeTab === tab.name ? "active" : ""
+              }`}
               onClick={() => setActiveTab(tab.name)}
             >
               {tab.name}
@@ -48,6 +50,7 @@ const NewTaskPopup = ({ onClose, onCreateTask }) => {
           ))}
         </div>
 
+        {/* Tab Content */}
         <div className="New-Task-Popup-tab-content">
           {tabs.find((tab) => tab.name === activeTab)?.component}
         </div>
