@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../AllTeamOverview/AllTeamform.css"; // keep this import for your existing styles
+import "../AllTeamOverview/AllTeamForm.css";
 
 const TeamForm = ({ onAddTeam }) => {
   const [formData, setFormData] = useState({
