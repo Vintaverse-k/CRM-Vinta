@@ -1,6 +1,9 @@
 import React from 'react';
 import topbarData from '../../Data/topbarData';
-import '..//../styles/TopBar.css';
+import '../../styles/TopBar.css';
+import ProfileDropdown from '../ProfileDrop/ProfileDropDown';
+
+
 
 const TopBar = () => {
   return (
@@ -21,12 +24,14 @@ const TopBar = () => {
         <button className="integrate-btn" aria-label="Integrate">
           <img src={topbarData.integrate} alt="integrate" />
           <span>Integrate</span>
-          
-
           <img src={topbarData.integrateIcon} alt="integrate" />
         </button>
-        <img src={topbarData.profileImage} alt="profile" className="profile-img" />
-        <span className="dropdown" aria-label="User menu">⌄</span>
+
+        {/* Profile Dropdown component */}
+        <ProfileDropdown
+          profileImage={topbarData.profileImage}
+          profileArrow={topbarData.profileArrow} 
+        />
       </div>
     </div>
   );

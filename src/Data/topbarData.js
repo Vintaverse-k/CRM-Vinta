@@ -6,6 +6,7 @@ const topbarData = {
   integrateIcon: 'assets/slack.svg',
   integrate: 'assets/intigrateicon.svg',
   profileImage: 'assets/img1.png',
+  profileArrow: 'assets/downarrow.svg',
 };
 
 export default topbarData;
